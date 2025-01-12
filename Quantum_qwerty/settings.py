@@ -11,21 +11,26 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+#Initialiting environ library
+env = environ.Env()
+environ.Env.read_env()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-fsy!k683y9-$)dxz)qj)#&4$0vi3y7@#=5!!s)$#e0n2ts9cne'
+SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = tuple(env.list('ALLOWED_HOSTS', default=['*']))
 
 
 # Application definition
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Local Apps
 ]
 
 MIDDLEWARE = [
@@ -73,11 +79,21 @@ WSGI_APPLICATION = 'Quantum_qwerty.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+DATABASES = {  #QUEDA PENDIENTE CONFIGURACION DE MYSQL CON ENVIRON
+    # srv Dev 1
+    # 'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3', #CAMBIAR SQLITE3 POR mysql
+    #    'NAME': env.str('DB_NAME'),
+    #    'USER': env.str('DB_USER'),
+    #    'PASSWORD': env.str('DB_PASSWRD'),
+    #    'HOST': env.str('DB_HOST'),
+    #   'PORT': env.str('DB_PORT')# CUANDO SE CONFIGURE DEBE SER env.int
+    # }
+
+     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+     }
 }
 
 
@@ -103,11 +119,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-mx'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
