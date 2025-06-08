@@ -1,5 +1,5 @@
 
-body {
+.bg-purple {
     background: #6B3290;
     background: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%, rgba(90, 27, 132, 1) 33%, rgba(72, 22, 106, 1) 66%, rgba(45, 14, 66, 1) 100%); 
     height: 100vh;
@@ -9,6 +9,17 @@ body {
 h1{
     font-family: 'Geometric 212', sans-serif !important;
 }
+
+/* pendiente eliminar eticca css -LGS */
+/* #welcome {
+    background-image: url('../img/quantica-qq.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+} */
+
+
 /* 
 background: #6B3290;
 background: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%, rgba(90, 27, 132, 1) 33%, rgba(72, 22, 106, 1) 66%, rgba(45, 14, 66, 1) 100%); */
