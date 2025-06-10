@@ -20,6 +20,8 @@ h1{
 } */
 
 
-/* 
-background: #6B3290;
-background: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%, rgba(90, 27, 132, 1) 33%, rgba(72, 22, 106, 1) 66%, rgba(45, 14, 66, 1) 100%); */
+.nav-icon {
+    width: 24px !important;
+    height: 24px !important;
+
+}
