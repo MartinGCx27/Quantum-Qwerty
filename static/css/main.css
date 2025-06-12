@@ -33,7 +33,7 @@ background: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%, rgba(90, 27, 132, 1)
   }
 
 .navbar-nav .nav-item {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
   .nav-link:hover {
@@ -82,3 +82,8 @@ background: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%, rgba(90, 27, 132, 1)
     visibility: visible;
   }
 
+.nav-icon {
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+
+}
