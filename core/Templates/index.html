@@ -13,7 +13,7 @@
   
   
   <!--Pendiente por definir -LGS-->
-  <style>
+  <!-- <style>
     #welcome {
       background-image: url("{% static 'img/quantica-qq.jpeg' %}");
       background-size: cover;
@@ -21,7 +21,8 @@
       background-position: center;
       height: 100vh;
     }
-  </style>
+  </style> -->
+
   
 </head>
 
@@ -109,7 +110,74 @@
 </nav>
 
 <section id="welcome">
-  
+  <canvas id="starfield"></canvas>
+<div class="space"></div>
+<div class="spiral"></div>
+<div class="black-hole"></div>
+<div class="enter-text">Entrando al sitio...</div>
+<script>
+  const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+const numStars = 400;
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+function initStars() {
+  stars = [];
+  for (let i = 0; i < numStars; i++) {
+    stars.push({
+      x: Math.random() * canvas.width - canvas.width/2,
+      y: Math.random() * canvas.height - canvas.height/2,
+      z: Math.random() * canvas.width,
+      o: Math.random()
+    });
+  }
+}
+initStars();
+
+function updateAndDraw() {
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
+  ctx.fillStyle = 'black';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  for (let s of stars) {
+    s.z -= 4;
+    if (s.z <= 0) s.z = canvas.width;
+
+    const k = 128.0 / s.z;
+    const px = s.x * k + cx;
+    const py = s.y * k + cy;
+    if (px < 0 || px >= canvas.width || py < 0 || py >= canvas.height) continue;
+
+    const size = (1 - s.z / canvas.width) * 3;
+    ctx.beginPath();
+    ctx.arc(px, py, size, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(255,255,255,${s.o})`;
+    ctx.fill();
+  }
+  requestAnimationFrame(updateAndDraw);
+}
+updateAndDraw();
+
+</script>
+  <div class="space"></div>
+<div class="spiral"></div>
+<div class="black-hole"></div>
+<div class="enter-text">Entrando al sitio...</div>
+
+<script>
+  setTimeout(() => {
+    document.body.classList.add('loaded');
+  }, 5000);
+</script>
+
 </section>
 
 <section id="Example" class="bg-purple">
