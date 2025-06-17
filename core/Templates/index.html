@@ -8,12 +8,13 @@
   {% load static %}
   <!-- Main CSS File -->
   <link href="{% static 'css/main.css' %}" rel="stylesheet">
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  
-  
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+
   <!--Pendiente por definir -LGS-->
-  <style>
+  <!-- <style>
     #welcome {
       background-image: url("{% static 'img/quantica-qq.jpeg' %}");
       background-size: cover;
@@ -21,64 +22,65 @@
       background-position: center;
       height: 100vh;
     }
-  </style>
-  
+  </style> -->
+
 </head>
 
 <body>
-  
+
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <div class="row w-100">
 
         <div class="col-6 col-md-4">
           <a class="navbar-brand" href="#">
-          <img src="{% static 'img/logo_blanco.png' %}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-          
-          Quantum Qwerty
-        </a>
+            <img src="{% static 'img/logo_blanco.png' %}" alt="Logo" width="30" height="24"
+              class="d-inline-block align-text-top">
+
+            Quantum Qwerty
+          </a>
         </div>
-        
+
         <div class="col-6 d-block d-lg-none text-end">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        
+
 
         <div class="col-12 col-md-5">
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li>
-            <link rel="stylesheet" href="https://iconos8.es/icon/qBlNlefkEJPq/home">
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link" ><img class="nav-icon" src="{% static 'img/home-icon.png'%}"/></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link" ><img class="nav-icon" src="{% static 'img/about-icon.png'%}"/></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link" ><img class="nav-icon" src="{% static 'img/services2-icon.png'%}"/></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link" ><img class="nav-icon" src="{% static 'img/contact-icon.png'%}"/></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contactanos</a>
-          </li>
-          <!-- TOOLtip: Se borrará posteriormente dropdown en caso de no utilizarse -Memix -->
-          <!-- <li class="nav-item dropdown">
+            <ul class="navbar-nav">
+              <li>
+                <link rel="stylesheet" href="https://iconos8.es/icon/qBlNlefkEJPq/home">
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link"><img class="nav-icon" src="{% static 'img/home-icon.png'%}" /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link"><img class="nav-icon" src="{% static 'img/about-icon.png'%}" /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link"><img class="nav-icon" src="{% static 'img/services2-icon.png'%}" /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link"><img class="nav-icon" src="{% static 'img/contact-icon.png'%}" /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contactanos</a>
+              </li>
+              <!-- TOOLtip: Se borrará posteriormente dropdown en caso de no utilizarse -Memix -->
+              <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown link
             </a>
@@ -88,37 +90,137 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li> -->
-        </ul>
-        </div>
+            </ul>
+          </div>
         </div>
 
-        <div class="col-6 col-md-3 d-flex justify-content-center justify-content-md-end align-items-center gap-2 mt-2 mt-md-0">
-        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" 
-        alt="facebook--v1"/>
-        <img width="40" height="40" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" 
-        alt="instagram-new"/>
-        <img width="30" height="30" src="https://img.icons8.com/glyph-neue/64/github.png" 
-        alt="github"/>
+        <div
+          class="col-6 col-md-3 d-flex justify-content-center justify-content-md-end align-items-center gap-2 mt-2 mt-md-0">
+          <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="facebook--v1" />
+          <img width="40" height="40" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png"
+            alt="instagram-new" />
+          <img width="30" height="30" src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
+        </div>
+
+
       </div>
 
-      
-      </div>
-      
     </div>
-  </div>
-</nav>
+    </div>
+  </nav>
 
-<section id="welcome">
-  
-</section>
+  <section id="welcome">
+    <canvas id="outerspace" height="500" width="500"> </canvas>
+    <div class="qq-text">Halo murió en Reach</div>
+    <script>
+      let outerspace = document.querySelector("#outerspace");
+      let maincontext = outerspace.getContext("2d");
 
-<section id="Example" class="bg-purple">
-  
-  <h1>Hello, world!</h1>
-</section>
+      let canvasWidth = outerspace.width;
+      let canvasHeight = outerspace.height;
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+      let numberOfStars = 2100;
+      let stars = [];
+
+      let centerX = canvasWidth * 0.5;
+      let centerY = canvasHeight * 0.5;
+
+      class Star {
+        constructor() {
+          this.x = getRandomInt(-centerX, centerX);
+          this.y = getRandomInt(-centerY, centerY);
+
+          this.counter = getRandomInt(1, canvasWidth);
+
+          this.radiusMax = getRandomInt(1, 10);
+          this.speed = getRandomInt(5, 15);
+
+          this.context = maincontext;
+        }
+
+        drawStar() {
+          this.counter -= this.speed;
+
+          if (this.counter < 1) {
+            this.counter = canvasWidth;
+
+            this.x = getRandomInt(-centerX, centerX);
+            this.y = getRandomInt(-centerY, centerY);
+
+            this.radiusMax = getRandomInt(1, 10);
+            this.speed = getRandomInt(1, 5);
+          }
+
+          let xRatio = this.x / this.counter;
+          let yRatio = this.y / this.counter;
+          
+          let starX = remap(xRatio, 0, 1, 0, canvasWidth);
+          let starY = remap(yRatio, 0, 1, 0, canvasHeight);
+
+          this.radius = remap(this.counter, 0, canvasWidth, this.radiusMax, 0);
+
+          maincontext.beginPath();
+
+          maincontext.arc(starX, starY, this.radius, 0, Math.PI * 2, false);
+
+          maincontext.closePath();
+
+          maincontext.fillStyle = "#fff";
+          maincontext.fill();
+        }
+      }
+
+      function setup() {
+        for (let i = 0; i < numberOfStars; i++) {
+          stars.push(new Star());
+        }
+      }
+      setup();
+
+      function draw() {
+        maincontext.clearRect(0, 0, canvasWidth, canvasHeight);
+        maincontext.fillStyle = "#111";
+        maincontext.fillRect(0, 0, canvasWidth, canvasHeight);
+
+        maincontext.translate(centerX, centerY);
+
+        for (let i = 0; i < stars.length; i++) {
+          let star = stars[i];
+          stars[i].drawStar();
+        }
+
+        maincontext.translate(-centerX, -centerY);
+
+        requestAnimationFrame(draw);
+      }
+      draw();
+
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function remap(value, istart, istop, ostart, ostop) {
+        value = Number(value);
+        istart = Number(istart);
+        istop = Number(istop);
+        ostart = Number(ostart);
+        ostop = Number(ostop);
+
+        return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
+      }
+    </script>
+  </section>
+
+  <section id="Example" class="bg-purple">
+
+    <h1>Hello, world!</h1>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
 
 </body>
 <!-- Hola Leo jejeje, rico ano ntc-->
+
 </html>
