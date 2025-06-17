@@ -9,6 +9,7 @@
 h1{
     font-family: 'Geometric 212', sans-serif !important;
 }
+
   .nav-link {
     transition: color 0.3s ease;
     position: relative;
@@ -71,93 +72,51 @@ h1{
 
 }
 
-  #welcome {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-  }
-.space {
-  position: absolute;
+#outerspace {
+  border: 3px solid #111;;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 10px #333);
+}
+#welcome {
+  position: relative;
   width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 80%);
-  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.black-hole {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, #000 40%, #111 60%, #000 80%);
-  box-shadow: 0 0 60px 30px rgba(0, 0, 0, 0.8);
-  animation: pulse 4s infinite ease-in-out;
-  z-index: 2;
-}
-
-.spiral {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 600px;
-  transform: translate(-50%, -50%) rotate(0deg);
-  border-radius: 50%;
-  background: conic-gradient(from 90deg, #444, #000 25%, #222, #000 50%, #111, #000 75%, #000);
-  animation: spin 10s linear infinite;
-  filter: blur(8px);
-  z-index: 0;
-}
-
-.enter-text {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2rem;
-  text-align: center;
-  z-index: 3;
-  animation: fadeOut 5s ease-in forwards;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); }
-  50% { transform: translate(-50%, -50%) scale(1.2); }
-}
-
-@keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes fadeOut {
-  0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-}
-
-body.loaded .black-hole,
-body.loaded .spiral,
-body.loaded .space {
-  animation: collapse 3s ease-in forwards;
-}
-
-@keyframes collapse {
-  to { transform: translate(-50%, -50%) scale(0); opacity: 0; }
-}
-#starfield {
+#outerspace {
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   z-index: 0;
-}
-.space, .spiral, .black-hole, .enter-text {
-  z-index: 1; 
+  border: none;
+  filter: brightness(1.2) drop-shadow(0 0 10px #6B3290);
 }
 
+.qq-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Geometric 212', sans-serif;
+  font-size: 3rem;
+  color: #EAE7E5;
+  z-index: 1;
+  text-shadow: 0 0 10px #6b3290, 0 0 20px #5A1B84;
+  animation: fade-glow 3s ease-in-out infinite;
+  text-align: center;
+}
+
+@keyframes fade-glow {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px #6B3290, 0 0 20px #5A1B84;
+  }
+  50% {
+    opacity: 0.6;
+    text-shadow: 0 0 5px #6B3290, 0 0 10px #5A1B84;
+  }
+}
