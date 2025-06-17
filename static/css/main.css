@@ -87,3 +87,58 @@ background: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%, rgba(90, 27, 132, 1)
     height: 1.8rem !important;
 
 }
+
+
+.hyperjump-effect {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+}
+
+#hyperCanvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0; /* canvas detrás */
+}
+
+.overlay-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 12rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  pointer-events: none;
+  font-family: Arial, sans-serif;
+}
+
+.overlay-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.overlay-text p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .overlay-text {
+    padding-top: 8rem;
+  }
+
+  .overlay-text h1 {
+    font-size: 2rem;
+  }
+
+  .overlay-text p {
+    font-size: 1rem;
+  }
+}
