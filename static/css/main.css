@@ -150,3 +150,12 @@ h1{
     text-shadow: 0 0 5px #6B3290, 0 0 10px #5A1B84;
   }
 }
+
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-scrolled {
+  background-color: rgb(254, 253, 255);
+}
