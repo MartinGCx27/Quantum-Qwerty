@@ -1,7 +1,7 @@
 
 .bg-purple {
     background: #6B3290;
-    background: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%, rgba(90, 27, 132, 1) 33%, rgba(72, 22, 106, 1) 66%, rgba(45, 14, 66, 1) 100%); 
+    background: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%, rgba(90, 27, 132, 1) 33%, rgba(72, 22, 106, 1) 66%, rgba(45, 14, 66, 1) 100%);
     height: 100vh;
     font-family: 'Monsterat', sans-serif;
     color: #EAE7E5 !important;
@@ -143,3 +143,40 @@ h1{
   .custom-navbar.scrolled .navbar-brand {
     color: black !important;
   }
+
+#scrollToTopBtn {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  align-items: center !important;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #76D7D9;
+  color: white;
+  cursor: pointer;
+  padding: 0px;
+  /* padding-bottom: 2px; */
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #706f6fde;
+}
+
+#scrollToTopBtn i{
+  font-size: 40px;
+  color: #6B3290;
+}
+
+#scrollToTopBtn i:hover{
+  font-size: 40px;
+  color: #ffffff;
+}
+
