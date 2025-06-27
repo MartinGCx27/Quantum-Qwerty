@@ -195,19 +195,99 @@ h1{
   color: #ffffff;
 }
 
+/* Comienza los estilos de la seccion 'sobre nostros' del home -Fer */
 #about-us {
-  position: relative;
   background-color: #6f42c1;
-  z-index: 3;
-  padding: 100px 0;
+  padding: 6.25rem 2.5rem;
   min-height: 100vh;
+  position: relative;
+  z-index: 3;
+}
+
+.img-about {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 31.25rem;
 }
 
 .card-about {
-  width: 20rem !important;
-} 
-
-.img-about {
-  width: 50rem;
-  margin-left: 10rem;
+  max-width: 37.5rem;
+  margin: 0 auto;
 }
+
+.card-about .card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  #about-us {
+    padding: 5rem 1.25rem 3.125rem 1.25rem;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .card-about {
+    text-align: center;
+  }
+
+  .card-about .card-text {
+    font-size: 1rem;
+  }
+
+  .img-about {
+    max-width: 100%;
+    margin-top: 1.875rem;
+  }
+}
+
+/* Estilos del mensaje temporal -Fer */
+.auto-hide-message {
+  position: absolute;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  max-width: 30rem;
+  width: 100%;
+  background-color: rgba(50, 50, 50, 0.6);
+  color: white;
+  padding: 0.5rem 2.2rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.auto-hide-message span {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+.auto-hide-message button {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .auto-hide-message {
+    max-width: 90%;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
