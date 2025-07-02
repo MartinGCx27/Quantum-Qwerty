@@ -23,26 +23,27 @@
 <body>
   
   <nav id="menu" class="navbar navbar-expand-lg fixed-top custom-navbar">
-    <div class="container-fluid">
-      <div class="row w-100">
-        
-        <div class="col-6 col-md-4">
-          <a class="navbar-brand" href="#">
-            <img src="{% static 'img/logo_blanco.png' %}" alt="Logo" width="30" height="24"
+  <div class="container-fluid">
+    <div class="row w-100">
+      
+      <!-- Logo -->
+      <div class="col-6 col-md-4">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'img/logo_blanco.png' %}" alt="Logo" width="30" height="24"
             class="d-inline-block align-text-top">
-            
-            Quantum Qwerty
-          </a>
-        </div>
-        
-        <div class="col-6 d-block d-lg-none text-end">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          Quantum Qwerty
+        </a>
+      </div>
+
+      <!-- Botón hamburguesa -LGS-->
+      <div class="col-6 d-block d-lg-none text-end">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-      
-      
+
+      <!-- Menú principal -LGS-->
       <div class="col-12 col-md-5">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
@@ -70,24 +71,28 @@
                 Contactanos
               </a>
             </li>
+
+            <!-- Iconos de redes para móvil -LGS-->
+            <li class="nav-item d-md-none mt-3">
+              <div class="d-flex justify-content-start align-items-center gap-2 ms-3">
+                <img class="navIcons" width="24" height="24" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="facebook" />
+                <img class="navIcons" width="28" height="28" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram" />
+                <img class="navIcons" width="24" height="24" src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
+              </div>
+            </li>
           </ul>
         </div>
       </div>
-      
-      <div
-      class="col-6 col-md-3 d-flex justify-content-center justify-content-md-end align-items-center gap-2 mt-2 mt-md-0">
-      <img class="navIcons" width="30" height="30" src="https://img.icons8.com/ios-filled/50/facebook--v1.png"
-      alt="facebook--v1" />
-      <img class="navIcons" width="40" height="40"
-      src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram-new" />
-      <img class="navIcons" width="30" height="30" src="https://img.icons8.com/glyph-neue/64/github.png"
-      alt="github" />
+
+      <!-- Iconos de redes sociales para escritorio -LGS-->
+      <div class="col-6 col-md-3 d-none d-md-flex justify-content-center justify-content-md-end align-items-center gap-2 mt-2 mt-md-0">
+        <img class="navIcons" width="30" height="30" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="facebook--v1" />
+        <img class="navIcons" width="40" height="40" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram-new" />
+        <img class="navIcons" width="30" height="30" src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
+      </div>
+
     </div>
-    
-    
   </div>
-  
-</div>
 </nav>
 
 <section id="welcome">
@@ -110,148 +115,196 @@
         <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
           Quae cumque dolor minus sed unde, deserunt illum animi, blanditiis esse impedit est placeat, 
           amet doloribus consequuntur ipsa molestiae laboriosam corporis nesciunt.</p>
-
+          
           <div>
             <button type="button" class="btn btn-outline-info">Info</button>
           </div>
-      </div>
-
-      <div class="col-6">
-        <img src="{% static 'img/quantica-qq.jpeg' %}" alt="About Us QQ" class="img-about">  
+        </div>
+        
+        <div class="col-6">
+          <!-- <img src="{% static 'img/quantica-qq.jpeg' %}" alt="About Us QQ" class="img-about">   -->
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-<button id="scrollToTopBtn" class="btn-animated"><i class="bi bi-arrow-up-short"></i></button>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-crossorigin="anonymous"></script>
-
-<script>
-  let animationStarted = false;
-  const canvas = document.getElementById('hyperCanvas');
-  const ctx = canvas.getContext('2d');
+  </section>
   
-  let stars = [];
-  const numStars = 400;
-  let w, h;
+  <!-- Incluir el slider -->
+  {% include "slider.html" %}
   
-  function resizeCanvas() {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-  }
   
-  function createStars() {
-    stars = [];
-    for (let i = 0; i < numStars; i++) {
-      stars.push({
-        x: (Math.random() - 0.5) * w,
-        y: (Math.random() - 0.5) * h,
-        z: Math.random() * w,
-        color: `rgba(255,255,255,${Math.random() * 0.8 + 0.2})`,
-      });
-    }
-  }
   
-  function drawStars() {
-    ctx.fillStyle = 'black';
-    ctx.fillRect(0, 0, w, h);
+  <button id="scrollToTopBtn" class="btn-animated"><i class="bi bi-arrow-up-short"></i></button>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+  crossorigin="anonymous"></script>
+  
+  <script>
+    let animationStarted = false;
+    const canvas = document.getElementById('hyperCanvas');
+    const ctx = canvas.getContext('2d');
     
-    for (let star of stars) {
-      let sx = (star.x / star.z) * w + w / 2;
-      let sy = (star.y / star.z) * h + h / 2;
-      
-      let px = (star.x / (star.z + 40)) * w + w / 2;
-      let py = (star.y / (star.z + 40)) * h + h / 2;
-      
-      ctx.beginPath();
-      ctx.strokeStyle = star.color;
-      ctx.lineWidth = 1.5;
-      ctx.moveTo(px, py);
-      ctx.lineTo(sx, sy);
-      ctx.stroke();
-      
-      star.z -= 25;
-      if (star.z < 1) {
-        star.z = w;
+    let stars = [];
+    const numStars = 400;
+    let w, h;
+    
+    function resizeCanvas() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      createStars(); // Importante: recalcula las estrellas para el nuevo tamaño
+    }
+    
+    function createStars() {
+      stars = [];
+      for (let i = 0; i < numStars; i++) {
+        stars.push({
+          x: (Math.random() - 0.5) * w,
+          y: (Math.random() - 0.5) * h,
+          z: Math.random() * w,
+          color: `rgba(255,255,255,${Math.random() * 0.8 + 0.2})`,
+        });
       }
     }
-  }
-  
-  function animate() {
-    drawStars();
-    requestAnimationFrame(animate);
-  }
-  
-  // impide reiniciar animación -LGS
-  function startAnimation() {
-    if (animationStarted) return;
-    animationStarted = true;
-    resizeCanvas();
-    createStars();
-    animate();
-  }
-  
-  window.addEventListener('resize', resizeCanvas);
-  document.addEventListener('DOMContentLoaded', startAnimation);
-</script>
-
-<script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("menu");
-    if (window.scrollY > window.innerHeight - 550) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
+    
+    function drawStars() {
+      ctx.fillStyle = 'black';
+      ctx.fillRect(0, 0, w, h);
+      
+      for (let star of stars) {
+        let sx = (star.x / star.z) * w + w / 2;
+        let sy = (star.y / star.z) * h + h / 2;
+        
+        let px = (star.x / (star.z + 40)) * w + w / 2;
+        let py = (star.y / (star.z + 40)) * h + h / 2;
+        
+        ctx.beginPath();
+        ctx.strokeStyle = star.color;
+        ctx.lineWidth = 1.5;
+        ctx.moveTo(px, py);
+        ctx.lineTo(sx, sy);
+        ctx.stroke();
+        
+        star.z -= 25;
+        if (star.z < 1) {
+          star.z = w;
+        }
+      }
     }
-  });
-</script>
-
-
-<script>
-  const iconos = document.getElementsByClassName('navIcons');
-  function updateIcons() {
-    for (let i = 0; i < iconos.length; i++) {
-      iconos[i].style.filter = window.scrollY >= window.innerHeight - 550
-      ? 'invert(0)' // negro
-      : 'invert(1)'; // blanco
+    
+    function animate() {
+      drawStars();
+      requestAnimationFrame(animate);
     }
-  }
-  window.addEventListener('load', updateIcons);
-  window.addEventListener('scroll', updateIcons);
-</script>
-
-
-<script>
-  // Obtener el botón
-  let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  
-  // Cuando el usuario se desplaza 20px desde la parte superior de la página, mostrar el botón
-  window.onscroll = function() {scrollFunction()};
-  
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      scrollToTopBtn.style.display = "flex";
-    } else {
-      scrollToTopBtn.style.display = "none";
+    
+    // impide reiniciar animación -LGS
+    function startAnimation() {
+      if (animationStarted) return;
+      animationStarted = true;
+      resizeCanvas();
+      createStars();
+      animate();
     }
-  }
+    
+    window.addEventListener('resize', resizeCanvas);
+    document.addEventListener('DOMContentLoaded', startAnimation);
+  </script>
   
-  // Cuando el usuario hace clic en el botón, desplazar a la parte superior de la página
-  scrollToTopBtn.addEventListener("click", backToTop);
+  <script>
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("menu");
+      if (window.scrollY > window.innerHeight - 550) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
   
-  function backToTop() {
-    document.body.scrollTop = 0; // Para navegadores Safari
-    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
-  }
-</script>
-
-
-
+  
+  <script>
+    const iconos = document.getElementsByClassName('navIcons');
+    function updateIcons() {
+      for (let i = 0; i < iconos.length; i++) {
+        iconos[i].style.filter = window.scrollY >= window.innerHeight - 550
+        ? 'invert(0)' // negro
+        : 'invert(1)'; // blanco
+      }
+    }
+    window.addEventListener('load', updateIcons);
+    window.addEventListener('scroll', updateIcons);
+  </script>
+  
+  
+  <script>
+    // Obtener el botón
+    let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+    // Cuando el usuario se desplaza 20px desde la parte superior de la página, mostrar el botón
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "flex";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+    
+    // Cuando el usuario hace clic en el botón, desplazar a la parte superior de la página
+    scrollToTopBtn.addEventListener("click", backToTop);
+    
+    function backToTop() {
+      document.body.scrollTop = 0; // Para navegadores Safari
+      document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+    }
+  </script>
+  
+  <script>
+    let currentCentered = null;
+    
+    function updateCenteredLogo() {
+      const slider = document.querySelector('.logo-slider');
+      const items = document.querySelectorAll('.logo-item');
+      if (!slider || items.length === 0) return;
+      
+      const sliderRect = slider.getBoundingClientRect();
+      const centerX = sliderRect.left + sliderRect.width / 2;
+      
+      let closestItem = null;
+      let closestDistance = Infinity;
+      
+      items.forEach(item => {
+        const itemRect = item.getBoundingClientRect();
+        const itemCenter = itemRect.left + itemRect.width / 2;
+        const distanceToCenter = Math.abs(centerX - itemCenter);
+        
+        if (distanceToCenter < closestDistance) {
+          closestDistance = distanceToCenter;
+          closestItem = item;
+        }
+      });
+      
+      if (closestItem && closestItem !== currentCentered) {
+        if (currentCentered) currentCentered.classList.remove('centered');
+        closestItem.classList.add('centered');
+        currentCentered = closestItem;
+      }
+    }
+    
+    function animateSliderCenter() {
+      updateCenteredLogo();
+      requestAnimationFrame(animateSliderCenter);
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      animateSliderCenter();
+    });
+  </script>
+  
+  
+  
+  
 </body>
 
 </html> 

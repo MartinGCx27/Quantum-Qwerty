@@ -1,0 +1,18 @@
+{% load static %}
+<section class="logo-slider-section">
+  <h2>NUESTROS LENGUAJES</h2>
+  <div class="logo-slider">
+    <div class="logo-track">
+      {% for logo in logos %}
+        <div class="logo-item">
+          <img src="{% static logo.src %}" alt="" class="{{ logo.class }}">
+        </div>
+      {% endfor %}
+      {% for logo in logos %}
+        <div class="logo-item">
+          <img src="{% static logo.src %}" alt="" class="{{ logo.class }}">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
