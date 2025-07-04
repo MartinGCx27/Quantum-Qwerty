@@ -18,6 +18,6 @@ def index(request):
         {'src': 'img/react.png', 'class': ''},
         {'src': 'img/swift.png', 'class': 'swift'},
         {'src': 'img/android_studio.png', 'class': 'android'},
-        {'src': 'img/wordpress.png', 'class': 'wordpress'},
+        {'src': 'img/wordpress.png', 'class': 'wordpress'}
     ]
     return render(request, 'index.html', {'logos': logos})

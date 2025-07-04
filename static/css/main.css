@@ -76,12 +76,13 @@ h1{
 }
 
 
+/* -------- ESTILOS PRINCIPALES -------- */
 .hyperjump-effect {
   position: relative;
   width: 100%;
   height: 100vh;
   background: black;
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
 }
 
@@ -90,36 +91,191 @@ h1{
   width: 100%;
   height: 100%;
   display: block;
-  z-index: 0; /* canvas detrás */
+  z-index: 0;
   pointer-events: none;
   top: 0;
   left: 0;
 }
 
-.qq-text {
+.overlay-text.qq-text {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Geometric 212', sans-serif;
-  font-size: 3rem;
   color: #EAE7E5;
   z-index: 2;
-  text-shadow: 0 0 10px #6b3290, 0 0 20px #5A1B84;
-  animation: fade-glow 3s ease-in-out infinite;
   text-align: center;
+  text-shadow: 0 0 10px #5A1B84, 0 0 20px #014276;
+  max-width: 62.5rem; /* 1000px */
+  padding: 0 1rem;
 }
 
-@keyframes fade-glow {
-  0%, 100% {
-    opacity: 1;
-    text-shadow: 0 0 10px #6B3290, 0 0 20px #5A1B84;
+.overlay-text.qq-text > * {
+  animation-name: focus-in-contract-bck;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.overlay-text.qq-text h1 {
+  animation-delay: 0s;
+  font-size: 2.4rem; /* aumentado de 2rem */
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  color: #00e5ff;
+}
+
+.qq-nombre {
+  display: block;
+  font-size: 2.8rem; /* aumentado de 2.4rem */
+  margin-top: 1.2rem;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: #5A1B84;
+  text-shadow: 0 0 10px #00e5ff, 0 0 20px #014276;
+}
+
+.overlay-text.qq-text p:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.overlay-text.qq-text p:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.overlay-text.qq-text p {
+  font-size: 1.4rem; /* aumentado de 1.2rem */
+  line-height: 2.2rem; /* aumentado un poco */
+  margin-top: 2rem;
+}
+
+.resaltado {
+  color: #00e5ff;
+  font-weight: bold;
+}
+
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
   }
-  50% {
-    opacity: 0.6;
-    text-shadow: 0 0 5px #6B3290, 0 0 10px #5A1B84;
+  100% {
+    letter-spacing: normal;
+    transform: translateZ(0);
+    filter: blur(0);
+    opacity: 1;
   }
 }
+
+/* Scroll abajo - texto y flechas -LGS*/
+.scroll-down-indicator {
+  position: absolute; /* Posiciona el elemento relativo a su contenedor -LGS */
+  bottom: 2.5rem;  /* Lo coloca a 2.5rem del borde inferior -LGS */
+  left: 50%; /* Lo centra horizontalmente en el 50% del contenedor -LGS */
+  transform: translateX(-50%); /* Ajusta la posición para que quede exactamente centrado -LGS */
+  display: flex;  /* Usa flexbox para alinear sus hijos -LGS */
+  align-items: center; /* Centra verticalmente los elementos hijos -LGS */
+  gap: 1.5rem; /* Espacio entre los elementos hijos -LGS */
+  font-family: 'Geometric 212', sans-serif; /* Define la fuente del texto -LGS */
+  color: #5A1B84; /* Color del texto -LGS */
+  text-shadow: 0 0 10px #5A1B84, 0 0 20px #014276; /* Sombra con efecto de resplandor -LGS */
+  z-index: 9999; /* Asegura que esté encima de casi todo -LGS */
+  padding: 0 1rem; /* Espaciado interno horizontal -LGS */
+}
+
+.scroll-text {
+  font-size: 1.4rem; /* aumentado de 1.2rem -LGS */
+  white-space: nowrap; /* Evita que el texto haga salto de línea -LGS */
+  animation: fadeInUp 1.5s ease forwards; /* Aplica animación para que aparezca y suba -LGS */
+}
+
+.arrow-svg {
+  width: 1.875rem; /* Ancho del icono SVG de flecha -LGS */
+  height: 1.875rem;/* Alto del icono SVG de flecha -LGS */
+  animation: arrowBounce 1.8s ease-in-out infinite; /* Animación de rebote infinito -LGS */
+  opacity: 0.8;/* Opacidad un poco transparente -LGS */
+}
+
+.left-arrow {
+  animation-delay: 0s;/* Sin retraso en la animación -LGS */
+}
+
+.right-arrow {
+  animation-delay: 0.3s;/* Retraso para que las flechas no se muevan al mismo tiempo -LGS */
+}
+
+/* Animación que hace que las flechas se muevan hacia arriba y hacia abajo -LGS */
+@keyframes arrowBounce {
+  0%   { transform: translateY(0); opacity: 0.2; }
+  50%  { transform: translateY(0.5rem); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.2; }
+}
+
+/* Animación para que el texto aparezca con un efecto de desvanecimiento y subida -LGS */
+@keyframes fadeInUp {
+  0%   { opacity: 0; transform: translateY(0.625rem); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 48rem) {
+  .overlay-text.qq-text h1 {
+    font-size: 2rem;
+  }
+
+  .nombre-empresa {
+    font-size: 2.4rem;
+  }
+
+  .overlay-text.qq-text p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .scroll-text {
+    font-size: 1.2rem;
+  }
+
+  .arrow-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .overlay-text.qq-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .nombre-empresa {
+    font-size: 2rem;
+  }
+
+  .overlay-text.qq-text p {
+    font-size: 1.05rem;
+    line-height: 1.6rem;
+    margin-top: 1.2rem;
+  }
+
+  .scroll-text {
+    font-size: 1rem;
+  }
+
+  .arrow-svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .scroll-down-indicator {
+    gap: 0.5rem;
+  }
+}
+
+
+
 
 .custom-navbar {
     background-color: transparent;
@@ -304,5 +460,55 @@ h1{
 
 img.wordpress {
   height: 10rem;
+}
+
+/* --- RESPONSIVE -LGS --- */
+@media (max-width: 992px) {
+  .logo-item {
+    height: 6rem;
+    margin: 0 1.2rem;
+  }
+
+  .logo-item img {
+    height: 5rem;
+  }
+
+  img.wordpress {
+    height: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-item {
+    height: 5rem;
+    margin: 0 1rem;
+  }
+
+  .logo-item img {
+    height: 4rem;
+  }
+
+  .logo-slider-section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-item {
+    height: 4rem;
+    margin: 0 0.8rem;
+  }
+
+  .logo-item img {
+    height: 3rem;
+  }
+
+  .logo-slider-section {
+    padding: 3rem 0.5rem;
+  }
+
+  .logo-slider-section h2 {
+    font-size: 1.1rem;
+  }
 }
 /* --- TERMINA SLIDER ---LGS */

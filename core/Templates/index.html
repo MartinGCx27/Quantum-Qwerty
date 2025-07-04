@@ -98,14 +98,9 @@
 <section id="welcome">
   
 </section>
+
 <!-- este es el bueno -->
-<section class="hyperjump-effect">
-  <canvas id="hyperCanvas"></canvas>
-  <div class="overlay-text qq-text">
-    <h1>Dos de asada spiderman</h1>
-    <p>El Leo se la come</p>
-  </div>
-</section>
+ {% include "hyper-jump.html" %}
 
 <section id="about-us" class="bg-purple">
   <h1 class="ms-4">Sobre nosotros</h1>
@@ -122,11 +117,12 @@
         </div>
         
         <div class="col-6">
-          <!-- <img src="{% static 'img/quantica-qq.jpeg' %}" alt="About Us QQ" class="img-about">   -->
+          <!-- <img src="{% static 'img/quantica-qq.jpeg' %}" alt="About Us QQ" class="img-about"> -->
         </div>
       </div>
     </div>
   </section>
+
   
   <!-- Incluir el slider -->
   {% include "slider.html" %}
