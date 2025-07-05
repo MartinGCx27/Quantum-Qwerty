@@ -1,0 +1,125 @@
+{% load static %}
+
+<section id="about-us" class="bg-purple py-5">
+    <div class="container">
+        <h1 class="text-white mb-4">Sobre nosotros</h1>
+        <div class="row align-items-center">
+            
+            <div class="col-md-6 col-12 mb-4 mb-md-0 card-about">
+                <p class="card-text text-white">
+                    En Quantum Qwerty, nos especializamos en soluciones web. 
+                    Sin embargo, no solo desarrollamos software a medida: conectamos tu negocio con el mundo digital.
+                    Creamos soluciones integrales que combinan tecnología, estrategia y creatividad. 
+                    Desde la creación de contenido y posicionamiento web, hasta el diseño visual y 
+                    la gestión inteligente de datos, te ayudamos a destacar, crecer y evolucionar en el entorno digital.
+                </p>
+                <div class="text-center text-md-start about-us">
+                    <a href="#" class="button-know-us">
+                        <span> Conocenos </span>
+                        <div class="span-wrapper">
+                            <span class="s1"></span>
+                            <span class="s2"></span>
+                            <span class="s3"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-12 text-center" style="position: relative;">
+                <svg class="img-about" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <filter id="turbulent-dissolve" x="0%" y="0%">
+                            <feTurbulence type="fractalNoise" baseFrequency=".012"/>
+                            <feColorMatrix type="luminanceToAlpha"/>
+                            <feComponentTransfer>
+                                <feFuncA type="linear" slope="0">
+                                    <animate attributeName="slope" values="0;0;0;0;0;0.5;1;1.5;2;2;2;2;2;2;1.5;1;0.5;0" dur="8s" repeatCount="indefinite"/>
+                                </feFuncA>
+                            </feComponentTransfer>
+                            <feComponentTransfer>
+                                <feFuncA type="discrete" tableValues="0 1"/>
+                            </feComponentTransfer>
+                            <feGaussianBlur stdDeviation="1"/>
+                            <feComposite operator="in" in="SourceGraphic" result="overlay"/>
+                            <feImage width="500px" height="300px" xlink:href="{% static 'img/about_us1.png' %}" result="underlay"/>
+                            <feComposite operator="over" in="overlay" in2="underlay"/>
+                        </filter>
+                    </defs> 
+                    <image filter="url(#turbulent-dissolve)" xlink:href="{% static 'img/about_us2.png' %}"/>
+                </svg>
+                
+                <!-- Mensaje temporal -->
+                <div class="auto-hide-message mt-3" id="autoMessage">
+                    <span>Hola!!! soy QQ te apoyaré con tus dudas</span>
+                    <button onclick="closeMessage()">✖</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Script para el mensaje temporal -->
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const msg = document.getElementById('autoMessage');
+        msg.style.display = 'block';
+        setTimeout(() => {
+            msg.style.display = 'none';
+        }, 4000);
+    });
+    
+    function closeMessage() {
+        document.getElementById('autoMessage').style.display = 'none';
+    }
+</script>
+
+<!-- Script para animaciones al hacer scroll -->
+{% comment %} <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const aboutSection = document.getElementById('about-us');
+        const animDown = aboutSection.querySelector('h1');
+        const animLeft = aboutSection.querySelector('.card-text');
+        const animUp = aboutSection.querySelector('.about-us');
+        const animRightImg = aboutSection.querySelector('.img-about');
+        
+        function resetAnimations() {
+            animDown.classList.remove('animate__fadeInDown', 'animate__animated');
+            animLeft.classList.remove('animate__fadeInLeft', 'animate__animated');
+            animUp.classList.remove('animate__fadeInUp', 'animate__animated');
+            animRightImg.classList.remove('animate__fadeInRight', 'animate__animated');
+        }
+        
+        function playAnimations() {
+            animDown.classList.add('animate__animated', 'animate__fadeInDown');
+            animLeft.classList.add('animate__animated', 'animate__fadeInLeft');
+            animUp.classList.add('animate__animated', 'animate__fadeInUp');
+            animRightImg.classList.add('animate__animated', 'animate__fadeInRight');
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    playAnimations();
+                } else {
+                    resetAnimations();
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        observer.observe(aboutSection);
+    });
+</script> {% endcomment %}
+
+<script type="module">
+  import { animationsScroll } from "{% static 'js/animationsScroll.js' %}";
+
+  animationsScroll.activate('#about-us', {
+    animations: {
+      'h1': 'fadeInDown',
+      '.card-text': 'fadeInLeft',
+      '.about-us': 'fadeInUp',
+      '.img-about': 'fadeInRight'
+    },
+    threshold: 0.1
+  });
+</script>
