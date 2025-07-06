@@ -31,6 +31,9 @@ h4, h4, h5, h6 {
   src: url("/static/font/Montserrat/Montserrat-Regular.ttf");
 }
 
+p {
+    font-family: "Montserrat-regular" !important;
+}
 
 /* titulos geometry heavy subtitulos geometry book */
 /* monserrat parrafos */
