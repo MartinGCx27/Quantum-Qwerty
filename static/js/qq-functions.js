@@ -1,7 +1,7 @@
 export class animationsScroll {
 
   // Método estático que se puede llamar sin instanciar la clase
-  static activate(sectionSelector, options = {}) {
+  static activate(sectionSelector, animations = {}, threshold = 0.1) {
 
     // 1. Seleccionamos la sección a la que se le aplicarán las animaciones
     const section = document.querySelector(sectionSelector);
@@ -9,14 +9,14 @@ export class animationsScroll {
 
     // 2. Obtenemos las animaciones que se van a aplicar (vienen en el objeto 'options')
     // Este objeto debe tener la forma: 'elemento' : 'animacion' ejemplo: { '.clase': 'fadeInLeft', 'h1': 'fadeInDown'}
-    const animations = options.animations || {};
+    // const animations = animations;
 
     // 3. Definimos qué tan visible debe estar la sección para activar las animaciones
-    const threshold = options.threshold ?? 0.1;
+    // const threshold = threshold;
 
     // 4. Creamos un objeto para guardar los elementos seleccionados dentro de la sección
     const elements = {};
-
+  
     // 5. Recorremos cada selector dentro de 'animations' y buscamos el elemento correspondiente en la sección
     Object.keys(animations).forEach(key => {
       elements[key] = section.querySelector(key);
@@ -24,8 +24,8 @@ export class animationsScroll {
 
     // 6. Función que quita las animaciones
     function resetAnimations() {
-      Object.entries(animations).forEach(([key, animation]) => {
-        const element = elements[key];
+        Object.entries(animations).forEach(([key, animation]) => {
+          const element = elements[key];
         if (element) {
           // Quitamos las clases de animación
           element.classList.remove('animate__animated', `animate__${animation}`);

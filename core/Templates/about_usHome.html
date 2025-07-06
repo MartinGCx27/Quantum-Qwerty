@@ -74,52 +74,17 @@
 </script>
 
 <!-- Script para animaciones al hacer scroll -->
-{% comment %} <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const aboutSection = document.getElementById('about-us');
-        const animDown = aboutSection.querySelector('h1');
-        const animLeft = aboutSection.querySelector('.card-text');
-        const animUp = aboutSection.querySelector('.about-us');
-        const animRightImg = aboutSection.querySelector('.img-about');
-        
-        function resetAnimations() {
-            animDown.classList.remove('animate__fadeInDown', 'animate__animated');
-            animLeft.classList.remove('animate__fadeInLeft', 'animate__animated');
-            animUp.classList.remove('animate__fadeInUp', 'animate__animated');
-            animRightImg.classList.remove('animate__fadeInRight', 'animate__animated');
-        }
-        
-        function playAnimations() {
-            animDown.classList.add('animate__animated', 'animate__fadeInDown');
-            animLeft.classList.add('animate__animated', 'animate__fadeInLeft');
-            animUp.classList.add('animate__animated', 'animate__fadeInUp');
-            animRightImg.classList.add('animate__animated', 'animate__fadeInRight');
-        }
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    playAnimations();
-                } else {
-                    resetAnimations();
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        observer.observe(aboutSection);
-    });
-</script> {% endcomment %}
 
 <script type="module">
-  import { animationsScroll } from "{% static 'js/animationsScroll.js' %}";
+  import { animationsScroll } from "{% static 'js/qq-functions.js' %}";
 
-  animationsScroll.activate('#about-us', {
-    animations: {
+  animationsScroll.activate('#about-us', 
+     {
       'h1': 'fadeInDown',
       '.card-text': 'fadeInLeft',
       '.about-us': 'fadeInUp',
       '.img-about': 'fadeInRight'
     },
-    threshold: 0.1
-  });
+    0.1
+  );
 </script>
