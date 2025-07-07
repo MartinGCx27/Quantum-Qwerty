@@ -6,6 +6,9 @@
       {% for logo in logos %}
         <div class="logo-item">
           <img src="{% static logo.src %}" alt="" class="{{ logo.class }}">
+          <script>
+            console.log(logo);
+          </script>
         </div>
       {% endfor %}
       {% for logo in logos %}
