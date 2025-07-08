@@ -70,13 +70,14 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
-
-.bg-purple {
-    background: #6B3290;
-    background: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%, rgba(90, 27, 132, 1) 33%, rgba(72, 22, 106, 1) 66%, rgba(45, 14, 66, 1) 100%);
-    height: 100vh;
-    font-family: 'Monsterrat';
-    color: #EAE7E5 !important;
+body{
+  background: #6B3290;
+   background: linear-gradient(0deg, #6b3290 0%, #5a1b84 33%, #48166a 66%, #2d0e42 100%);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   font-family: 'Montserrat', sans-serif;
+   color: #EAE7E5 !important;
 }
 
  .nav-link {
