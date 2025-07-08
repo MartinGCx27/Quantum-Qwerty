@@ -26,7 +26,7 @@
             </div>
             
             <div class="col-md-6 col-12 text-center" style="position: relative;">
-                <svg class="img-about" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid meet">
+                <svg class="img-about" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
                     <defs>
                         <filter id="turbulent-dissolve" x="0%" y="0%">
                             <feTurbulence type="fractalNoise" baseFrequency=".012"/>
@@ -41,7 +41,7 @@
                             </feComponentTransfer>
                             <feGaussianBlur stdDeviation="1"/>
                             <feComposite operator="in" in="SourceGraphic" result="overlay"/>
-                            <feImage width="500px" height="300px" xlink:href="{% static 'img/about_us1.png' %}" result="underlay"/>
+                            <feImage width="600px" height="400px" xlink:href="{% static 'img/about_us1.png' %}" result="underlay"/>
                             <feComposite operator="over" in="overlay" in2="underlay"/>
                         </filter>
                     </defs> 

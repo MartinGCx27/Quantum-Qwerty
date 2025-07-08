@@ -37,29 +37,6 @@ p {
 
 /* titulos geometry heavy subtitulos geometry book */
 /* monserrat parrafos */
-
-/* Global colors var -LGS */
-:root {
-  --primary-color: #5A1B84; /* Color principal base */
-  --secondary-color: #014276; /* Color principal base */
-  --primary-color-light: #8237a4; /* Variante más clara del color principal */
-  --primary-color-lighter: #c89bdc; /* Variante aún más clara */
-  --primary-color-dark: #451466; /* Variante más oscura */
-  --secondary-color-light: #0360a3;
-  --secondary-color-lighter: #3a86c3;
-  --secondary-color-dark: #012c4f;
-  --background-color: linear-gradient(0deg, rgba(107, 50, 144, 1) 0%,
-   rgba(90, 27, 132, 1) 33%,
-   rgba(72, 22, 106, 1) 66%,
-   rgba(45, 14, 66, 1) 100%); /* Color de fondo claro (degradado) */
-  --default-color: #EAE7E5; /* Color de texto general  */
-  --default-color-invert: #000;
-  --heading-color: var(--primary-color); /* Color de títulos (usa el color principal) */
-  --accent-color: var(--primary-color); /* Color para acentos o detalles (igual que el principal) */
-  --complementary-color: #E8A9D8; /*color complemenario  */
-  --complementary-light-color: #76D7D9; /* complementario claro */
-}
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -431,7 +408,7 @@ html, body {
 
 .img-about {
   width: 100%;
-  max-width: 31.25rem;
+  max-width: 37.5rem;
   height: auto;
 }
 
@@ -446,25 +423,26 @@ html, body {
   margin-bottom: 1.25rem;
 }
 
-@media (max-width: 48rem) {
-  #about-us {
-    padding: 5rem 1.25rem 3.125rem 1.25rem;
-    min-height: auto;
-    text-align: center;
-  }
-
-  .card-about {
-    text-align: center;
-  }
-
-  .card-about .card-text {
-    font-size: 1rem;
-  }
-
+@media (max-width: 47rem) {
   .img-about {
-    width: 90%;
-    max-width: none;
-    margin-top: 1.875rem;
+    display: none;
+  }
+  
+  #about-us {
+    background-image: url("/static/img/about_us1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .card-about {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
   }
 }
 
