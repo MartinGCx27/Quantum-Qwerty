@@ -732,6 +732,7 @@ img.wordpress {
   }
 }
 /* --- TERMINA SLIDER ---LGS */
+/* --- Sección de servicios -Memix */
 .services{
   margin-bottom: 4.135rem !important;
   margin-top: 0.9rem !important;
@@ -753,10 +754,33 @@ img.wordpress {
   height: 100% !important;
   
 }
+/* Pantallas tipo laptop/tablet (medianas) -Memix */
 @media (max-width: 1280px) {
-    .card-services, .card-services-2 {
-        margin: 2.8rem; 
-    }
+  .card-services,
+  .card-services-2 {
+    margin: 2rem auto;
+    max-width: 90%;
+  }
+}
+
+/* Pantallas pequeñas (tablets y móviles en horizontal) -Memix */
+@media (max-width: 768px) {
+  .card-services,
+  .card-services-2 {
+    margin: 1.5rem auto;
+    width: 90%;
+    max-width: none;
+  }
+}
+
+/* Móviles (vertical, pantallas muy pequeñas) -Memix */
+@media (max-width: 480px) {
+  .card-services,
+  .card-services-2 {
+    margin: 1rem auto;
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 .card-services-2 {
@@ -807,6 +831,7 @@ img.wordpress {
  h2 {
    text-shadow: #000000 0px 0px 15px;
  }
+ /* Botones de servicios -Memix */
 .services-button, .services-button-2{
   position: relative;
   padding: 1.5rem 3rem;
