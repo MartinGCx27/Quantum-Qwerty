@@ -4,254 +4,254 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quantum Qwerty | {% block title %} {% endblock %}</title>
+  <title>Quantum Qwerty {% block title %} {% endblock %}</title>
   {% load static %}
   <!-- Main CSS File -->
   <link href="{% static 'css/main.css' %}" rel="stylesheet">
-  
+  <!-- Bootsrap CDN-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <!--Bootsrap-icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  
+  <!-- Aos CDN -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{% static 'img/favicon-96x96.png' %}" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="{% static 'img/favicon.svg' %}" />
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}" />
+  <meta name="apple-mobile-web-app-title" content="QuantumQwerty" />
+  <link rel="manifest" href="{% static 'img/site.webmanifest' %}" />
+
 </head>
-<script>
-  setTimeout(() => {
-    document.querySelector("#Example").scrollIntoView({ behavior: "smooth" });
-  }, 5000);
-</script>
 
 <body>
-  
+
   <nav id="menu" class="navbar navbar-expand-lg fixed-top custom-navbar">
     <div class="container-fluid">
       <div class="row w-100">
-        
+
         <div class="col-6 col-md-4">
           <a class="navbar-brand" href="#">
             <img src="{% static 'img/logo_blanco.png' %}" alt="Logo" width="30" height="24"
-            class="d-inline-block align-text-top">
-            
+              class="d-inline-block align-text-top">
             Quantum Qwerty
           </a>
         </div>
-        
+
         <div class="col-6 d-block d-lg-none text-end">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+
+        <div class="col-12 col-md-5">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item d-flex align-items-center">
+                <a href="#" class="nav-link d-flex align-items-center">
+                  <img class="nav-icon" src="{% static 'img/home-icon.png' %}" alt="Inicio"
+                    style="margin-right: 6px;" />
+                  Inicio
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <a href="#" class="nav-link d-flex align-items-center">
+                  <img class="nav-icon" src="{% static 'img/about-icon.png' %}" alt="Sobre Nosotros"
+                    style="margin-right: 6px;" />
+                  Sobre nosotros
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <a href="#" class="nav-link d-flex align-items-center">
+                  <img class="nav-icon" src="{% static 'img/services2-icon.png' %}" alt="Servicios"
+                    style="margin-right: 6px;" />
+                  Servicios
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <a href="#" class="nav-link d-flex align-items-center">
+                  <img class="nav-icon" src="{% static 'img/contact-icon.png' %}" alt="Contactanos"
+                    style="margin-right: 6px;" />
+                  Contactanos
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="col-6 col-md-3 d-flex justify-content-center justify-content-md-end align-items-center gap-2 mt-2 mt-md-0">
+          <img class="navIcons" width="30" height="30" src="https://img.icons8.com/ios-filled/50/facebook--v1.png"
+            alt="facebook--v1" />
+          <img class="navIcons" width="40" height="40"
+            src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram-new" />
+          <img class="navIcons" width="30" height="30" src="https://img.icons8.com/glyph-neue/64/github.png"
+            alt="github" />
+        </div>
+
+
       </div>
-      
-      
-      <div class="col-12 col-md-5">
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item d-flex align-items-center">
-              <a href="#" class="nav-link d-flex align-items-center">
-                <img class="nav-icon" src="{% static 'img/home-icon.png' %}" alt="Inicio" style="margin-right: 6px;" />
-                Inicio
-              </a>
-            </li>
-            <li class="nav-item d-flex align-items-center">
-              <a href="#" class="nav-link d-flex align-items-center">
-                <img class="nav-icon" src="{% static 'img/about-icon.png' %}" alt="Sobre Nosotros" style="margin-right: 6px;" />
-                Sobre nosotros
-              </a>
-            </li>
-            <li class="nav-item d-flex align-items-center">
-              <a href="#" class="nav-link d-flex align-items-center">
-                <img class="nav-icon" src="{% static 'img/services2-icon.png' %}" alt="Servicios" style="margin-right: 6px;" />
-                Servicios
-              </a>
-            </li>
-            <li class="nav-item d-flex align-items-center">
-              <a href="#" class="nav-link d-flex align-items-center">
-                <img class="nav-icon" src="{% static 'img/contact-icon.png' %}" alt="Contactanos" style="margin-right: 6px;" />
-                Contactanos
-              </a>
-            </li>
-          </ul>
+
+    </div>
+  </nav>
+
+
+  
+  
+{% include 'home/services.html' %}
+
+  <button id="scrollToTopBtn" class="btn-animated"><i class="bi bi-arrow-up-short"></i></button>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <p>&copy; 2025 Quantum Qwerty. Todos los derechos reservados.</p>
+          <p>Powered By: Quantum Qwerty</p>
         </div>
       </div>
-      
-      <div
-      class="col-6 col-md-3 d-flex justify-content-center justify-content-md-end align-items-center gap-2 mt-2 mt-md-0">
-      <img class="navIcons" width="30" height="30" src="https://img.icons8.com/ios-filled/50/facebook--v1.png"
-      alt="facebook--v1" />
-      <img class="navIcons" width="40" height="40"
-      src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram-new" />
-      <img class="navIcons" width="30" height="30" src="https://img.icons8.com/glyph-neue/64/github.png"
-      alt="github" />
     </div>
-    
-    
-  </div>
-  
-</div>
-</nav>
-
-<section id="welcome">
-  
-</section>
-<!-- este es el bueno -->
-<section class="hyperjump-effect">
-  <canvas id="hyperCanvas"></canvas>
-  <div class="overlay-text qq-text">
-    <h1>Dos de asada spiderman</h1>
-    <p>El Leo se la come</p>
-  </div>
-</section>
-
-<section id="about-us" class="bg-purple">
-  <h1 class="ms-4">Sobre nosotros</h1>
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-6 card-about">
-        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-          Quae cumque dolor minus sed unde, deserunt illum animi, blanditiis esse impedit est placeat, 
-          amet doloribus consequuntur ipsa molestiae laboriosam corporis nesciunt.</p>
-
-          <div>
-            <button type="button" class="btn btn-outline-info">Info</button>
-          </div>
-      </div>
-
-      <div class="col-6">
-        <img src="{% static 'img/quantica-qq.jpeg' %}" alt="About Us QQ" class="img-about">  
-      </div>
-    </div>
-  </div>
-</section>
+  </footer>
 
 
-<button id="scrollToTopBtn" class="btn-animated"><i class="bi bi-arrow-up-short"></i></button>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-crossorigin="anonymous"></script>
+  <script>
+    let animationStarted = false;
+    const canvas = document.getElementById('hyperCanvas');
+    const ctx = canvas.getContext('2d');
 
-<script>
-  let animationStarted = false;
-  const canvas = document.getElementById('hyperCanvas');
-  const ctx = canvas.getContext('2d');
-  
-  let stars = [];
-  const numStars = 400;
-  let w, h;
-  
-  function resizeCanvas() {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-  }
-  
-  function createStars() {
-    stars = [];
-    for (let i = 0; i < numStars; i++) {
-      stars.push({
-        x: (Math.random() - 0.5) * w,
-        y: (Math.random() - 0.5) * h,
-        z: Math.random() * w,
-        color: `rgba(255,255,255,${Math.random() * 0.8 + 0.2})`,
-      });
+    let stars = [];
+    const numStars = 400;
+    let w, h;
+
+    function resizeCanvas() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
     }
-  }
-  
-  function drawStars() {
-    ctx.fillStyle = 'black';
-    ctx.fillRect(0, 0, w, h);
-    
-    for (let star of stars) {
-      let sx = (star.x / star.z) * w + w / 2;
-      let sy = (star.y / star.z) * h + h / 2;
-      
-      let px = (star.x / (star.z + 40)) * w + w / 2;
-      let py = (star.y / (star.z + 40)) * h + h / 2;
-      
-      ctx.beginPath();
-      ctx.strokeStyle = star.color;
-      ctx.lineWidth = 1.5;
-      ctx.moveTo(px, py);
-      ctx.lineTo(sx, sy);
-      ctx.stroke();
-      
-      star.z -= 25;
-      if (star.z < 1) {
-        star.z = w;
+
+    function createStars() {
+      stars = [];
+      for (let i = 0; i < numStars; i++) {
+        stars.push({
+          x: (Math.random() - 0.5) * w,
+          y: (Math.random() - 0.5) * h,
+          z: Math.random() * w,
+          color: `rgba(255,255,255,${Math.random() * 0.8 + 0.2})`,
+        });
       }
     }
-  }
-  
-  function animate() {
-    drawStars();
-    requestAnimationFrame(animate);
-  }
-  
-  // impide reiniciar animación -LGS
-  function startAnimation() {
-    if (animationStarted) return;
-    animationStarted = true;
-    resizeCanvas();
-    createStars();
-    animate();
-  }
-  
-  window.addEventListener('resize', resizeCanvas);
-  document.addEventListener('DOMContentLoaded', startAnimation);
-</script>
 
-<script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("menu");
-    if (window.scrollY > window.innerHeight - 550) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
+    function drawStars() {
+      ctx.fillStyle = 'black';
+      ctx.fillRect(0, 0, w, h);
+
+      for (let star of stars) {
+        let sx = (star.x / star.z) * w + w / 2;
+        let sy = (star.y / star.z) * h + h / 2;
+
+        let px = (star.x / (star.z + 40)) * w + w / 2;
+        let py = (star.y / (star.z + 40)) * h + h / 2;
+
+        ctx.beginPath();
+        ctx.strokeStyle = star.color;
+        ctx.lineWidth = 1.5;
+        ctx.moveTo(px, py);
+        ctx.lineTo(sx, sy);
+        ctx.stroke();
+
+        star.z -= 25;
+        if (star.z < 1) {
+          star.z = w;
+        }
+      }
     }
-  });
-</script>
 
-
-<script>
-  const iconos = document.getElementsByClassName('navIcons');
-  function updateIcons() {
-    for (let i = 0; i < iconos.length; i++) {
-      iconos[i].style.filter = window.scrollY >= window.innerHeight - 550
-      ? 'invert(0)' // negro
-      : 'invert(1)'; // blanco
+    function animate() {
+      drawStars();
+      requestAnimationFrame(animate);
     }
-  }
-  window.addEventListener('load', updateIcons);
-  window.addEventListener('scroll', updateIcons);
-</script>
-
-
-<script>
-  // Obtener el botón
-  let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  
-  // Cuando el usuario se desplaza 20px desde la parte superior de la página, mostrar el botón
-  window.onscroll = function() {scrollFunction()};
-  
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      scrollToTopBtn.style.display = "flex";
-    } else {
-      scrollToTopBtn.style.display = "none";
+    function startAnimation() {
+      if (animationStarted) return;
+      animationStarted = true;
+      resizeCanvas();
+      createStars();
+      animate();
     }
-  }
-  
-  // Cuando el usuario hace clic en el botón, desplazar a la parte superior de la página
-  scrollToTopBtn.addEventListener("click", backToTop);
-  
-  function backToTop() {
-    document.body.scrollTop = 0; // Para navegadores Safari
-    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
-  }
-</script>
+
+    window.addEventListener('resize', resizeCanvas);
+    document.addEventListener('DOMContentLoaded', startAnimation);
+  </script>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("menu");
+      if (window.scrollY > window.innerHeight - 550) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+
+  <script>
+    const iconos = document.getElementsByClassName('navIcons');
+    function updateIcons() {
+      for (let i = 0; i < iconos.length; i++) {
+        iconos[i].style.filter = window.scrollY >= window.innerHeight - 550
+          ? 'invert(0)'
+          : 'invert(1)';
+      }
+    }
+    window.addEventListener('load', updateIcons);
+    window.addEventListener('scroll', updateIcons);
+  </script>
+
+
+  <script>
+    let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "flex";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+
+    scrollToTopBtn.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script>
+    function scrollToAboutIfOnFirstSection() {
+      const firstSection = document.querySelector('.hyperjump-effect');
+      const aboutSection = document.querySelector('#about-us');
+
+      if (window.scrollY < firstSection.offsetHeight) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    setTimeout(scrollToAboutIfOnFirstSection, 3000);
+    /* 3000 milliseconds = 3 seconds -Memix */
+  </script>
+
 
 
 
 </body>
 
-</html> 
+</html>
