@@ -1,9 +1,11 @@
 from django.shortcuts import render
+import pdb 
 
 # Create your views here.
 def index(request):
     logos = [
-        {'src': 'img/one-piece.png', 'class': ''},
+        {'src': 'img/one-piece.png',
+          'class': ''},
         {'src': 'img/html-5.png', 'class': ''},
         {'src': 'img/css-3.png', 'class': ''},
         {'src': 'img/javascript.png', 'class': ''},
@@ -20,4 +22,5 @@ def index(request):
         {'src': 'img/android_studio.png', 'class': 'android'},
         {'src': 'img/wordpress.png', 'class': 'wordpress'}
     ]
+    # pdb.set_trace()
     return render(request, 'index.html', {'logos': logos})
