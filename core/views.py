@@ -24,3 +24,6 @@ def index(request):
     ]
     # pdb.set_trace()
     return render(request, 'index.html', {'logos': logos})
+
+def services(request):
+    return render(request, 'services.html')
