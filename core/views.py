@@ -24,6 +24,9 @@ def index(request):
     ]
     # pdb.set_trace()
     return render(request, 'index.html', {'logos': logos})
-
+    
 def ContactUs(request):
     return render(request, 'ContactUs.html')
+
+def aboutUs(request):
+    return render(request, 'aboutUs.html')
