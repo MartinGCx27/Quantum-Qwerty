@@ -13,7 +13,7 @@
   <!--Bootsrap-icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
+
   <!-- Aos CDN -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Favicon -->
@@ -73,7 +73,7 @@
               </a>
             </li>
             <li class="nav-item d-flex align-items-center">
-              <a href="#" class="nav-link d-flex align-items-center">
+              <a href="{% url 'contactus' %}" class="nav-link d-flex align-items-center">
                 <img class="nav-icon" src="{% static 'img/contact-icon.png' %}" alt="Contactanos" style="margin-right: 6px;" />
                 Contactanos
               </a>
@@ -129,198 +129,17 @@
 
 <button id="scrollToTopBtn" class="btn-animated"><i class="bi bi-arrow-up-short"></i></button>
 
-<script>
-  let animationStarted = false;
-  const canvas = document.getElementById('hyperCanvas');
-  const ctx = canvas.getContext('2d');
-  
-  let stars = [];
-  const numStars = 400;
-  let w, h;
-  
-  function resizeCanvas() {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-    createStars(); // Importante: recalcula las estrellas para el nuevo tamaño
-  }
-  
-  function createStars() {
-    stars = [];
-    for (let i = 0; i < numStars; i++) {
-      stars.push({
-        x: (Math.random() - 0.5) * w,
-        y: (Math.random() - 0.5) * h,
-        z: Math.random() * w,
-        color: `rgba(255,255,255,${Math.random() * 0.8 + 0.2})`,
-      });
-    }
-  }
-  
-  function drawStars() {
-    ctx.fillStyle = 'black';
-    ctx.fillRect(0, 0, w, h);
-    
-    for (let star of stars) {
-      let sx = (star.x / star.z) * w + w / 2;
-      let sy = (star.y / star.z) * h + h / 2;
-      
-      let px = (star.x / (star.z + 40)) * w + w / 2;
-      let py = (star.y / (star.z + 40)) * h + h / 2;
-      
-      ctx.beginPath();
-      ctx.strokeStyle = star.color;
-      ctx.lineWidth = 1.5;
-      ctx.moveTo(px, py);
-      ctx.lineTo(sx, sy);
-      ctx.stroke();
-      
-      star.z -= 25;
-      if (star.z < 1) {
-        star.z = w;
-      }
-    }
-  }
-  
-  function animate() {
-    drawStars();
-    requestAnimationFrame(animate);
-  }
-  
-  // impide reiniciar animación -LGS
-  function startAnimation() {
-    if (animationStarted) return;
-    animationStarted = true;
-    resizeCanvas();
-    createStars();
-    animate();
-  }
-  
-  window.addEventListener('resize', resizeCanvas);
-  document.addEventListener('DOMContentLoaded', startAnimation);
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+crossorigin="anonymous"></script>
 
-<!-- Script que agrega una clase al navbar cuando el usuario hace scroll para cambiar su estilo -Fer -->
-<script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("menu");
-    if (window.scrollY > window.innerHeight - 80) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-</script>
-
-
-<!-- Actualiza íconos y logo del navbar según el scroll -Fer -->
-<script>
-  const icons = document.getElementsByClassName('navIcons');
-  const logo = document.getElementsByClassName('navbar-logo')[0];
-  
-  function updateNavbarIL() {
-    const useColorDark = window.scrollY >= window.innerHeight - 80;
-    
-    for (let i = 0; i < icons.length; i++) {
-      icons[i].style.filter = useColorDark
-      ? 'invert(0)'  // negro
-      : 'invert(1)'; // blanco
-    }
-    
-    // Cambiar imagen del logo si existe
-    if (logo) {
-      logo.src = useColorDark
-      ? logo.dataset.srcNormal
-      : logo.dataset.srcRosa;
-    }
-  }
-  
-  window.addEventListener('load', updateNavbarIL);
-  window.addEventListener('scroll', updateNavbarIL);
-</script>
-
-
-<!-- Script para mostrar un botón que permite volver al inicio al hacer scroll -Fer -->
-<script>
-  // Obtener el botón
-  let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  
-  // Cuando el usuario se desplaza 20px desde la parte superior de la página, mostrar el botón
-  window.onscroll = function() {scrollFunction()};
-  
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      scrollToTopBtn.style.display = "flex";
-    } else {
-      scrollToTopBtn.style.display = "none";
-    }
-  }
-  
-  // Cuando el usuario hace clic en el botón, desplazar a la parte superior de la página
-  scrollToTopBtn.addEventListener("click", backToTop);
-  
-  function backToTop() {
-    document.body.scrollTop = 0; // Para navegadores Safari
-    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
-  }
-</script>
-
-<script>
-  let currentCentered = null;
-  
-  function updateCenteredLogo() {
-    const slider = document.querySelector('.logo-slider');
-    const items = document.querySelectorAll('.logo-item');
-    if (!slider || items.length === 0) return;
-    
-    const sliderRect = slider.getBoundingClientRect();
-    const centerX = sliderRect.left + sliderRect.width / 2;
-    
-    let closestItem = null;
-    let closestDistance = Infinity;
-    
-    items.forEach(item => {
-      const itemRect = item.getBoundingClientRect();
-      const itemCenter = itemRect.left + itemRect.width / 2;
-      const distanceToCenter = Math.abs(centerX - itemCenter);
-      
-      if (distanceToCenter < closestDistance) {
-        closestDistance = distanceToCenter;
-        closestItem = item;
-      }
-    });
-    
-    if (closestItem && closestItem !== currentCentered) {
-      if (currentCentered) currentCentered.classList.remove('centered');
-      closestItem.classList.add('centered');
-      currentCentered = closestItem;
-    }
-  }
-  
-  function animateSliderCenter() {
-    updateCenteredLogo();
-    requestAnimationFrame(animateSliderCenter);
-  }
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    animateSliderCenter();
-  });
-</script>
-  <script>
-    function scrollToAboutIfOnFirstSection() {
-      const firstSection = document.querySelector('.hyperjump-effect');
-      const aboutSection = document.querySelector('#about-us');
-
-      if (window.scrollY < firstSection.offsetHeight) {
-        aboutSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-
-    setTimeout(scrollToAboutIfOnFirstSection, 3000);
-    /* 3000 milliseconds = 3 seconds -Memix */
-  </script>
-
-
-
+<!--Seccion de Scripts personalizados -LGS -->
+<script src="{% static 'js/hyper-jump.js' %}"></script>
+<script src="{% static 'js/switch-icons.js' %}"></script>
+<script src="{% static 'js/update-icons-scroll.js' %}"></script>
+<script src="{% static 'js/top-botton.js' %}"></script>
+<script src="{% static 'js/slider-pop-center.js' %}"></script>
+<script src="{% static 'js/gradient-sections.js' %}"></script>
 
 </body>
 
