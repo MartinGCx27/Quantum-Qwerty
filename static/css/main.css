@@ -718,7 +718,9 @@ img.wordpress {
  .services-text{
     text-align: center;
  }
-
+.services h1{
+  text-align: center;
+}
 .card-services, .card-services-2 {
   position: relative;
   margin: 4.125rem;
@@ -729,7 +731,7 @@ img.wordpress {
   color: #EAE7E5 !important;
   overflow: visible;
   border: 2px solid #0ff;
-  height: 100% !important;
+  height: 37.5rem !important;
   
 }
 /* Pantallas tipo laptop/tablet (medianas) -Memix */
@@ -752,14 +754,70 @@ img.wordpress {
 }
 
 /* Móviles (vertical, pantallas muy pequeñas) -Memix */
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .row.align-items-center {
+    display: flex !important;
+    flex-direction: column !important;
+    row-gap: 0.5rem !important;
+  }
   .card-services,
   .card-services-2 {
-    margin: 1rem auto;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .card-services::before,
+  .card-services::after,
+  .card-services-2::before,
+  .card-services-2::after {
+    content: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .card-services .card-img-top,
+  .card-services-2 .card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.4 !important;
+    transition: none !important;
+  }
+
+  .card-services .card-body,
+  .card-services-2 .card-body {
+    position: absolute !important;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 1rem;
+    background: none !important;
+    color: #FFFFFF !important;
+    text-shadow: 2px 2px 4px #000000 !important;
+    box-sizing: border-box;
+    animation: none !important;
+    transition: none !important;
   }
+
+  .card-services .title-card-services,
+  .card-services-2 .title-card-services {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .card-services .card-text,
+  .card-services-2 .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
 }
+
 
 .card-services-2 {
   background: linear-gradient(318deg, #e8abd9 0%, #edbae0 33%, #76d7d9 68%, #3b6c6d 100%);
@@ -789,6 +847,7 @@ img.wordpress {
 }
 .card-img-top{
   padding-top: 10px;
+  width: 100% !important;
 }
 .card-text{
   display: flex;
@@ -875,4 +934,9 @@ img.wordpress {
    position: relative;
    z-index: 1;
    padding: 100px 0;
+ }
+ #carouselExampleControls{
+  height: 500px !important;
+  width: 300px !important;
+  align-items: center !important;
  }

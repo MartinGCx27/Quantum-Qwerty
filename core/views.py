@@ -25,5 +25,10 @@ def index(request):
     # pdb.set_trace()
     return render(request, 'index.html', {'logos': logos})
 
+<<<<<<< HEAD
 def ContactUs(request):
     return render(request, 'ContactUs.html')
+=======
+def services(request):
+    return render(request, 'services.html')
+>>>>>>> ramaMemix
