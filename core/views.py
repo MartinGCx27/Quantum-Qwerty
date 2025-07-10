@@ -30,3 +30,6 @@ def ContactUs(request):
 
 def aboutUs(request):
     return render(request, 'aboutUs.html')
+
+def services(request):
+    return render(request, 'services.html')
