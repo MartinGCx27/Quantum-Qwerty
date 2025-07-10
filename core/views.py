@@ -27,5 +27,6 @@ def index(request):
 
 def ContactUs(request):
     return render(request, 'ContactUs.html')
+
 def services(request):
     return render(request, 'services.html')

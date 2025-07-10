@@ -788,6 +788,7 @@ img.wordpress {
     height: auto;
     opacity: 0.4 !important;
     transition: none !important;
+    
   }
 
   .card-services .card-body,
@@ -939,4 +940,7 @@ img.wordpress {
   height: 500px !important;
   width: 300px !important;
   align-items: center !important;
+ }
+ #bd-img-services, #consultancy-img-services{
+  overflow: hidden !important;
  }
