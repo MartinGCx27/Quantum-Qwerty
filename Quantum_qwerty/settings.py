@@ -80,11 +80,7 @@ WSGI_APPLICATION = 'Quantum_qwerty.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {  #QUEDA PENDIENTE CONFIGURACION DE MYSQL CON ENVIRON
-    # srv Dev 1
-    # 'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3', #CAMBIAR SQLITE3 POR mysql
-    #    'NAME': env.str('DB_NAME'),
+DATABASES = { 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': env.str('DB_NAME'),
