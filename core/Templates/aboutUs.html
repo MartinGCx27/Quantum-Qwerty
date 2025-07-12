@@ -4,13 +4,82 @@
 
 {% block head %}
 {{ block.super }}
+<link href="{% static 'css/aboutUs.css' %}" rel="stylesheet">
+
 {% endblock %}
 
-
 {% block content %}
-<section class="section">
+
+<section id="aboutHeader">
     <h1>Sobre nosotros</h1>
-    <p>Slogan</p>
+    <p>Nuestro slogan</p>
+    <div class="gradient-line"></div>
 </section>
+
+<section id="ourFoundation" class="parent">
+    <div class="mision-vision-wrapper">
+        <div class="card mision">
+            <h2>Nuestra Misión</h2>
+            <p>
+                Ser el único lugar en donde
+                se encuentren todas las
+                soluciones para tu marca.
+            </p>
+        </div>
+        <div class="card vision">
+            <h2>Nuestra Visión</h2>
+            <p>
+                Contar con expertos en cada
+                área trabajando de manera
+                colaborativa, para llevar a
+                nuestros clientes a cada una
+                de sus metas
+            </p>
+        </div>
+    </div>
+    
+    <div class="values">
+        <div class="valuesHead">
+            <h2>Nuestros Valores</h2>
+            <p>Los principios fundamentales que guían cada decisión y acción en Quantum Qwerty</p>
+        </div>
+        <div class="values-grid">
+            <div class="card value">
+                <h3>Diversidad</h3>
+                <p>
+                    Consideramos que un equipo multidisciplinario es la clave de la eficiencia...
+                </p>
+            </div>
+            <div class="card value">
+                <h3>Facilitador</h3>
+                <p>
+                    Le brindamos soluciones a tu marca desde cualquier arista...
+                </p>
+            </div>
+            <div class="card value">
+                <h3>Eficiencia</h3>
+                <p>
+                    Siempre nos aseguramos de que cada tarea y cada proyecto se lleven a cabo...
+                </p>
+            </div>
+            <div class="card value">
+                <h3>Personalización</h3>
+                <p>
+                    Comprender profundamente la visión y objetivos de cada cliente...
+                </p>
+            </div>
+        </div>
+    </div> 
+</section>
+
+{% comment %} <section id="workEnvironment">
+<h1>Hola</h1>
+</section>
+
+<section id="connectWithUs">
+<h1>Hola</h1>
+</section>  {% endcomment %}
+
+
 {% endblock %}
 
