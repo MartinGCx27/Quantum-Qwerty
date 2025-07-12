@@ -3,26 +3,58 @@
 {% load static %}
 
 {% block head %}
-    {{ block.super }}
-{% endblock %}
-
-{% block navbar %}
-    {{ block.super }}
+{{ block.super }}
+<link href="{% static 'css/contact.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
 
-<section class="section">
-<h1>Contáctanos</h1>
-<p>Por favor llena el siguiente formulario para contactarnos.</p>
+<section id="ContactUs">
+    <!-- div padre-->
+    <div class="parents">
+        <!-- div de info_contact -->
+        <div id="info_contact" class="info_contact">
+            <h2>QuantumQwerty</h2>
+        </div>
+        
+        <div id="form_contact" class="form_contact">
+            <h1>Contáctanos</h1>
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <label for="exampleInputEmail1" class="form-label">Ingresa tu Nombre(s)</label>
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1" class="form-label">Ingresa tus Apellidos</label>
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" placeholder="example@mail.com" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="col-md-12">
+                    <div class="g-recaptcha" data-sitekey=""></div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
 </section>
 
 {% endblock %}
 
 {% block footer %}
-    {{ block.super }}
+{{ block.super }}
 {% endblock %}
 
 {% block js %}
-    {{ block.super }}
+{{ block.super }}
 {% endblock %}

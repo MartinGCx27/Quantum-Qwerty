@@ -7,7 +7,7 @@
 }
 
 h1, h2 {
-    font-family: "Geometr212-heavy" !important;
+  font-family: "Geometr212-heavy" !important;
 }
 
 /* Subtitulos */
@@ -32,7 +32,7 @@ h4, h4, h5, h6 {
 }
 
 p {
-    font-family: "Montserrat-regular" !important;
+  font-family: "Montserrat-regular" !important;
 }
 
 /* titulos geometry heavy subtitulos geometry book */
@@ -867,7 +867,7 @@ img.wordpress {
   }
 }
  h2 {
-   text-shadow: #000000 0px 0px 15px;
+  text-shadow: #000000 0px 0px 15px;
  }
  /* Botones de servicios -Memix */
 .services-button, .services-button-2{

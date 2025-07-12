@@ -1,0 +1,30 @@
+h1{
+    color: black;
+}
+
+#ContactUs{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    padding-top: 6rem;
+}
+
+.parents{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+.info_contact{
+    flex: 1;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.form_contact{
+    background-color: white;
+    flex: 1;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
