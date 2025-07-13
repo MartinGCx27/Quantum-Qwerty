@@ -572,9 +572,10 @@ body{
 }
 
 .logo-slider-section h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
-  color: #6b2b01;
+  color: #EAE7E5;
+  text-shadow: 0 0 10px #E8A9D8, 0 0 20px #022C44;
 }
 
 /* --- Contenedor visible del slider ---LGS */
@@ -866,7 +867,7 @@ img.wordpress {
     opacity: 0;
   }
 }
- h2 {
+ .card-body h2{
   text-shadow: #000000 0px 0px 15px;
  }
  /* Botones de servicios -Memix */
