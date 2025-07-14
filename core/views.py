@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.utils import timezone
 import pdb 
+from .forms import FormContact
 
 # Create your views here.
 def index(request):
@@ -24,9 +27,24 @@ def index(request):
     ]
     # pdb.set_trace()
     return render(request, 'index.html', {'logos': logos})
+
+
     
 def ContactUs(request):
-    return render(request, 'ContactUs.html')
+    if request.method == 'POST':
+        form = FormContact(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Formulario enviado correctamente ✅')
+            return redirect('contactus')  # Evita reenvíos duplicados
+        else:
+            messages.error(request, 'Por favor completa todos los campos correctamente ❌')
+    else:
+        form = FormContact()
+
+    return render(request, 'ContactUs.html', {'form': form})
+
+
 
 def aboutUs(request):
     return render(request, 'aboutUs.html')
