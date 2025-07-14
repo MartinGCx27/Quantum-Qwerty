@@ -62,12 +62,12 @@
             <form method="post">
                 {% csrf_token %}
                 {% if messages %}
-  {% for message in messages %}
-    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
-      {{ message }}
-    </div>
-  {% endfor %}
-{% endif %}
+                {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
                 <div class="row">
                     <div class="col user-box">
                         {{ form.name_contact }}
@@ -99,12 +99,12 @@
                     </div> -->
                 </div>
                 
-<button id="sendBtn" class="noselect" type="button">
-  <span>Enviar</span>
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
-  </svg>
-</button>
+                <button id="sendBtn" class="noselect" type="button">
+                    <span>Enviar</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
+                    </svg>
+                </button>
             </form>
         </div>
     </div>
@@ -121,20 +121,20 @@
 {{ block.super }}
 <script src="{% static 'js/Contact-Number.js' %}"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const btn = document.getElementById('sendBtn');
-  const form = document.querySelector('form');
-
-  btn.addEventListener('click', function () {
-    // 🔄 Forzar el focus para que se ejecute tu animación CSS
-    btn.focus();
-
-    // ⏳ Tiempo para dejar que la animación inicie (opcional)
-    setTimeout(() => {
-      form.submit(); // 🚀 Envía el formulario
-    }, 100); // espera mínima (puedes ajustar a 0ms si prefieres)
-  });
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('sendBtn');
+        const form = document.querySelector('form');
+        
+        btn.addEventListener('click', function () {
+            // 🔄 Forzar el focus para que se ejecute tu animación CSS
+            btn.focus();
+            
+            // ⏳ Tiempo para dejar que la animación inicie (opcional)
+            setTimeout(() => {
+                form.submit(); // 🚀 Envía el formulario
+            }, 100); // espera mínima (puedes ajustar a 0ms si prefieres)
+        });
+    });
 </script>
 
 {% endblock %}
