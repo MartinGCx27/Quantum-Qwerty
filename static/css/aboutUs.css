@@ -1,12 +1,30 @@
+body {
+    background: linear-gradient(334deg, #022C44, #6b3290, #022C44);
+    background-size: 180% 180%;
+    animation: gradient-animationBody 6s ease infinite; 
+}
+
+@keyframes gradient-animationBody {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 #aboutHeader {
-    padding-top: 120px;
+    padding-top: 7.5rem; 
     text-align: center;
-    font-size: 22px;
+    font-size: 1.375rem;
     margin-bottom: 7rem;
 }
 
 #aboutHeader h1 {
-    font-size: 55px;
+    font-size: 3.438rem;
 }
 
 .gradient-line {
@@ -26,7 +44,7 @@
     flex-direction: column;
     gap: 2rem;
     color: black;
-    padding: 110px 2rem 2rem;
+    padding: 5rem 2rem 5rem;
 }
 
 .mision-vision-wrapper {
@@ -38,7 +56,19 @@
 .card {
     border-radius: 10px;
     background-color: white;
-    box-shadow: 10px 10px 8px rgba(0,0,0,0.05);
+    box-shadow: 0.438rem 0.438rem 0.5rem rgba(90, 27, 132, 0.5); 
+}
+
+.icon-Foundation-above {
+    width: 2.5rem;
+}
+
+.foundation-icon-wrapper-p {
+    display: inline-block;
+    margin: 0 0.938rem 0 0.313rem;
+    padding: 0.25rem;
+    border-radius: 50%;
+    background-color: #eae4f0;
 }
 
 .mision, .vision {
@@ -48,16 +78,430 @@
 }
 
 .mision p, .vision p {
-    margin-top: 30px;
+    margin-top: 1.875rem;
 }
 
 .values {
-    margin-top: 100px;
+    margin-top: 5rem;
+}
+
+.values p {
+    margin-top: 1.25rem;
+    font-size: 0.938rem;
+}
+
+.values h3 {
+    margin-top: 0.625rem;
+    font-size: 1.625rem;
 }
 
 .valuesHead {
     text-align: center;
 }
 
+.values-grid {
+    margin-top: 4.375rem;
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card.value {
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem;
+    margin: 0 0.313rem;  
+    height: auto;
+    max-width: 18.75rem;
+}
+
+.foundation-icon-wrapper-v {
+    display: flex;
+    justify-content: center;
+    padding: 0.313px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #6b3290 0%, #5a1b84 33%, #48166a 66%, #2d0e42 100%);
+    width: 4.375rem;
+    height: 4.375rem;
+    margin: 0.3rem auto 1rem;
+}
+
+.icon-Foundation-below {
+    width: 2.188rem;
+    object-fit: contain;
+}
+
+/* Responsive Styles aboutHeader -fer*/
+
+@media (max-width: 64rem) {
+    #aboutHeader {
+        font-size: 1.25rem;
+        padding-top: 6.25rem;
+    }
+    
+    #aboutHeader h1 {
+        font-size: 2.625rem;
+    }
+    
+    .mision-vision-wrapper {
+        gap: 4rem;
+    }
+    
+    .mision, .vision {
+        width: 45%;
+        padding: 1.2rem;
+    }
+    
+    .values-grid {
+        flex-wrap: wrap;
+    }
+    
+    .card.value {
+        max-width: 16.25rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    #aboutHeader {
+        font-size: 1.125rem;
+        padding-top: 5rem;
+    }
+    
+    #aboutHeader h1 {
+        font-size: 2.188rem;
+    }
+    
+    .mision-vision-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .mision, .vision {
+        width: 90%;
+    }
+    
+    .values-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card.value {
+        width: 90%;
+        max-width: none;
+    }
+    
+    .foundation-icon-wrapper-v {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+    
+    .icon-Foundation-below {
+        width: 1.875rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    #aboutHeader h1 {
+        font-size: 1.75rem;
+    }
+    
+    .gradient-line {
+        width: 4rem;
+    }
+    
+    .mision p, .vision p,
+    .values p {
+        font-size: 0.rem;
+    }
+    
+    .values h3 {
+        font-size: 1rem;
+    }
+}
+
+.mision h2, .vision h2 {
+    font-size: 1.35rem;
+}
+
+/* Seccion workEnvironment -Fer*/
+
+#workEnvironment {
+    background-color: white;
+    text-align: center;    
+    padding: 80px 2rem 5rem;
+    color: black;
+}
+
+figure.snip0019 {
+    display: inline-flex;
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 30px;
+    min-width: 220px;
+    max-width: 410px;
+    max-height: 220px;
+    width: 100%;
+    background: #000000;
+    text-align: center;
+}
+
+figure.snip0019 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+figure.snip0019 img {
+    opacity: 1;
+    width: 100%;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.snip0019 figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+figure.snip0019 figcaption > div {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+}
+
+figure.snip0019 figcaption::before {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    width: 2px;
+    content: '';
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+figure.snip0019 h3,
+figure.snip0019 p {
+    margin: 0;
+    padding: 20px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+    transition: opacity 0.45s,-webkit-transform 0.45s,-moz-transform 0.45s,-o-transform 0.45s,transform 0.45s;
+}
+
+figure.snip0019 h3 {
+    text-align: right;
+    display: inline-block;
+    word-spacing: -0.1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transform: translate3d(50%, 0%, 0);
+    transform: translate3d(50%, 0%, 0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+figure.snip0019 h3 span {
+    font-weight: 800;
+}
+
+figure.snip0019 p {
+    display: block;
+    bottom: 0;
+    text-align: left;
+    font-weight: 300;
+    top: 0%;
+    color: #000;
+    background: #ffffff;
+    -webkit-transform: translate3d(-50%, 0%, 0);
+    transform: translate3d(-50%, 0%, 0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+figure.snip0019 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    color: #ffffff;
+}
+
+figure.snip0019:hover img {
+    opacity: 0.7;
+}
+
+figure.snip0019:hover figcaption h3,
+figure.snip0019:hover figcaption p {
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+figure.snip0019:hover figcaption h3 {
+    opacity: 1;
+}
+
+figure.snip0019:hover figcaption p {
+    opacity: 1;
+}
+
+figure.snip0019:hover figcaption::before {
+    background: #ffffff;
+    top: 0px;
+    bottom: 0px;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
 
 
+
+/* Seccion connectWithUs -Fer*/
+
+#connectWithUs {
+    background: #3B6689;
+    text-align: center;
+    padding: 5rem 1rem 5rem;
+    color: #eae4f0;
+    width: 100vw;
+    height: 48vh;
+    background: #5A1B84;
+    
+}
+
+.connectHead p {
+    padding: 1.563rem 21.875rem 0 21.875rem;
+}
+
+.cantactUs-button {
+    display: inline-flex;
+    width: 9.375rem;
+    height: 3.125rem;
+    margin-top: 1.75rem;
+    border-radius: 0.625rem;
+    border: 0.063rem solid #E8A9D8;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1; 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0.313rem 0.313rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.cantactUs-button::before,
+.cantactUs-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.cantactUs-button::before {
+    left: -0.625rem;
+    background: #EAE7E5;
+}
+
+.cantactUs-button::after {
+    right: -0.625rem;
+    background: #EAE7E5;
+}
+
+.cantactUs-button:hover::before,
+.cantactUs-button:hover::after {
+    width: 58%;
+}
+
+.cantactUs-button:hover span {
+    color: #022C44;
+    transition: 0.3s;
+}
+
+.cantactUs-button span {
+    color: #EAE7E5;
+    font-size: 1.125rem;
+    transition: all 0.3s ease-in;
+}
+
+/* Responsive styles connectWithUs -Fer*/
+
+@media (max-width: 64rem) {
+    #connectWithUs {
+        height: auto;
+        padding: 4.375rem 2rem 4rem;
+    }
+    
+    .connectHead p {
+        padding: 1.25rem 9.375rem 0 9.375rem;
+        font-size: 1.063rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    #connectWithUs {
+        padding: 3.75rem 1.5rem 3rem;
+    }
+    
+    .connectHead p {
+        padding: 0.938rem 2rem 0 2rem;
+        font-size: 1px;
+    }
+    
+    .cantactUs-button {
+        width: 8.75rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .connectHead p {
+        padding: 0.625rem 1rem 0 1rem;
+        font-size: 0.938rem;
+    }
+    
+    .cantactUs-button {
+        width: 8.125rem;
+        height: 2.813rem;
+    }
+    
+    .cantactUs-button span {
+        font-size: 1rem;
+    }
+}
+
+
+/* Seccion footer -Fer */
+
+footer {
+    padding: 1.875rem 0 1.875rem 0;
+    background: linear-gradient(180deg, #5A1B84, #002d47);
+}

@@ -866,7 +866,7 @@ img.wordpress {
     opacity: 0;
   }
 }
-h2 {
+.card-body h2 {
   text-shadow: #000000 0px 0px 15px;
 }
 /* Botones de servicios -Memix */
