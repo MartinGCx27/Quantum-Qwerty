@@ -67,4 +67,15 @@ export class animationsScroll {
     // 7. Indicamos al observador que observe la sección que seleccionamos
     observer.observe(section);
   }
+  // Método estático para hacer scroll a la segunda sección después de un tiempo -Memix
+  static scrollToSecondSection(firstSelector, secondSelector, delay = 3000) {
+    const firstSection = document.querySelector(firstSelector);
+    const secondSection = document.querySelector(secondSelector);
+
+    setTimeout(() => {
+      if (window.scrollY < firstSection.offsetHeight) {
+        secondSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, delay);
+  }
 }

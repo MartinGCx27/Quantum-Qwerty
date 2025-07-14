@@ -6,8 +6,8 @@
   src: url("/static/font/geometr212 BkCn BT Heavy/Geometr212 BkCn BT Heavy.ttf");
 }
 
-h1, h2 {
-  font-family: "Geometr212-heavy" !important;
+h1,
+h2 {
   font-family: "Geometr212-heavy" !important;
 }
 
@@ -36,7 +36,6 @@ h6 {
 }
 
 p {
-  font-family: "Montserrat-regular" !important;
   font-family: "Montserrat-regular" !important;
 }
 
@@ -302,22 +301,22 @@ body {
   .overlay-text.qq-text h1 {
     font-size: 2rem;
   }
-  
-  .qq-nombre  {
+
+  .qq-nombre {
     font-size: 2.4rem;
   }
-  
+
   .overlay-text.qq-text p {
     font-size: 1.2rem;
     line-height: 1.8rem;
     margin-top: 1.5rem;
   }
-  
+
   .scroll-text {
     font-size: 1.1rem;
     max-width: 14rem;
   }
-  
+
   .arrow-svg {
     width: 1.5rem;
     height: 1.5rem;
@@ -329,27 +328,27 @@ body {
   .overlay-text.qq-text h1 {
     font-size: 1.7rem;
   }
-  
-  .qq-nombre  {
+
+  .qq-nombre {
     font-size: 2rem;
   }
-  
+
   .overlay-text.qq-text p {
     font-size: 1.05rem;
     line-height: 1.6rem;
     margin-top: 1.2rem;
   }
-  
+
   .scroll-down-indicator {
     gap: 0.6rem;
     padding: 0 0.5rem;
   }
-  
+
   .scroll-text {
     font-size: 1rem;
     max-width: 12rem;
   }
-  
+
   .arrow-svg {
     width: 1.25rem;
     height: 1.25rem;
@@ -526,7 +525,9 @@ body {
 }
 
 /* Estilos del boton que manda al usuario al template 'Sobre nosotros' -Fer */
-.about-us, .about-us::after, .about-us::before {
+.about-us,
+.about-us::after,
+.about-us::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -535,8 +536,9 @@ body {
 /* Variables CSS: color principal usado en todo el botón */
 :root {
   --font: Montserrat;
-  --main-clr: #76D7D9; /* color principal para texto, bordes y animaciones #0ebac5*/
-} 
+  --main-clr: #76D7D9;
+  /* color principal para texto, bordes y animaciones #0ebac5*/
+}
 
 /* Estilo principal del enlace que funciona como botón */
 .button-know-us {
@@ -544,7 +546,7 @@ body {
   user-select: none;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  font-family: var(--font); 
+  font-family: var(--font);
   /* text-transform: uppercase; */
   text-decoration: none;
   border: 2px solid var(--main-clr);
@@ -605,10 +607,9 @@ body {
 }
 
 .logo-slider-section h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: #EAE7E5;
-  text-shadow: 0 0 10px #E8A9D8, 0 0 20px #022C44;
+  color: #6b2b01;
 }
 
 /* --- Contenedor visible del slider ---LGS */
@@ -703,11 +704,11 @@ img.wordpress {
     height: 6rem;
     margin: 0 1.2rem;
   }
-  
+
   .logo-item img {
     height: 5rem;
   }
-  
+
   img.wordpress {
     height: 6rem;
   }
@@ -718,11 +719,11 @@ img.wordpress {
     height: 5rem;
     margin: 0 1rem;
   }
-  
+
   .logo-item img {
     height: 4rem;
   }
-  
+
   .logo-slider-section h2 {
     font-size: 1.3rem;
   }
@@ -733,15 +734,15 @@ img.wordpress {
     height: 4rem;
     margin: 0 0.8rem;
   }
-  
+
   .logo-item img {
     height: 3rem;
   }
-  
+
   .logo-slider-section {
     padding: 3rem 0.5rem;
   }
-  
+
   .logo-slider-section h2 {
     font-size: 1.1rem;
   }
@@ -753,10 +754,12 @@ img.wordpress {
   margin-bottom: 4.135rem !important;
   margin-top: 0.9rem !important;
 }
-.services-text{
+
+.services-text {
   text-align: center;
 }
-.services h1{
+
+.services h1 {
   text-align: center;
 }
 
@@ -825,7 +828,7 @@ img.wordpress {
     animation: none !important;
     transition: none !important;
   }
-  
+
   .card-services .card-img-top,
   .card-services-2 .card-img-top {
     display: block;
@@ -835,7 +838,7 @@ img.wordpress {
     transition: none !important;
 
   }
-  
+
   .card-services .card-body,
   .card-services-2 .card-body {
     position: absolute !important;
@@ -850,7 +853,7 @@ img.wordpress {
     animation: none !important;
     transition: none !important;
   }
-  
+
   .card-services .title-card-services,
   .card-services-2 .title-card-services {
     font-size: 1.2rem;
@@ -947,11 +950,14 @@ img.wordpress {
     opacity: 0;
   }
 }
- .card-body h2{
+
+h2 {
   text-shadow: #000000 0px 0px 15px;
- }
- /* Botones de servicios -Memix */
-.services-button, .services-button-2{
+}
+
+/* Botones de servicios -Memix */
+.services-button,
+.services-button-2 {
   position: relative;
   padding: 1.5rem 3rem;
   font-size: 1.1rem;
@@ -988,8 +994,8 @@ img.wordpress {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(318deg,#000d18 0%, #014276 50%, #1a5584 100%);
-  
+  background: linear-gradient(318deg, #000d18 0%, #014276 50%, #1a5584 100%);
+
   transition: transform 0.5s ease;
   z-index: 1;
   transform: scaleX(0);
@@ -1018,18 +1024,22 @@ img.wordpress {
   z-index: 2;
   transition: color 0.4s ease;
 }
+
 .section {
   background-color: transparent !important;
   position: relative;
   z-index: 1;
   padding: 100px 0;
 }
-#carouselExampleControls{
+
+#carouselExampleControls {
   height: 500px !important;
   width: 300px !important;
   align-items: center !important;
 }
-#bd-img-services, #consultancy-img-services{
+
+#bd-img-services,
+#consultancy-img-services {
   overflow: hidden !important;
 }
 /* Estilos generales de secciones de servicios */
