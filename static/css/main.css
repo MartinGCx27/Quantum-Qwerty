@@ -1185,3 +1185,36 @@ img.wordpress {
     width: 100%;
   }
 } */
+ .svgscroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.svgscroll__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.svgscroll__svg path {
+  stroke: #ff00ff;
+  stroke-dasharray: 8959;
+  stroke-dashoffset: 8959;
+  animation: blink 1s infinite alternate;
+  transition: stroke-dashoffset 0.2s ease-out;
+  filter: url(#glow);
+}
+
+@keyframes blink {
+  0% {
+    filter: drop-shadow(0 0 0px #76D7D9);
+  }
+  100% {
+    filter: drop-shadow(0 0 10px #76D7D9);
+  }
+}
+

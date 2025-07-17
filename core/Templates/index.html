@@ -102,9 +102,26 @@
   </div>
 </nav>
 
-<section id="welcome">
-  
-</section>
+<div class="svgscroll">
+  <svg class="svgscroll__svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <g clip-path="url(#clip0_1_2)">
+      <path d="M-627 85S-95-252-170-227C-321 165 413-161 212 336 106 542 1006 708 850 507 629 35 2112 532 1674 638 1214 644-169 947-392 1698-19 1728 379 361 1795 1251S1745 2452 1403 2175C805 1839 1393 839 2122 678 2725 597 1960 1575 3468 803 4423 477 4986 2045 3860 2271 3147 2577 3907 2934 4267 2869" stroke-width="60" filter="url(#glow)"/>
+    </g>
+    <defs>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+        <feMerge>
+          <feMergeNode in="coloredBlur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+      <clipPath id="clip0_1_2">
+        <rect width="1280" height="720" fill="white"/>
+      </clipPath>
+    </defs>
+  </svg>
+</div>
+
 
 <!-- este es el bueno -->
 {% include "home/hyper-jump.html" %}
@@ -140,6 +157,7 @@ crossorigin="anonymous"></script>
 
 <!--Seccion de Scripts personalizados -LGS -->
 <script src="{% static 'js/hyper-jump.js' %}"></script>
+<script src="{% static 'js/scroll-snake.js' %}"></script>
 <script src="{% static 'js/switch-icons.js' %}"></script>
 <script src="{% static 'js/update-icons-scroll.js' %}"></script>
 <script src="{% static 'js/top-botton.js' %}"></script>
