@@ -1203,6 +1203,7 @@ img.wordpress {
 .svgscroll__svg path {
   stroke: #E8A9D8;
   stroke-dasharray: 8959;
+  stroke-opacity: 0.4;
   stroke-dashoffset: 8959;
   animation: blink 1s infinite alternate;
   transition: stroke-dashoffset 0.2s ease-out;
