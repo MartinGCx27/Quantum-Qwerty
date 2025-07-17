@@ -1,0 +1,159 @@
+{% extends "starter-page.html" %}
+
+{% load static %}
+
+{% block head %}
+{{ block.super }}
+<link href="{% static 'css/aboutUs.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %} 
+
+<section id="aboutHeader" class="animate__animated animate__fadeIn">
+    <h1>Sobre nosotros</h1>
+    <p>Nuestro slogan</p>
+    <div class="gradient-line"></div>
+</section>  
+
+<section id="ourFoundation" class="parent">
+    <div class="mision-vision-wrapper">
+        <div class="card mision animate__animated animate__slideInLeft">
+            <h2>
+                <div class="foundation-icon-wrapper-p">
+                    <img class="icon-Foundation-above" src="{% static 'img/mision-icon.png' %}">
+                </div>
+                Nuestra Misión
+            </h2>
+            <p>
+                Ser el único lugar en donde
+                se encuentren todas las
+                soluciones para tu marca.
+            </p>
+        </div>
+        <div class="card vision animate__animated animate__slideInRight ">
+            <h2>
+                <div class="foundation-icon-wrapper-p">
+                    <img src="{% static 'img/vision-icon.png' %}">
+                </div>
+                Nuestra Visión
+            </h2>
+            <p>
+                Contar con expertos en cada
+                área trabajando de manera
+                colaborativa, para llevar a
+                nuestros clientes a cada una
+                de sus metas
+            </p>
+        </div>
+    </div>
+    
+    <div class="values">
+        <div class="valuesHead">
+            <h2>Nuestros Valores</h2>
+            <p>Los principios fundamentales que guían cada decisión y acción en Quantum Qwerty</p>
+        </div>
+        <div class="values-grid ">
+            <div class="card value">
+                <div class="foundation-icon-wrapper-v">
+                    <img class="icon-Foundation-below" src="{% static 'img/diversity-icon.png' %}">
+                </div>
+                <h3>Diversidad</h3>
+                <p>
+                    Consideramos que un equipo multidisciplinario es la clave de la eficiencia,
+                    para poder resolver cualquier obstáculo al fusionar sus conocimientos y
+                    habilidades.
+                </p>
+            </div>
+            <div class="card value">
+                <div class="foundation-icon-wrapper-v">
+                    <img class="icon-Foundation-below" src="{% static 'img/facilitator-icon.png' %}">
+                </div>
+                <h3>Facilitador</h3>
+                <p>
+                    Le brindamos soluciones a tu marca desde cualquier arista, facilitando
+                    siempre el acceso a la mejor tecnología.
+                </p>
+            </div>
+            <div class="card value">
+                <div class="foundation-icon-wrapper-v">
+                    <img class="icon-Foundation-below" src="{% static 'img/efficiency-icon.png' %}">
+                </div>
+                <h3>Eficiencia</h3>
+                <p>
+                    Siempre nos aseguramos de que cada tarea y cada proyecto se lleven a cabo
+                    con la mayor efectividad.
+                </p>
+            </div>
+            <div class="card value">
+                <div class="foundation-icon-wrapper-v">
+                    <img class="icon-Foundation-below" src="{% static 'img/personalization-icon.png' %}">
+                </div>
+                <h3>Personalización</h3>
+                <p>
+                    Comprender profundamente la visión y objetivos de cada cliente, adaptando
+                    nuestras soluciones de manera personalizada para garantizar los mejores
+                    resultados.
+                </p>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<section id="workEnvironment">
+    <h2>Nuestro metodo de trabajo</h2>
+    <p>
+        Explora cómo nuestros valores cobran vida en cada proyecto, 
+        reflejando el compromiso y la metodología que nos definen
+    </p>
+    <figure class="snip0019">
+        <img src="{% static 'img/methodWork1.jpg' %}" alt="sample11"/>
+        <figcaption>
+            <div><h3>What <span>state</span> do you live in?</h3></div>
+            <div><p>Denial. Miss Wormwood: I don't suppose I can argue with that.</p></div>
+        </figcaption>			
+    </figure>
+    <figure class="snip0019">
+        <img src="{% static 'img/methodWork2.jpg' %}" alt="sample12"/>
+        <figcaption>
+            <div><h3>If we wanted more <span>leisure</span></h3></div>
+            <div><p>We'd invent machines that do things less efficiently.</p></div>
+        </figcaption>			
+    </figure>
+    <figure class="snip0019">
+        <img src="{% static 'img/methodWork3.jpg' %}" alt="sample13"/>
+        <figcaption>    
+            <div><h3>I <span>propose</span> we leave <span>math</span> </h3></div>
+            <div><p>To the machines and go play outside.</p></div>
+        </figcaption>			
+    </figure>
+</section>
+
+<section id="connectWithUs">
+    <div class="connectHead">
+        <h2>¿Listo para comenzar?</h2>
+        <p>
+            Conectemos y demos forma a tu visión digital con soluciones inteligentes y a la medida. 
+            En Quantum Qwerty estamos listos para escucharte y crear algo excepcional contigo
+        </p>
+        <a href="{% url 'contactus' %}" class="cantactUs-button">
+            <span> 
+                Contactanos
+            </span>
+        </a>
+    </div>
+</section> 
+
+<script type="module">
+    import { animationsScroll } from "{% static 'js/qq-functions.js' %}";
+    
+    animationsScroll.activate('#ourFoundation', 
+    {
+        '.valuesHead': 'slideInDown',
+        '.values-grid': 'pulse',
+    },
+    0.4
+    );
+</script>
+
+{% endblock %}

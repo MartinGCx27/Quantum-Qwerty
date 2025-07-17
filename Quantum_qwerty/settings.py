@@ -80,21 +80,15 @@ WSGI_APPLICATION = 'Quantum_qwerty.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {  #QUEDA PENDIENTE CONFIGURACION DE MYSQL CON ENVIRON
-    # srv Dev 1
-    # 'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3', #CAMBIAR SQLITE3 POR mysql
-    #    'NAME': env.str('DB_NAME'),
-    #    'USER': env.str('DB_USER'),
-    #    'PASSWORD': env.str('DB_PASSWRD'),
-    #    'HOST': env.str('DB_HOST'),
-    #   'PORT': env.str('DB_PORT')# CUANDO SE CONFIGURE DEBE SER env.int
-    # }
-
-     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-     }
+DATABASES = { 
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env.str('DB_NAME'),
+        'USER': env.str('DB_USER'),
+        'PASSWORD': env.str('DB_PASSWRD'),
+        'HOST': env.str('DB_HOST'),
+        'PORT': env.int('DB_PORT')
+    }
 }
 
 
@@ -145,3 +139,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Se agregan nuevos captcha para QUANTUM QWERTY -LGS
+RECAPTCHA_PUBLIC_KEY = ''
+RECAPTCHA_SECRET_KEY = ''

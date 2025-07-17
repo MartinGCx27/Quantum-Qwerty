@@ -1,0 +1,11 @@
+{%extends 'starter-page.html' %}
+{% load static %}
+{%block title %}Servicios{%endblock %}
+
+{%block content %}
+{% include 'OurServices/animation.html' %}
+{% include 'OurServices/content.html' %}
+<script type="module" src="{% static 'js/scroll-section-services.js' %}"></script>
+<script src="{% static 'js/switch-icons.js' %}"></script>
+<script src="{% static 'js/update-icons-scroll.js' %}"></script>
+{%endblock%}

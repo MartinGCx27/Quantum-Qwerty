@@ -1,0 +1,140 @@
+{% extends "starter-page.html" %}
+
+{% load static %}
+
+{% block head %}
+{{ block.super }}
+<link href="{% static 'css/contact.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<section id="ContactUs">
+    <div class="parents">
+        <div class="info_contact">
+            <img src="{% static 'img/logotipo_qq_rosa.png' %}" alt="" class="LogoContact contact_block">
+            
+            <div class="InfoBlock">
+                <div>
+                    <div class="contact_block">
+                        <h5>
+                            <img src="{% static 'img/phone_qq.png' %}" alt="" class="IconsContact">
+                            55 5555 5555
+                        </h5>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="contact_block">
+                        <h5>
+                            <img src="{% static 'img/mail_qq.png' %}" alt="" class="IconsContact">
+                            Prepucio_qq@quantumquerito.com
+                        </h5>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="contact_block">
+                        <h5>
+                            <img src="{% static 'img/map_qq.png' %}" alt="" class="IconsContact">
+                            San Agujeriado el chiquillo, Col. Prestas #555 C.P. 79789
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="InfoIcons">
+                <a href="https://matias.me/nsfw/">
+                    <img src="{% static 'img/facebook_contact.png' %}" alt="" class="SocialIcoins">
+                </a>
+                <a href="https://matias.me/nsfw/">
+                    <img src="{% static 'img/instagram_contact.png' %}" alt="" class="SocialIcoins">
+                </a>
+                <a href="https://matias.me/nsfw/">
+                    <img src="{% static 'img/github_contact.png' %}" alt="" class="SocialIcoins">
+                </a>
+            </div>
+            
+        </div>
+        
+        <div class="form_contact">
+            <h1>Contáctanos</h1>
+            <form method="post">
+                {% csrf_token %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                <div class="row">
+                    <div class="col user-box">
+                        {{ form.name_contact }}
+                        <label for="nombre">Ingresa tu Nombre</label>
+                    </div>
+                    
+                    <div class="col user-box">
+                        {{ form.lastname_contact }}
+                        <label for="apellido">Ingresa tu Apellido</label>
+                    </div>
+                    
+                    <div class="mb-3 user-box">
+                        {{ form.email_contact }}
+                        <label for="email">Ingresa tu Email:</label>
+                    </div>
+                    
+                    <div class="mb-3 user-box phone" id="phone">
+                        {{ form.phone_contact }}
+                        <label>Ingresa tu Teléfono:</label>
+                    </div>
+                    
+                    <div class="mb-3 user-box" id="message">
+                        {{ form.comments_contact }}
+                        <label for="mensaje">Mensaje</label>
+                    </div>
+                    
+                    <!-- <div class="col-md-12 user-box">
+                        <div class="g-recaptcha" data-sitekey=""></div>
+                    </div> -->
+                </div>
+                
+                <button id="sendBtn" class="noselect" type="button">
+                    <span>Enviar</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block footer %}
+{{ block.super }}
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+<script src="{% static 'js/Contact-Number.js' %}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('sendBtn');
+        const form = document.querySelector('form');
+        
+        btn.addEventListener('click', function () {
+            // 🔄 Forzar el focus para que se ejecute tu animación CSS
+            btn.focus();
+            
+            // ⏳ Tiempo para dejar que la animación inicie (opcional)
+            setTimeout(() => {
+                form.submit(); // 🚀 Envía el formulario
+            }, 100); // espera mínima (puedes ajustar a 0ms si prefieres)
+        });
+    });
+</script>
+
+{% endblock %}
