@@ -1057,53 +1057,7 @@ img.wordpress {
 }
 
 /* Sección de servicios -Memix  */
-/* Fuentes */
-@font-face {
-  font-family: 'Geometr212-heavy';
-  src: url("/static/font/geometr212 BkCn BT Heavy/Geometr212 BkCn BT Heavy.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Geometr212-book';
-  src: url("/static/font/geometr212 BkCn BT Book/Geometr212 BkCn BT Book.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Montserrat-black';
-  src: url("/static/font/Montserrat/Montserrat-Black.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Montserrat-regular';
-  src: url("/static/font/Montserrat/Montserrat-Regular.ttf");
-  font-display: swap;
-}
-h1, h2 {
-  font-family: 'Geometr212-heavy', sans-serif !important;
-}
-h3 {
-  font-family: 'Geometr212-heavy', sans-serif !important;
-}
-h4, h5, h6 {
-  font-family: 'Geometr212-book', sans-serif !important;
-}
-p {
-  font-family: 'Montserrat-regular', sans-serif !important;
-}
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-}
 
-/* Sección principal */
 .section.content-services {
   background: linear-gradient(135deg, #2d0e42 0%, #48166a 80%, #a78bfa 100%) !important;
   background-image: none !important;
@@ -1251,7 +1205,7 @@ body {
   overflow: visible;
   display: block;
 }
-/* Elimina Bootstrap columns para estas dos columnas */
+/* eliminamos bootsrap grid para 2 seccione */
 .services-temp .row .col-md-4,
 .services-temp .row .col-lg-3,
 .services-temp .row .col-lg-9,
@@ -1263,7 +1217,7 @@ body {
   padding: 0 !important;
 }
 
-/* Responsive: Nav vertical arriba del contenido */
+/* Responsive */
 @media (max-width: 991px) {
   .services-temp .row {
     grid-template-columns: 1fr;
@@ -1276,7 +1230,7 @@ body {
   }
 }
 
-/* Preguntas y respuestas completas sin corte */
+/* Preguntas y respuestas completas */
 .tab-content, .tab-content .tab-pane {
   width: 100%;
   min-width: 0;
@@ -1359,7 +1313,7 @@ body {
   100% { opacity: 1; transform: translateY(0);}
 }
 
-
+/* Serpiente on scroll */
  .svgscroll {
   position: fixed;
   top: 0;
