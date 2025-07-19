@@ -3,21 +3,19 @@
 /* Titulos */
 @font-face {
   font-family: 'Geometr212-heavy';
-  src: url("/static/font/geometr212 BkCn BT Heavy/Geometr212 BkCn BT Heavy.ttf");
+  src: url("/static/font/geometr212-BkCn-BT-Heavy/Geometr212-BkCn-BT-Heavy.ttf");
 }
 
 h1, h2 {
-  font-family: "Geometr212-heavy" !important;
   font-family: "Geometr212-heavy" !important;
 }
 
 /* Subtitulos */
 @font-face {
   font-family: 'Geometr212-book';
-  src: url("/static/font/geometr212 BkCn BT Book/Geometr212 BkCn BT Book.ttf");
+  src: url("/static/font/geometr212-BkCn-BT-Book/Geometr212-BkCn-BT-Book.ttf");
 }
 
-h4,
 h4,
 h5,
 h6 {
@@ -36,7 +34,6 @@ h6 {
 }
 
 p {
-  font-family: "Montserrat-regular" !important;
   font-family: "Montserrat-regular" !important;
 }
 
@@ -364,17 +361,17 @@ body {
 }
 
 .custom-navbar .nav-link:hover {
-  color: #76D7D9 !important;
+  color: #76D7D9;
 }
 
 .custom-navbar .nav-link,
 .custom-navbar .navbar-brand {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 
 .custom-navbar.scrolled {
-  background-color: #ffffff !important;
+  background-color: #ffffff;
   box-shadow: 0 2px 4px #0000001a;
 }
 
@@ -434,7 +431,7 @@ body {
 #about-us {
   background-color: #6f42c1;
   padding: 6.25rem 2.5rem;
-  min-height: 100vh;
+  min-height: 85vh;
   position: relative;
   z-index: 3;
 }
@@ -752,6 +749,7 @@ img.wordpress {
 .services {
   margin-bottom: 4.135rem !important;
   margin-top: 0.9rem !important;
+  
 }
 .services-text{
   text-align: center;

@@ -16,14 +16,21 @@ body {
     }
 }
 
-#aboutHeader {
+/* Sección del navbar -Fer */
+.custom-navbar.scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 0.25rem #0000001a;
+}
+
+/* Seccion aboutHeader -Fer*/
+.aboutHeader {
     padding-top: 7.5rem; 
     text-align: center;
     font-size: 1.375rem;
     margin-bottom: 7rem;
 }
 
-#aboutHeader h1 {
+.aboutHeader h1 {
     font-size: 3.438rem;
 }
 
@@ -36,9 +43,9 @@ body {
     background: linear-gradient(to right, #a78bfa, #f472b6);
 }
 
-/* Seccion ourFoundation -Fer*/
+/* Seccion ourFoundation -Fer */
 
-#ourFoundation {
+.ourFoundation {
     background-color: #EAE7E5;
     display: flex;
     flex-direction: column;
@@ -54,7 +61,7 @@ body {
 }
 
 .card {
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background-color: white;
     box-shadow: 0.438rem 0.438rem 0.5rem rgba(90, 27, 132, 0.5); 
 }
@@ -99,6 +106,10 @@ body {
     text-align: center;
 }
 
+.values .valuesHead p {
+    font-size: 1.2rem;
+}
+
 .values-grid {
     margin-top: 4.375rem;
     text-align: center;
@@ -119,7 +130,7 @@ body {
 .foundation-icon-wrapper-v {
     display: flex;
     justify-content: center;
-    padding: 0.313px;
+    padding: 0.02rem;
     border-radius: 50%;
     background: linear-gradient(0deg, #6b3290 0%, #5a1b84 33%, #48166a 66%, #2d0e42 100%);
     width: 4.375rem;
@@ -132,15 +143,15 @@ body {
     object-fit: contain;
 }
 
-/* Responsive Styles aboutHeader -fer*/
+/* Responsive Styles aboutHeader -fer */
 
 @media (max-width: 64rem) {
-    #aboutHeader {
+    .aboutHeader {
         font-size: 1.25rem;
         padding-top: 6.25rem;
     }
     
-    #aboutHeader h1 {
+    .aboutHeader h1 {
         font-size: 2.625rem;
     }
     
@@ -157,18 +168,22 @@ body {
         flex-wrap: wrap;
     }
     
+    .valuesHead p {
+        font-size: 1.125rem;
+    }
+    
     .card.value {
         max-width: 16.25rem;
     }
 }
 
 @media (max-width: 48rem) {
-    #aboutHeader {
+    .aboutHeader {
         font-size: 1.125rem;
         padding-top: 5rem;
     }
     
-    #aboutHeader h1 {
+    .aboutHeader h1 {
         font-size: 2.188rem;
     }
     
@@ -203,7 +218,7 @@ body {
 }
 
 @media (max-width: 30rem) {
-    #aboutHeader h1 {
+    .aboutHeader h1 {
         font-size: 1.75rem;
     }
     
@@ -225,25 +240,34 @@ body {
     font-size: 1.35rem;
 }
 
-/* Seccion workEnvironment -Fer*/
+.valuesHead p {
+        padding: 0.8rem 0 0.5rem 0;
+        font-size: 0.938rem;
+    }
 
-#workEnvironment {
+/* Seccion workEnvironment -Fer */
+
+.workEnvironment {
     background-color: white;
     text-align: center;    
-    padding: 80px 2rem 5rem;
+    padding: 5rem 2rem 5rem;
     color: black;
+}
+
+.workEnvironment p {
+    padding: 1.1rem 0;
+    font-size: 1.2rem;
 }
 
 figure.snip0019 {
     display: inline-flex;
-    font-family: 'Raleway', Arial, sans-serif;
     color: #fff;
     position: relative;
     overflow: hidden;
-    margin: 30px;
-    min-width: 220px;
-    max-width: 410px;
-    max-height: 220px;
+    margin: 1.875rem;
+    min-width: 13.75rem;
+    max-width: 25.625rem;
+    max-height: 13.75rem;
     width: 100%;
     background: #000000;
     text-align: center;
@@ -283,7 +307,7 @@ figure.snip0019 figcaption::before {
     top: 50%;
     bottom: 50%;
     left: 50%;
-    width: 2px;
+    width: 0.125rem;
     content: '';
     opacity: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -296,7 +320,7 @@ figure.snip0019 figcaption::before {
 figure.snip0019 h3,
 figure.snip0019 p {
     margin: 0;
-    padding: 20px;
+    padding: 1.25rem;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -369,18 +393,62 @@ figure.snip0019:hover figcaption p {
 
 figure.snip0019:hover figcaption::before {
     background: #ffffff;
-    top: 0px;
-    bottom: 0px;
+    top: 0rem;
+    bottom: 0rem;
     opacity: 1;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
 }
 
+/* Responsive Styles workEnvironment -fer */
 
+@media (max-width: 64rem) {
+    .workEnvironment {
+        padding: 2.5rem 2.5rem 3rem;
+    }
+    
+    .workEnvironment p {
+        padding: 1rem 0 1rem 0;
+        font-size: 1.125rem;
+    }
+}
 
-/* Seccion connectWithUs -Fer*/
+@media (max-width: 48rem) {
+    .workEnvironment {
+        padding: 3.75rem 1.5rem 4rem;
+    }
 
-#connectWithUs {
+    figure.snip0019 {
+        max-width: 90%;
+        margin: 1.25rem auto;
+    }
+}
+
+@media (max-width: 30rem) {
+    .workEnvironment {
+        padding: 2.5rem 2.5rem 3rem;
+    }
+    
+    .workEnvironment p {
+        padding: 1rem 0 1rem 0;
+        font-size: 0.938rem;
+    }
+
+    figure.snip0019 {
+        max-width: 95%;
+        max-height: none;
+    }
+    
+    figure.snip0019 p,
+    figure.snip0019 h3 {
+        font-size: 0.9rem;
+        padding: 0.938rem;
+    }
+}
+
+/* Seccion connectWithUs -Fer */
+
+.connectWithUs {
     background: #3B6689;
     text-align: center;
     padding: 5rem 1rem 5rem;
@@ -451,10 +519,10 @@ figure.snip0019:hover figcaption::before {
     transition: all 0.3s ease-in;
 }
 
-/* Responsive styles connectWithUs -Fer*/
+/* Responsive styles connectWithUs -Fer */
 
 @media (max-width: 64rem) {
-    #connectWithUs {
+    .connectWithUs {
         height: auto;
         padding: 4.375rem 2rem 4rem;
     }
@@ -466,13 +534,13 @@ figure.snip0019:hover figcaption::before {
 }
 
 @media (max-width: 48rem) {
-    #connectWithUs {
+    .connectWithUs {
         padding: 3.75rem 1.5rem 3rem;
     }
     
     .connectHead p {
         padding: 0.938rem 2rem 0 2rem;
-        font-size: 1px;
+        font-size: 1.2rem;
     }
     
     .cantactUs-button {

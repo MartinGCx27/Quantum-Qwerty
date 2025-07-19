@@ -49,17 +49,17 @@
                 </svg>
                 
                 <!-- Mensaje temporal -->
-                <div class="auto-hide-message mt-3" id="autoMessage">
+                {% comment %} <div class="auto-hide-message mt-3" id="autoMessage">
                     <span>Hola!!! soy QQ te apoyaré con tus dudas</span>
                     <button onclick="closeMessage()">✖</button>
-                </div>
+                </div> {% endcomment %}
             </div>
         </div>
     </div>
 </section>
 
 <!-- Script para el mensaje temporal -->
-<script>
+{% comment %} <script>
     window.addEventListener('DOMContentLoaded', () => {
         const msg = document.getElementById('autoMessage');
         msg.style.display = 'block';
@@ -71,7 +71,7 @@
     function closeMessage() {
         document.getElementById('autoMessage').style.display = 'none';
     }
-</script>
+</script> {% endcomment %}
 
 <!-- Script para animaciones al hacer scroll -->
 

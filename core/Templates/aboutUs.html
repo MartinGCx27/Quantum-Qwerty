@@ -10,13 +10,13 @@
 
 {% block content %} 
 
-<section id="aboutHeader" class="animate__animated animate__fadeIn">
+<section id="aboutHeader" class="aboutHeader animate__animated animate__fadeIn">
     <h1>Sobre nosotros</h1>
     <p>Nuestro slogan</p>
     <div class="gradient-line"></div>
-</section>  
+</section>
 
-<section id="ourFoundation" class="parent">
+<section id="ourFoundation" class="ourFoundation parent">
     <div class="mision-vision-wrapper">
         <div class="card mision animate__animated animate__slideInLeft">
             <h2>
@@ -100,8 +100,8 @@
     </div> 
 </section>
 
-<section id="workEnvironment">
-    <h2>Nuestro metodo de trabajo</h2>
+<section id="workEnvironment" class="workEnvironment">
+    <h2>Nuestro método de trabajo</h2>
     <p>
         Explora cómo nuestros valores cobran vida en cada proyecto, 
         reflejando el compromiso y la metodología que nos definen
@@ -129,7 +129,7 @@
     </figure>
 </section>
 
-<section id="connectWithUs">
+<section id="connectWithUs" class="connectWithUs">
     <div class="connectHead">
         <h2>¿Listo para comenzar?</h2>
         <p>
@@ -154,6 +154,48 @@
     },
     0.4
     );
+</script>
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+    window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("menu");
+        if (window.scrollY > window.innerHeight - 470) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+    
+</script>
+
+
+<script>
+    const icons = document.getElementsByClassName('navIcons');
+    const logo = document.getElementsByClassName('navbar-logo')[0];
+    
+    function updateNavbarIL() {
+        const useColorDark = window.scrollY >= window.innerHeight - 470;
+        
+        for (let i = 0; i < icons.length; i++) {
+            icons[i].style.filter = useColorDark
+            ? 'invert(0)'  // negro
+            : 'invert(1)'; // blanco
+        }
+        
+        // Cambiar imagen del logo si existe
+        if (logo) {
+            logo.src = useColorDark
+            ? logo.dataset.srcNormal
+            : logo.dataset.srcRosa;
+        }
+    }
+    
+    window.addEventListener('load', updateNavbarIL);
+    window.addEventListener('scroll', updateNavbarIL);
 </script>
 
 {% endblock %}
