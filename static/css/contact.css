@@ -5,119 +5,23 @@
   box-sizing: border-box;
 }
 
-/* Títulos */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(334deg, #E8A9D8, #5A1B84, #022C44);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 h1 {
   color: black;
   margin-bottom: 1rem;
-}
-
-/* Contenedor principal */
-#ContactUs {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  padding: 2.5rem;
-  padding-top: 6rem;
-  margin-bottom: 3rem;
-}
-
-/* Contenedor de dos columnas */
-.parents {
-  display: flex;
-  flex-direction: row;
-  gap: 2.5rem;
-}
-
-/* Información de contacto */
-.info_contact {
-  flex: 1;
-  padding: 1rem;
-  border-radius: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* Formulario */
-.form_contact {
-  background-color: white;
-  flex: 1;
-  padding: 2rem 2rem 0.8rem 2rem;
-  border-radius: 1.5rem;
-  box-shadow:
-    0 40px 80px rgba(0, 0, 0, 0.5),
-    0 15px 30px rgba(0, 0, 0, 0.35),
-    0 0 25px rgba(0, 0, 0, 0.25);
-}
-
-/* Logo centrado */
-.LogoContact {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 20rem;
-  height: auto;
-  margin-bottom: 1.5rem;
-}
-
-/* Botón personalizado */
-button.noselect {
-  width: 150px;
-  height: 50px;
-  background: none;
-  border: 4px solid #ff304f;
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 100ms;
-  margin-top: 0.5rem;  /* MÁS CERCA del textarea */
-  margin-bottom: 0;
-}
-
-span,
-svg {
-  position: absolute;
-  color: #002651;
-  fill: transparent;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-
-button:focus {
-  outline: none;
-  border: 2px solid #1e2a78;
-  width: 50px;
-  border-left: 4px solid #1e2a78;
-  border-bottom: 4px solid #1e2a78;
-  animation: spin 2s 500ms forwards;
-}
-
-button:focus span {
-  color: transparent;
-}
-
-button:focus svg {
-  animation: check 500ms 2300ms forwards;
-}
-
-@keyframes spin {
-  80% {
-    border: 4px solid transparent;
-    border-left: 4px solid #303a52;
-  }
-  100% {
-    transform: rotate(1080deg);
-    border: 4px solid #303a52;
-  }
-}
-
-@keyframes check {
-  to {
-    fill: #17b978;
-  }
+  text-align: center;
 }
 
 h5 {
@@ -127,68 +31,137 @@ h5 {
   margin: 0;
 }
 
-.IconsContact {
-  width: 1.8rem;
-  height: auto;
-  margin-right: 15px;
-  flex-shrink: 0;
+#ContactUs {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  padding-top: 6rem;
+  margin-bottom: 3rem;
 }
 
-.InfoBlock {
-  margin-top: 2rem;
+.parents {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: row;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.info_contact {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_contact {
+  flex: 1;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5),
+              0 15px 30px rgba(0, 0, 0, 0.35),
+              0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.LogoContact {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  width: 20rem;
+  height: auto;
 }
 
 .contact_block {
   margin-bottom: 2rem;
 }
 
-.InfoIcons {
-  margin-bottom: 1.5rem;
+.IconsContact {
+  width: 1.8rem;
+  margin-right: 15px;
+}
+
+.InfoBlock {
   margin-top: 2rem;
-  align-items: center !important;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
+}
+
+.InfoIcons {
+  margin: 2rem auto 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .SocialIcoins {
   width: 3.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin: 0 0.5rem;
 }
 
-body {
-  background: linear-gradient(334deg, #E8A9D8, #5A1B84, #022C44);
-  background-size: 180% 180%;
-  animation: gradient-animation 6s ease infinite;
+button.noselect {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: 4px solid #5A1B84;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 100ms;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem auto 0 auto;
 }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+button.noselect span,
+button.noselect svg {
+  position: absolute;
+  color: #014276;
+  fill: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
-/* Labels y espaciado */
-.FormLabel {
-  margin-top: 1rem;
-  color: black;
+button.noselect.loading {
+  width: 50px;
+  border-left: 4px solid #1e2a78;
+  border-bottom: 4px solid #1e2a78;
+  animation: spin 2s forwards;
 }
 
-/* Form inputs y labels con efecto flotante */
+button.noselect.loading span {
+  color: transparent;
+}
+
+button.noselect.loading svg {
+  animation: check 500ms 2.3s forwards;
+}
+
+@keyframes spin {
+  80% { border: 4px solid transparent; border-left: 4px solid #303a52; }
+  100% { transform: rotate(1080deg); border: 4px solid #303a52; }
+}
+
+@keyframes check {
+  to { fill: #17b978; }
+}
+
+/* Floating labels */
 .user-box {
   position: relative;
   margin-bottom: 2rem;
 }
 
-/* Input y Textarea base */
 .user-box input.form-control,
 .user-box textarea.form-control {
   width: 100%;
@@ -203,19 +176,11 @@ body {
   transition: border-color 0.3s ease;
 }
 
-/* Espaciado superior solo para el TEXTAREA */
 .user-box textarea.form-control {
   min-height: 100px;
-  padding-top: 22px; /* más espacio interno superior */
+  padding-top: 22px;
 }
 
-/* Estilo al enfocar */
-.user-box input.form-control:focus,
-.user-box textarea.form-control:focus {
-  border-color: #7d3bb1;
-}
-
-/* Label flotante */
 .user-box label {
   position: absolute;
   top: 20px;
@@ -226,7 +191,6 @@ body {
   transition: 0.3s ease all;
 }
 
-/* Cuando flota el label */
 .user-box input.form-control:focus ~ label,
 .user-box input.form-control:not(:placeholder-shown) ~ label,
 .user-box textarea.form-control:focus ~ label,
@@ -236,20 +200,27 @@ body {
   color: #7d3bb1;
 }
 
-/* Ajustes específicos entre campos */
-#phone.user-box {
-  margin-top: 1.2rem; 
-}
-
-#message.user-box {
-  margin-top: 1.1rem;
+/* Contenedor de alertas */
+#alert-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .alert {
-  padding: 1rem;
-  border-radius: 5px;
+  position: relative;
   margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
   font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .alert-success {
@@ -258,9 +229,231 @@ body {
   border: 1px solid #c3e6cb;
 }
 
-.alert-error,
 .alert-danger {
   background-color: #f8d7da;
   color: #721c24;
   border: 1px solid #f5c6cb;
+}
+
+.phone-count {
+  font-size: 14px;
+  margin-top: 0.3rem;
+}
+
+.error-message {
+  color: #721c24;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+/* Recaptcha wrapper */
+.recaptcha-wrapper {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.g-recaptcha {
+  transform-origin: 0 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ===== MEDIA QUERIES RESPONSIVE ===== */
+
+@media screen and (max-width: 1024px) {
+  .parents {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .LogoContact {
+    width: 16rem;
+  }
+
+  .form_contact {
+    padding: 1.5rem;
+  }
+
+  .SocialIcoins {
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ContactUs {
+    padding-top: 6rem;
+  }
+
+  .parents {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .form_contact {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  .LogoContact {
+    width: 14rem;
+  }
+
+  button.noselect {
+    width: 100%;
+    height: 48px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  .SocialIcoins {
+    width: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ContactUs {
+    padding-top: 8rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h5 {
+    font-size: 0.95rem;
+  }
+
+  .LogoContact {
+    width: 12rem;
+  }
+
+  .user-box input.form-control,
+  .user-box textarea.form-control {
+    font-size: 14px;
+    padding: 14px 10px 10px 10px;
+  }
+
+  .user-box label {
+    font-size: 14px;
+  }
+
+  .user-box input.form-control:focus ~ label,
+  .user-box input.form-control:not(:placeholder-shown) ~ label,
+  .user-box textarea.form-control:focus ~ label,
+  .user-box textarea.form-control:not(:placeholder-shown) ~ label {
+    font-size: 12px;
+  }
+
+  .form_contact {
+    padding: 1rem;
+  }
+
+  .alert {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* NAVBAR */
+.custom-navbar {
+  background-color: #ffffff;
+  transition: background-color 0.8s ease, color 0.8s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 1rem;
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: #000000;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #022C44;
+}
+
+.custom-navbar .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1rem;
+}
+
+.custom-navbar .nav-link:hover::before {
+  width: 100%;
+}
+
+.custom-navbar .d-md-flex img {
+  transition: transform 0.3s ease;
+}
+
+.custom-navbar .d-md-flex img:hover {
+  transform: scale(1.1);
+}
+
+.navIcons {
+  transition: transform 0.3s ease;
+}
+
+.navIcons:hover {
+  transform: scale(1.1);
+}
+
+.nav-icon {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+}
+
+.nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-logo {
+    display: none;
+  }
+
+  .custom-navbar .navbar-collapse {
+    margin-top: 0.5rem;
+  }
+
+  .custom-navbar .navbar-nav {
+    align-items: flex-start;
+  }
+
+  .custom-navbar .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .custom-navbar .navbar-brand {
+    padding-left: 0;
+  }
 }

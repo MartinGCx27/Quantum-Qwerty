@@ -5,109 +5,182 @@
 {% block head %}
 {{ block.super }}
 <link href="{% static 'css/contact.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+{% endblock %}
+
+{% block navbar %}
+<nav id="menu" class="navbar navbar-expand-lg fixed-top custom-navbar">
+  <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between">
+    
+    <!-- LOGO -->
+    <div class="col-6 col-md-4">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'img/logotipo_qq.png' %}"
+                    data-src-normal="{% static 'img/logotipo_qq.png' %}"
+                    data-src-rosa="{% static 'img/logotipo_qq.png' %}"
+                    alt="Logo"
+                    class="d-inline-block align-text-top navbar-logo">
+                </a>
+            </div>
+
+    <!-- Botón hamburguesa móvil -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú principal -->
+    <div class="collapse navbar-collapse flex-grow-1" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-column flex-lg-row align-items-lg-center">
+        <li class="nav-item">
+          <a href="{% url 'index' %}" class="nav-link d-flex align-items-center">
+            <img class="nav-icon" src="{% static 'img/home-icon.png' %}" alt="Inicio" />
+            Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'about' %}" class="nav-link d-flex align-items-center">
+            <img class="nav-icon" src="{% static 'img/about-icon.png' %}" alt="Sobre Nosotros" />
+            Sobre nosotros
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'services' %}" class="nav-link d-flex align-items-center">
+            <img class="nav-icon" src="{% static 'img/services2-icon.png' %}" alt="Servicios" />
+            Servicios
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'contactus' %}" class="nav-link d-flex align-items-center">
+            <img class="nav-icon" src="{% static 'img/contact-icon.png' %}" alt="Contactanos" />
+            Contactanos
+          </a>
+        </li>
+
+        <!-- Redes sociales para móvil -->
+        <li class="nav-item d-lg-none mt-3">
+          <div class="d-flex gap-3 ms-3">
+            <img class="navIcons" width="24" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="facebook" />
+            <img class="navIcons" width="28" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram" />
+            <img class="navIcons" width="24" src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Redes sociales escritorio -->
+    <div class="d-none d-lg-flex align-items-center gap-3">
+      <img width="30" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="facebook" />
+      <img width="40" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram" />
+      <img width="30" src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
+    </div>
+
+  </div>
+</nav>
+
 {% endblock %}
 
 {% block content %}
 
 <section id="ContactUs">
-    <div class="parents">
-        <div class="info_contact">
-            <img src="{% static 'img/logotipo_qq_rosa.png' %}" alt="" class="LogoContact contact_block">
-            
-            <div class="InfoBlock">
-                <div>
-                    <div class="contact_block">
-                        <h5>
-                            <img src="{% static 'img/phone_qq.png' %}" alt="" class="IconsContact">
-                            55 5555 5555
-                        </h5>
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="contact_block">
-                        <h5>
-                            <img src="{% static 'img/mail_qq.png' %}" alt="" class="IconsContact">
-                            Prepucio_qq@quantumquerito.com
-                        </h5>
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="contact_block">
-                        <h5>
-                            <img src="{% static 'img/map_qq.png' %}" alt="" class="IconsContact">
-                            San Agujeriado el chiquillo, Col. Prestas #555 C.P. 79789
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="InfoIcons">
-                <a href="https://matias.me/nsfw/">
-                    <img src="{% static 'img/facebook_contact.png' %}" alt="" class="SocialIcoins">
-                </a>
-                <a href="https://matias.me/nsfw/">
-                    <img src="{% static 'img/instagram_contact.png' %}" alt="" class="SocialIcoins">
-                </a>
-                <a href="https://matias.me/nsfw/">
-                    <img src="{% static 'img/github_contact.png' %}" alt="" class="SocialIcoins">
-                </a>
-            </div>
-            
+  <div class="parents">
+    <div class="info_contact animate__animated animate__fadeInLeft">
+      <img src="{% static 'img/logotipo_qq_rosa.png' %}" alt="" class="LogoContact contact_block">
+
+      <div class="InfoBlock">
+        <div class="contact_block">
+          <h5>
+            <img src="{% static 'img/phone_qq.png' %}" alt="" class="IconsContact">
+            55 7301 1774
+          </h5>
         </div>
-        
-        <div class="form_contact">
-            <h1>Contáctanos</h1>
-            <form method="post">
-                {% csrf_token %}
-                {% if messages %}
-                {% for message in messages %}
-                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
-                    {{ message }}
-                </div>
-                {% endfor %}
-                {% endif %}
-                <div class="row">
-                    <div class="col user-box">
-                        {{ form.name_contact }}
-                        <label for="nombre">Ingresa tu Nombre</label>
-                    </div>
-                    
-                    <div class="col user-box">
-                        {{ form.lastname_contact }}
-                        <label for="apellido">Ingresa tu Apellido</label>
-                    </div>
-                    
-                    <div class="mb-3 user-box">
-                        {{ form.email_contact }}
-                        <label for="email">Ingresa tu Email:</label>
-                    </div>
-                    
-                    <div class="mb-3 user-box phone" id="phone">
-                        {{ form.phone_contact }}
-                        <label>Ingresa tu Teléfono:</label>
-                    </div>
-                    
-                    <div class="mb-3 user-box" id="message">
-                        {{ form.comments_contact }}
-                        <label for="mensaje">Mensaje</label>
-                    </div>
-                    
-                    <div class="col-md-12 user-box">
-                        <div class="g-recaptcha" data-sitekey="6LfDEIkrAAAAACX1AiomHxo4MgaclWELJQ8kHYb4"></div>
-                    </div>
-                </div>
-                
-                <button id="sendBtn" class="noselect" type="button">
-                    <span>Enviar</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
-                    </svg>
-                </button>
-            </form>
+        <div class="contact_block">
+          <h5>
+            <img src="{% static 'img/mail_qq.png' %}" alt="" class="IconsContact">
+            servicios@quantumqwerty.com
+          </h5>
         </div>
+        <div class="contact_block">
+          <h5>
+            <img src="{% static 'img/map_qq.png' %}" alt="" class="IconsContact">
+            Ciudad de México
+          </h5>
+        </div>
+      </div>
+
+      <div class="InfoIcons">
+        <a href="https://matias.me/nsfw/">
+          <img src="{% static 'img/facebook_color_qq.png' %}" alt="" class="SocialIcoins">
+        </a>
+        <a href="https://matias.me/nsfw/">
+          <img src="{% static 'img/instagram_color_qq.png' %}" alt="" class="SocialIcoins">
+        </a>
+        <a href="https://matias.me/nsfw/">
+          <img src="{% static 'img/github_color_qq.png' %}" alt="" class="SocialIcoins">
+        </a>
+      </div>
     </div>
+
+    <div class="form_contact animate__animated animate__fadeIn">
+      <h1>Contáctanos</h1>
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <div id="alert-container">
+          {% if messages %}
+            {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+              {{ message }}
+            </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        <div class="row">
+          <div class="col user-box">
+            {{ form.name_contact }}
+            <label for="nombre">Ingresa tu Nombre</label>
+            <div id="name_contact-error-message" class="error-message"></div>
+          </div>
+
+          <div class="col user-box">
+            {{ form.lastname_contact }}
+            <label for="apellido">Ingresa tu Apellido</label>
+            <div id="lastname_contact-error-message" class="error-message"></div>
+          </div>
+
+          <div class="mb-3 user-box">
+            {{ form.email_contact }}
+            <label for="email">Ingresa tu Email:</label>
+            <div id="email_contact-error-message" class="error-message"></div>
+          </div>
+
+          <div class="mb-3 user-box phone">
+            {{ form.phone_contact }}
+            <label for="phone">Ingresa tu Teléfono:</label>
+            <div id="phone-count-message" class="phone-count"></div>
+            <div id="phone_contact-error-message" class="error-message"></div>
+          </div>
+
+          <div class="mb-3 user-box">
+            {{ form.comments_contact }}
+            <label for="mensaje">Mensaje</label>
+            <div id="comments_contact-error-message" class="error-message"></div>
+          </div>
+        </div>
+
+        <div class="col-md-12 recaptcha-wrapper">
+          <div class="g-recaptcha" data-sitekey="6LfDEIkrAAAAACX1AiomHxo4MgaclWELJQ8kHYb4"></div>
+        </div>
+
+        <button id="sendBtn" class="noselect" type="submit">
+          <span>Enviar</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
 </section>
 
 
@@ -120,21 +193,40 @@
 {% block js %}
 {{ block.super }}
 <script src="{% static 'js/Contact-Number.js' %}"></script>
+
+<script src="{% static 'js/form.js' %}"></script>
+
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const btn = document.getElementById('sendBtn');
-        const form = document.querySelector('form');
+    window.addEventListener("scroll", function () {
         
-        btn.addEventListener('click', function () {
-            // 🔄 Forzar el focus para que se ejecute tu animación CSS
-            btn.focus();
-            
-            // ⏳ Tiempo para dejar que la animación inicie (opcional)
-            setTimeout(() => {
-                form.submit(); // 🚀 Envía el formulario
-            }, 100); // espera mínima (puedes ajustar a 0ms si prefieres)
-        });
     });
 </script>
+
+<script>
+    const logo = document.getElementsByClassName('navbar-logo')[0];
+    
+    function updateNavbarIL() {
+        const useColorDark = window.scrollY >= 0;
+        
+        
+        // Cambiar imagen del logo si existe
+        if (logo) {
+            logo.src = useColorDark
+            ? logo.dataset.srcNormal
+            : logo.dataset.srcNormal;
+        }
+    }
+    
+    window.addEventListener('load', updateNavbarIL);
+</script>
+
+<script>
+    function filterLetters(input) {
+        // Solo letras y espacios
+        input.value = input.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ ]/g, '');
+    }
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 {% endblock %}
