@@ -108,8 +108,8 @@ def ContactUs(request):
             send_mail(
                 subject=asunto,
                 message=contenido,
-                from_email=settings.DEFAULT_FROM_EMAIL,          # Remitente configurado en settings -LGS
-                recipient_list=settings.recipient_list,      # A quién le llegará -LGS
+                from_email=settings.DEFAULT_FROM_EMAIL,      # Remitente configurado en settings -LGS
+                recipient_list=['quantumqwrty@gmail.com'],      # A quién le llegará -LGS
                 fail_silently=False,
             )
         except Exception as e:
@@ -124,9 +124,10 @@ def ContactUs(request):
 
         # Devolvemos un JSON indicando éxito (puedes usar redirect_url en JS) -LGS
         return JsonResponse({'success': True, 'redirect_url': request.path})
-
+    
     # Si NO es POST o no es AJAX, simplemente mostramos el formulario vacío -LGS
     form = FormContact()
+    # pdb.set_trace()
     return render(request, 'ContactUs.html', {'form': form})
 
 
