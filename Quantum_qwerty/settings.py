@@ -140,6 +140,18 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Se agregan nuevos captcha para QUANTUM QWERTY -LGS
-RECAPTCHA_PUBLIC_KEY = ''
-RECAPTCHA_SECRET_KEY = ''
+RECAPTCHA_PUBLIC_KEY = '6LfDEIkrAAAAACX1AiomHxo4MgaclWELJQ8kHYb4' 
+RECAPTCHA_SECRET_KEY = '6LfDEIkrAAAAAH5sp3b8HvXNMw-gf_7SeT6WX1BB'
+
+#servidor de uso Gmail correo
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = f'Inmunolife <{os.environ.get("EMAIL_HOST_USER")}>'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+BASE_URL = os.environ.get('BASE_URL', 'http://localhost:8000')
+
+recipient_list = os.environ.get('recipient_list')
