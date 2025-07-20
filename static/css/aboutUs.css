@@ -24,14 +24,27 @@ body {
 
 /* Seccion aboutHeader -Fer*/
 .aboutHeader {
-    padding-top: 7.5rem; 
+    padding-top: 6.5rem; 
     text-align: center;
-    font-size: 1.375rem;
-    margin-bottom: 7rem;
+    margin-bottom: 4rem;
 }
 
 .aboutHeader h1 {
-    font-size: 3.438rem;
+    font-size: 2.8rem;
+}
+
+.aboutHeader p {
+    font-size: 1.15rem;
+    padding: 0.7rem 12rem 0.7rem 12rem;
+}
+.aboutHeader h3 {
+    font-size: 1.7rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.aboutHeader h5 {
+    font-size: 1rem;
 }
 
 .gradient-line {
@@ -43,7 +56,7 @@ body {
     background: linear-gradient(to right, #a78bfa, #f472b6);
 }
 
-/* Seccion ourFoundation -Fer */
+/* Sección ourFoundation -Fer */
 
 .ourFoundation {
     background-color: #EAE7E5;
@@ -51,7 +64,7 @@ body {
     flex-direction: column;
     gap: 2rem;
     color: black;
-    padding: 5rem 2rem 5rem;
+    padding: 5rem 2rem;
 }
 
 .mision-vision-wrapper {
@@ -63,7 +76,7 @@ body {
 .card {
     border-radius: 0.625rem;
     background-color: white;
-    box-shadow: 0.438rem 0.438rem 0.5rem rgba(90, 27, 132, 0.5); 
+    box-shadow: 0.438rem 0.438rem 0.5rem rgba(90, 27, 132, 0.5);
 }
 
 .icon-Foundation-above {
@@ -78,14 +91,27 @@ body {
     background-color: #eae4f0;
 }
 
+.philosophy {
+    text-align: center;
+    padding-bottom: 2.8rem;
+}
+
+.philosophy p {
+    padding: 1.25rem 8rem 0;
+    font-size: 1.2rem;
+}
+
 .mision, .vision {
     width: 40%;
     padding: 1.5rem;
-    
+}
+
+.mision h2, .vision h2 {
+    font-size: 1.6rem;
 }
 
 .mision p, .vision p {
-    margin-top: 1.875rem;
+    margin-top: 1.7rem;
 }
 
 .values {
@@ -106,7 +132,8 @@ body {
     text-align: center;
 }
 
-.values .valuesHead p {
+.valuesHead p {
+    padding: 0.7rem 8rem 0.4rem;
     font-size: 1.2rem;
 }
 
@@ -116,13 +143,14 @@ body {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card.value {
     display: flex;
     flex-direction: column;
     padding: 1.8rem;
-    margin: 0 0.313rem;  
+    margin: 0 0.313rem;
     height: auto;
     max-width: 18.75rem;
 }
@@ -143,7 +171,7 @@ body {
     object-fit: contain;
 }
 
-/* Responsive Styles aboutHeader -fer */
+/* ================= Responsive de ourFoundation -Fer================= */
 
 @media (max-width: 64rem) {
     .aboutHeader {
@@ -155,6 +183,10 @@ body {
         font-size: 2.625rem;
     }
     
+    .aboutHeader p {
+        padding: 0.7rem 5rem;
+    }
+    
     .mision-vision-wrapper {
         gap: 4rem;
     }
@@ -164,16 +196,17 @@ body {
         padding: 1.2rem;
     }
     
-    .values-grid {
-        flex-wrap: wrap;
-    }
-    
     .valuesHead p {
         font-size: 1.125rem;
     }
     
     .card.value {
         max-width: 16.25rem;
+    }
+    
+    .philosophy p {
+        padding: 1.25rem 4rem 0;
+        font-size: 1.1rem;
     }
 }
 
@@ -187,6 +220,11 @@ body {
         font-size: 2.188rem;
     }
     
+    .aboutHeader p {
+        padding: 0.7rem 2rem;
+        text-align: center; 
+    }
+    
     .mision-vision-wrapper {
         flex-direction: column;
         align-items: center;
@@ -197,14 +235,14 @@ body {
         width: 90%;
     }
     
-    .values-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    
     .card.value {
         width: 90%;
         max-width: none;
+    }
+    
+    .values-grid {
+        flex-direction: column;
+        align-items: center;
     }
     
     .foundation-icon-wrapper-v {
@@ -215,9 +253,24 @@ body {
     .icon-Foundation-below {
         width: 1.875rem;
     }
+    
+    .mision h2, .vision h2 {
+        font-size: 1.3rem;
+    }
+    
+    .valuesHead p {
+        padding: 0.7rem 2rem 0.4rem;
+        font-size: 1rem;
+    }
+    
+    .philosophy p {
+        padding: 1.25rem 2rem 0;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 30rem) {
+    
     .aboutHeader h1 {
         font-size: 1.75rem;
     }
@@ -228,22 +281,27 @@ body {
     
     .mision p, .vision p,
     .values p {
-        font-size: 0.rem;
+        font-size: 0.875rem;
     }
     
+    .philosophy p {
+        font-size: 0.938rem;
+        padding: 1.5rem 0.1rem 0.1rem 0.1rem;
+    }
+
     .values h3 {
         font-size: 1rem;
     }
-}
-
-.mision h2, .vision h2 {
-    font-size: 1.35rem;
-}
-
-.valuesHead p {
-        padding: 0.8rem 0 0.5rem 0;
+    
+    .valuesHead p {
         font-size: 0.938rem;
+        padding: 1rem 0.1rem 0.1rem 0.1rem;
     }
+    
+    .mision h2, .vision h2 {
+        font-size: 1.1rem;
+    }
+}
 
 /* Seccion workEnvironment -Fer */
 
@@ -255,7 +313,7 @@ body {
 }
 
 .workEnvironment p {
-    padding: 1.1rem 0;
+    padding: 1.1rem 8rem 0 8rem;
     font-size: 1.2rem;
 }
 
@@ -400,8 +458,7 @@ figure.snip0019:hover figcaption::before {
     transition-delay: 0s;
 }
 
-/* Responsive Styles workEnvironment -fer */
-
+/* ================= Responsive de workEnvironment -Fer================= */
 @media (max-width: 64rem) {
     .workEnvironment {
         padding: 2.5rem 2.5rem 3rem;
@@ -417,7 +474,7 @@ figure.snip0019:hover figcaption::before {
     .workEnvironment {
         padding: 3.75rem 1.5rem 4rem;
     }
-
+    
     figure.snip0019 {
         max-width: 90%;
         margin: 1.25rem auto;
@@ -433,7 +490,7 @@ figure.snip0019:hover figcaption::before {
         padding: 1rem 0 1rem 0;
         font-size: 0.938rem;
     }
-
+    
     figure.snip0019 {
         max-width: 95%;
         max-height: none;
@@ -519,8 +576,20 @@ figure.snip0019:hover figcaption::before {
     transition: all 0.3s ease-in;
 }
 
-/* Responsive styles connectWithUs -Fer */
+/* .blink-soft {
+animation: blinkAnimation 3.5s infinite;
+}
 
+@keyframes blinkAnimation {
+0%, 100% {
+opacity: 1;
+}
+50% {
+opacity: 0.4;
+}
+} */
+
+/* ================= Responsive de connectWithUs -Fer================= */
 @media (max-width: 64rem) {
     .connectWithUs {
         height: auto;
@@ -565,7 +634,6 @@ figure.snip0019:hover figcaption::before {
         font-size: 1rem;
     }
 }
-
 
 /* Seccion footer -Fer */
 

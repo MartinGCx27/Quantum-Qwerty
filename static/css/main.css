@@ -6,14 +6,14 @@
   src: url("/static/font/geometr212-BkCn-BT-Heavy/Geometr212-BkCn-BT-Heavy.ttf");
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Geometr212-heavy" !important;
 }
 
 /* Subtitulos */
 @font-face {
   font-family: 'Geometr212-book';
-  src: url("/static/font/geometr212-BkCn-BT-Book/Geometr212-BkCn-BT-Book.ttf");
+  src: url("/static/font/geometr212-BkCn-BT-Book/Geometr212-BkCn BT-Book.ttf");
 }
 
 h4,

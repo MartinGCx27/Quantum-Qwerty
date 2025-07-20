@@ -12,11 +12,19 @@
 
 <section id="aboutHeader" class="aboutHeader animate__animated animate__fadeIn">
     <h1>Sobre nosotros</h1>
-    <p>Nuestro slogan</p>
+    <p> En Quantum Qwerty creemos que cada empresa merece un acompañamiento estratégico, personalizado y eficiente, respaldado por un equipo experto que transforma visión en resultados concretos. </p>
+    <h3>Unique Partner</h3>
+    <h5> Por qué un socio puede ser suficiente cuando es el correcto.</h5>
     <div class="gradient-line"></div>
 </section>
 
 <section id="ourFoundation" class="ourFoundation parent">
+    
+    <div class="philosophy animate__animated animate__fadeInUp">
+        <h2>Nuestra Filosofia</h2>
+        <p>En Quantum Qwerty no solo somos desarrolladores apasionados, somos un equipo multidisciplinario que abarca desde el diseño gráfico, la animación, hasta la administración de servidores y el posicionamiento web sin dejar a un lado la producción de medios audiovisuales.</p>
+    </div>
+    
     <div class="mision-vision-wrapper">
         <div class="card mision animate__animated animate__slideInLeft">
             <h2>
@@ -31,7 +39,7 @@
                 soluciones para tu marca.
             </p>
         </div>
-        <div class="card vision animate__animated animate__slideInRight ">
+        <div class="card vision animate__animated animate__slideInRight">
             <h2>
                 <div class="foundation-icon-wrapper-p">
                     <img src="{% static 'img/vision-icon.png' %}">
@@ -43,7 +51,7 @@
                 área trabajando de manera
                 colaborativa, para llevar a
                 nuestros clientes a cada una
-                de sus metas
+                de sus metas.
             </p>
         </div>
     </div>
@@ -131,10 +139,10 @@
 
 <section id="connectWithUs" class="connectWithUs">
     <div class="connectHead">
-        <h2>¿Listo para comenzar?</h2>
+        <h2 class="blink-soft">¿Listo para comenzar?</h2>
         <p>
             Conectemos y demos forma a tu visión digital con soluciones inteligentes y a la medida. 
-            En Quantum Qwerty estamos listos para escucharte y crear algo excepcional contigo
+            En Quantum Qwerty estamos listos para escucharte y crear algo excepcional contigo.
         </p>
         <a href="{% url 'contactus' %}" class="cantactUs-button">
             <span> 
@@ -156,6 +164,17 @@
     );
 </script>
 
+<script type="module">
+    import { animationsScroll } from "{% static 'js/qq-functions.js' %}";
+    
+    animationsScroll.activate('#connectWithUs', 
+    {
+        '.connectHead': 'heartBeat',
+    },
+    0.4
+    );
+</script>
+
 {% endblock %}
 
 {% block js %}
@@ -163,7 +182,7 @@
 <script>
     window.addEventListener("scroll", function () {
         const navbar = document.getElementById("menu");
-        if (window.scrollY > window.innerHeight - 470) {
+        if (window.scrollY > window.innerHeight - 430) {
             navbar.classList.add("scrolled");
         } else {
             navbar.classList.remove("scrolled");
@@ -178,7 +197,7 @@
     const logo = document.getElementsByClassName('navbar-logo')[0];
     
     function updateNavbarIL() {
-        const useColorDark = window.scrollY >= window.innerHeight - 470;
+        const useColorDark = window.scrollY >= window.innerHeight - 430;
         
         for (let i = 0; i < icons.length; i++) {
             icons[i].style.filter = useColorDark
