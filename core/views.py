@@ -48,7 +48,7 @@ def index(request):
     
 def ContactUs(request):
     # Verificamos si la petición es POST y además viene por AJAX (usando cabecera x-requested-with) -LGS
-    #EVITA LA RECARGA DEL SUBMIT-LGS
+    # EVITA LA RECARGA DEL SUBMIT-LGS
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
         # Cargamos los datos enviados al formulario -LGS
         form = FormContact(request.POST)
@@ -120,7 +120,7 @@ def ContactUs(request):
                 subject=asunto,
                 message=contenido,
                 from_email=settings.DEFAULT_FROM_EMAIL,      # Remitente configurado en settings -LGS
-                recipient_list=['quantumqwrty@gmail.com'],      # A quién le llegará -LGS
+                recipient_list=settings.RECIPIENT_LIST,      # A quién le llegará -LGS
                 fail_silently=False,
             )
         except Exception as e:

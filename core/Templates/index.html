@@ -194,24 +194,6 @@
     AOS.init();
   </script>
 
-  <!--Script de draw svg line on scroll -Fer-->
-
-  <script>
-    const strokeLength = 8959;
-    const scrollSvg = document.querySelector('.svgscroll__svg path');
-
-    function svgScroll() {
-      let scrollHeight = document.body.scrollHeight;
-      let winHeight = window.innerHeight;
-      let calcHeight = scrollHeight - winHeight;
-      let scroll = window.scrollY;
-      let scrollPercent = scroll / calcHeight;
-      scrollSvg.style.strokeDashoffset = strokeLength - (strokeLength * scrollPercent);
-    }
-
-    window.addEventListener('scroll', svgScroll);
-  </script>
-
   <!--Seccion de Scripts personalizados -LGS -->
   <script src="{% static 'js/hyper-jump.js' %}"></script>
   <script src="{% static 'js/scroll-snake.js' %}"></script>

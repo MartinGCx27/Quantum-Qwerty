@@ -154,4 +154,5 @@ DEFAULT_FROM_EMAIL = f'quantumqwerty <{os.environ.get("EMAIL_HOST_USER")}>'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 BASE_URL = os.environ.get('BASE_URL', 'http://localhost:8000')
 
-RECIPIENT_LIST = tuple(os.environ.get("recipient_list"))
+RECIPIENT_LIST = [os.environ.get("RECIPIENT_EMAIL")]
+
