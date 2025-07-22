@@ -130,8 +130,8 @@
 
   {% block footer %}
 
-  <footer class="footer">
-    <div class="bubbles">
+    <footer  class="footer">
+    <div id="bubble-container" class="bubbles">
       {% for b in bubbles %}
       <div class="bubble" style="--size:{{ b.size }}rem;
                     --distance:{{ b.distance }}rem;
@@ -153,7 +153,6 @@
       </div>
     </div>
 
-
     <svg style="position:fixed; top:100vh">
       <defs>
         <filter id="blob">
@@ -172,6 +171,7 @@
   <button id="scrollToTopBtn" class="btn-animated"><i class="bi bi-arrow-up-short"></i></button>
 
   {% block js %}
+  <script src="{% static 'js/bubbles.js' %}"></script>
   <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>

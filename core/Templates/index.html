@@ -145,8 +145,8 @@
   {% include "home/slider.html" %}
   
   
-  <footer class="footer">
-    <div class="bubbles">
+  <footer  class="footer">
+    <div id="bubble-container" class="bubbles">
       {% for b in bubbles %}
       <div class="bubble" style="--size:{{ b.size }}rem;
                     --distance:{{ b.distance }}rem;
@@ -167,7 +167,6 @@
         </div>
       </div>
     </div>
-
 
     <svg style="position:fixed; top:100vh">
       <defs>
@@ -221,9 +220,10 @@
   <script src="{% static 'js/top-botton.js' %}"></script>
   <script src="{% static 'js/slider-pop-center.js' %}"></script>
   <script src="{% static 'js/challenges.js' %}"></script>
+  <script src="{% static 'js/bubbles.js' %}"></script>
   <script type="module" src="{% static 'js/scroll-section-index.js' %}"></script>
 
-
+  
 
 </body>
 

@@ -40,19 +40,9 @@ def index(request):
         {'titulo':'Apps', 'icono_url':'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/140599451/original/602e9a52c18a32e25dd3282f05c699cf3ce89f80/create-a-professional-ios-and-android-app.png'},
         #{'titulo':'Salud', 'icono_url':'/static/icons/salud.svg'},
     ]
-    bubbles = [
-        {
-            'size': round(2 + random.uniform(0, 4), 2),
-            'distance': round(6 + random.uniform(0, 4), 2),
-            'position': round(-5 + random.uniform(0, 110), 2),
-            'time': round(2 + random.uniform(0, 2), 2),
-            'delay': round(-1 * (2 + random.uniform(0, 2)), 2),
-        }
-        for _ in range(128)
-    ]
-
+    
     # pdb.set_trace()
-    return render(request, 'index.html', {'logos': logos, 'desafios': desafios, 'bubbles': bubbles})
+    return render(request, 'index.html', {'logos': logos, 'desafios': desafios})
 
 
     

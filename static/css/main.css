@@ -431,7 +431,7 @@ body {
 #about-us {
   background-color: #6f42c1;
   padding: 6.25rem 2.5rem;
-  min-height: 85vh;
+  min-height: 20vh;
   position: relative;
   z-index: 3;
 }
