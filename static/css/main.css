@@ -431,7 +431,7 @@ body {
 #about-us {
   background-color: #6f42c1;
   padding: 6.25rem 2.5rem;
-  min-height: 85vh;
+  min-height: 20vh;
   position: relative;
   z-index: 3;
 }
@@ -598,12 +598,12 @@ body {
 /* --- Sección SLIDER ---LGS */
 .logo-slider-section {
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 
 .logo-slider-section h2 {
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #EAE7E5;
   text-shadow: 0 0 10px #E8A9D8, 0 0 20px #022C44;
 }

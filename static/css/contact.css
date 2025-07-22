@@ -252,6 +252,7 @@ button.noselect.loading svg {
   display: flex;
   margin-top: 1rem;
   overflow-x: auto;
+  justify-content: flex-start;
   padding-bottom: 0.5rem;
 }
 
