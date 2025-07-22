@@ -163,7 +163,7 @@ crossorigin="anonymous"></script>
 
 <!--Script de draw svg line on scroll -Fer-->
 
-<script>
+{% comment %} <script>
   const strokeLength = 8959;
   const scrollSvg = document.querySelector('.svgscroll__svg path');
   
@@ -177,7 +177,7 @@ crossorigin="anonymous"></script>
   }
   
   window.addEventListener('scroll', svgScroll);
-</script>
+</script> {% endcomment %}
 
 <!--Seccion de Scripts personalizados -LGS -->
 <script src="{% static 'js/hyper-jump.js' %}"></script>
