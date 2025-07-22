@@ -8,10 +8,8 @@ scrollSvg.style.strokeDashoffset = strokeLength;
 function svgScroll() {
   // Posición de inicio: el top de #about-us
   const aboutUsTop = aboutUs.offsetTop;
-  // Posición de final: bottom de la página - puedes ajustar si quieres que termine antes
+  // Posición de final: bottom de la página
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-  // Progreso: solo cuenta el scroll a partir de aboutUs
   const scrollTop = window.scrollY;
 
   // Calcula el rango de scroll desde aboutUsTop hasta docHeight
