@@ -1,0 +1,478 @@
+[33mcommit 45c8f9551c54b6f0f72da5b942f44e343998d268[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 20 12:38:16 2025 -0600
+
+    update requirements.txt -LGS
+
+[33mcommit cf47405a51d43b32c8bfe198cb7c73616b8937b0[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 20 12:25:47 2025 -0600
+
+    complete Contact Us section -LGS
+
+[33mcommit 6c5b42fed0a1c4ade268a671f78ad2c9e940347e[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 20 11:56:08 2025 -0600
+
+    commit -LGS
+
+[33mcommit 4c9de5d75097d98ba11862cfdc408b3b7e7aeb6b[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 20 11:50:54 2025 -0600
+
+    commit -LGS
+
+[33mcommit 2f92ed038a69657d59d152c3ea82f1ad2623df5e[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 20 11:49:38 2025 -0600
+
+    commit -LGS
+
+[33mcommit dd684c37657ead456e53a625d0545d8897ffdd7d[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 20 11:47:31 2025 -0600
+
+    complete Contact Us section -LGS
+
+[33mcommit fc31c419411074adc4ae10d6298ee18581145bf3[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 20 10:33:54 2025 -0600
+
+    Complete about us section -Fer
+
+[33mcommit 4d0a95681bfaba6dfedf4b8e0960cb4866ed1f62[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 20 10:31:52 2025 -0600
+
+    Complete about us section -Fer
+
+[33mcommit 4d2e21afdb089466be310d7635c7b7c71dba0b93[m
+Merge: 5afcc15 937b271
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sat Jul 19 09:43:35 2025 -0600
+
+    Merge branch 'master' into Fer
+
+[33mcommit 5afcc153c1366d6b0af811cc2d11638ba6e6fa33[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sat Jul 19 09:39:57 2025 -0600
+
+    Complete section about us -Fer
+
+[33mcommit 937b27144ee3d2bae1359855becfc80dd20eaa2b[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Fri Jul 18 22:41:33 2025 -0600
+
+    add comments css services content -Memix
+
+[33mcommit e65a8b5b4eb6ad666662b3c9a004e701562db0a9[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Fri Jul 18 22:35:42 2025 -0600
+
+    responsive scroll svg-home and responsive services section -Memix
+
+[33mcommit 34437bb600aff02d34abb961b4e5b4e9d116c0c8[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 16 20:54:16 2025 -0600
+
+    complete both options snake scroll -Memix
+
+[33mcommit 60ec7295b83fd11739e1252c83e1762d1d094dc6[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 16 20:46:38 2025 -0600
+
+    Modify scroll snake option 2 without opacity and other path -Memix
+
+[33mcommit c484e89e83e2f26258db321d2b5502c2864784a4[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 16 20:23:55 2025 -0600
+
+    Modify scroll svg with option 2 opacity 0.4 -Memix
+
+[33mcommit cb415b08385911a1eaa85693d207e9bcff2ce9bf[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 16 19:42:29 2025 -0600
+
+    add svg scroll -Memix
+
+[33mcommit 167f90a75c26ed27f3625c7dd2d1e7c108b98da8[m
+Merge: d2ca085 29333b1
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 16 19:04:45 2025 -0600
+
+    Merge branch 'ramaMemix' into testbg
+
+[33mcommit 29333b1eaed8293bcba27812ee8979375c64c2ab[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 16 19:04:20 2025 -0600
+
+    add svg scroll -Memix
+
+[33mcommit 8404ebfd4645312b4583490465b53384b462db92[m
+Merge: 3c1e1e1 e4ba481
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 13 18:28:10 2025 -0600
+
+    About us section -Fer
+
+[33mcommit 3c1e1e1cc7c5f7a1d9c4bd4035a342a7da3261fe[m
+Merge: 02df13f e6eb079
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 13 18:22:10 2025 -0600
+
+    about us section -Fer
+
+[33mcommit e4ba481bee2d8b40f72f82c99162263b01b6b113[m
+Merge: d7623a0 e6eb079
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Sun Jul 13 18:19:32 2025 -0600
+
+    create services template, refactor scroll function -Memix
+
+[33mcommit d7623a01febac8c40781bec47d9505961574bbd4[m
+Merge: 67b1a37 fc620c3
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Sun Jul 13 18:18:37 2025 -0600
+
+    create services template, refactor scroll function -Memix
+
+[33mcommit 02df13fda89abde32408cc265bd76500d0d13003[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 13 18:18:04 2025 -0600
+
+    About us section -Fer
+
+[33mcommit fc620c3ce6fa2ef216df20eb159d6ddba249613d[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Sun Jul 13 18:17:58 2025 -0600
+
+    create services template, refactor scroll function -Memix
+
+[33mcommit e6eb07941361156880c1056d6bca78e6a0e0f73b[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 13 18:17:26 2025 -0600
+
+    functional form creation -LGS
+
+[33mcommit 33dfc0644b0cd2a50bf302575a0a62584ea6b26c[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 13 17:59:47 2025 -0600
+
+    functional form creation -LGS
+
+[33mcommit 49cf41ab73c307ec76b7e316acfcbf782f7c3ea8[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Sat Jul 12 19:34:39 2025 -0600
+
+    create services template -Memix
+
+[33mcommit c2ea5dc26e9283d162e0bd6e719a3c588fb40b27[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Sat Jul 12 10:38:12 2025 -0600
+
+    Merge -Memix
+
+[33mcommit 48c562487ca5b2cd29c10808c3895332448b97d1[m
+Merge: 2fc7d1e 67b1a37
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sat Jul 12 10:38:10 2025 -0600
+
+    Merge branch 'master' of https://github.com/MartinGCx27/Quantum-Qwerty
+
+[33mcommit 2fc7d1ee407fcaa6b9f65a2908c52a925202cdd7[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sat Jul 12 10:38:02 2025 -0600
+
+    contact us style -LGS
+
+[33mcommit 3cca1c0edbda8657c31bdce3d99a8737e4d55531[m
+Merge: 95a7af3 67b1a37
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sat Jul 12 09:59:52 2025 -0600
+
+    Merge branch 'master' into Fer
+
+[33mcommit 9cda2ed211f94bf6a945da063c5aa9e29aaa47f6[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Fri Jul 11 19:29:22 2025 -0600
+
+    create and fix db qq -Memix
+
+[33mcommit 95a7af3508d8a20efc1a338b05a4b59603a31346[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Fri Jul 11 19:29:06 2025 -0600
+
+    Creation of an about us section -Fer
+
+[33mcommit 67b1a37bcc4e6a1f2566fa6277ace6426e993ac4[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Fri Jul 11 19:26:30 2025 -0600
+
+    create and fix db qq -Memix
+
+[33mcommit a8cc817a53d5650658fe4cb9a5fdafbd3d7d6784[m
+Merge: a20424c 1186617
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Wed Jul 9 22:55:26 2025 -0600
+
+    modify script and create template aboutUs -Fer
+
+[33mcommit a20424c4e7fe7b2abffb89068367c46b4a9adb16[m
+Merge: f3ccc99 b79aa82
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Wed Jul 9 22:52:43 2025 -0600
+
+    modify script and create template aboutUs -Fer
+
+[33mcommit 11866176a622f1424abc7c74debf5ceabbcbde1d[m
+Merge: e740791 e0a86b4
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 9 22:47:30 2025 -0600
+
+    finished services section, img´s corrections -Memix
+
+[33mcommit e7407917809313bcf34204a754ddf7800907daef[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 9 22:47:04 2025 -0600
+
+    finished services section, img´s corrections -Memix
+
+[33mcommit e0a86b4bbb03dacd43a9f8db1aaaa65017e57ee8[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 9 22:46:28 2025 -0600
+
+    finished services section, img´s corrections -Memix
+
+[33mcommit 89138d49f3f7dd084ad86dd8c679f96a66aee44b[m
+Merge: 20bab0d 5347ca0
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 9 22:29:05 2025 -0600
+
+    responsive services-home -Memix
+
+[33mcommit 20bab0d02cf91deb60294707698aa096b7e7abf0[m
+Merge: 41c4b1c f3ccc99
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 9 22:24:49 2025 -0600
+
+    Merge branch 'master' of https://github.com/MartinGCx27/Quantum-Qwerty
+
+[33mcommit 5347ca0eae919f584dbfe39c6ca5bc794ba65178[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jul 9 22:24:27 2025 -0600
+
+    responsive services-home -Memix
+
+[33mcommit b79aa82146942e0b65ad7e7ad7fc79a9c56783c9[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Wed Jul 9 22:23:35 2025 -0600
+
+    Update js animations -Fer
+
+[33mcommit f3ccc99a96e05895efaef2f98f7a2fb3fda8a846[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Wed Jul 9 22:21:07 2025 -0600
+
+    create view contact us and separate scripts -LGS
+
+[33mcommit 41c4b1ce8bc858aa71648dcc2f5c3c282fee278e[m
+Merge: b25b20e c392cdc
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Mon Jul 7 23:04:34 2025 -0600
+
+    merge with sections -Memix
+
+[33mcommit c392cdcd7334dad4e499d2bd1a82f02ec8e26259[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Mon Jul 7 23:03:37 2025 -0600
+
+    responsive about us -Fer
+
+[33mcommit 84c15968da783961da033d51896008e950909004[m
+Merge: 6b8b50f 8759250
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Mon Jul 7 22:58:14 2025 -0600
+
+    Merge branch 'Fer'
+
+[33mcommit 6b8b50f186ad98de116728d6357ff24b8f8f48ed[m
+Merge: cf29ea7 759d735
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Mon Jul 7 22:55:58 2025 -0600
+
+    Merge branch 'master' of https://github.com/MartinGCx27/Quantum-Qwerty
+
+[33mcommit 8759250467b132e1fbd65020c849faec5baeffa5[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Mon Jul 7 22:55:07 2025 -0600
+
+    Responsive About Us Section -Fer
+
+[33mcommit 759d7350488891d7b2ad57513ff1717e5372a687[m
+Merge: 5afb676 ef542bf
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Mon Jul 7 22:55:01 2025 -0600
+
+    create starter page -LGS
+
+[33mcommit b25b20ee5299b52b20350260d10ce4daad29cbab[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Mon Jul 7 22:50:57 2025 -0600
+
+    merge seccions -Memix
+
+[33mcommit ef542bfdced61ee70d8370e063f4e86a74092444[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Mon Jul 7 22:13:33 2025 -0600
+
+    merge success -Memix
+
+[33mcommit 5afb676b07aaa0f19e630d43e83af273f00f028b[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Mon Jul 7 22:07:30 2025 -0600
+
+    create starter page -LGS
+
+[33mcommit 6dc64133db8e75048bf59128cdb294329e001266[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Mon Jul 7 22:06:54 2025 -0600
+
+    merge success -Memix
+
+[33mcommit 7262015d01637ac64c89a77a28f9017c7e3cc4c0[m
+Merge: 96ee6b1 07a3880
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Mon Jul 7 21:59:48 2025 -0600
+
+    merge? -Memix
+
+[33mcommit 07a388096dfba0c1aef09bb9b50a150ebc8190c1[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Mon Jul 7 21:33:42 2025 -0600
+
+    creation services-home section, add favicon -Memix
+
+[33mcommit b2bcee773eec205546cbd0cbd2b78388533c9891[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 6 23:58:49 2025 -0600
+
+    create starter-page.html -LGS
+
+[33mcommit cf29ea7ff571f5e730c51a3d4f170b3ea9d5966e[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 6 10:18:53 2025 -0600
+
+    qwerty correction -Fer
+
+[33mcommit 97044eea23d1d6f807d6d1b6d40080c623699108[m
+Merge: 43cb582 96ee6b1
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 6 10:15:28 2025 -0600
+
+    Merge branch 'master' of https://github.com/MartinGCx27/Quantum-Qwerty into Fer
+
+[33mcommit 96ee6b11a6dcf8e333050101a15d2d495d484bb4[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jul 6 01:21:50 2025 -0600
+
+    add global colors var -LGS
+
+[33mcommit 9e12e554e43fc7676a16717b8a09d43988b5dcd2[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 6 01:12:52 2025 -0600
+
+    Global font settings and animation function optimization -Fer
+
+[33mcommit 43cb582fc12db432277717483bfc29091f7725d3[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 6 01:11:30 2025 -0600
+
+    Global font settings and animation function optimization -Fer
+
+[33mcommit 76bfe52fa1bc6e160099a45482a965604d9fbb3e[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jul 6 00:58:56 2025 -0600
+
+    Global font settings -Fer
+
+[33mcommit b6fcb3600e1ef37e18845b8f3e0b50f84e702386[m
+Merge: 3da7e1a d2e27fb
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sat Jul 5 00:41:41 2025 -0600
+
+    Merge slider and about us, and animation refactoring -Fer
+
+[33mcommit 3da7e1a74e4ebeb7987ff9ea92289c3789467e14[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Fri Jul 4 22:38:51 2025 -0600
+
+    fixed responsive hyperjump -LGS
+
+[33mcommit d2e27fbc2a66694f25249ec47f949f404a1ca24a[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Fri Jul 4 22:14:21 2025 -0600
+
+    refactoring of animation function -Fer
+
+[33mcommit 4037e6ea085ed4bb69d6b7a0f34d9352cf620ad2[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Fri Jul 4 02:58:31 2025 -0600
+
+    The about_usHome template is added for the home. -Fer
+
+[33mcommit 52d01661db6a0e693051a0e2dcf6e76ac3049b38[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Fri Jul 4 02:43:07 2025 -0600
+
+    The about us section was added and finalized, and the logo was added. -Fer
+
+[33mcommit 62ff8b672b5cf478955b0c864cca49f8b59eabab[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Fri Jul 4 02:09:29 2025 -0600
+
+    Creation of extra templates and responsive sliders and hyper jump -LGS
+
+[33mcommit a82d122f36b080bb4405a89ca7d76440bf3188ab[m
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Tue Jul 1 23:56:04 2025 -0600
+
+    complete 1st slider -LGS
+
+[33mcommit 02c4b141116e5647226d34369c927c164abcbec6[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Fri Jun 27 15:58:23 2025 -0600
+
+    change branch -Fer
+
+[33mcommit bd2fd91b6ce3cc3b9afdb26b35af222878c531a9[m
+Merge: b0849cd fc4a17d
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Wed Jun 25 22:25:41 2025 -0600
+
+    merge -Memix
+
+[33mcommit b0849cd3c2a8a29636c94a39b10c9bca4a40b737[m
+Author: Emilio Ariza <emilioalexisag14@gmail.com>
+Date:   Sun Jun 22 15:18:47 2025 -0600
+
+    merge succes -Memix
+
+[33mcommit ecf03ad56d92062ba3b13fdbec17d4c097eb4a21[m
+Merge: 741140a fc4a17d
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jun 22 11:59:39 2025 -0600
+
+    Merge branch 'master' into ramaLeo-qq
+
+[33mcommit fc4a17d7aa9f3dfae2df6e3b90229426a1d90210[m
+Author: FernandoMR10 <fernando.martinezr28@gmail.com>
+Date:   Sun Jun 22 11:48:09 2025 -0600
+
+    Add section about us -Fer
+
+[33mcommit 741140a6750c849121b863562886b6946dab15e7[m
+Merge: 01c5d89 22ca3d5
+Author: LeonardoGameshow <leonciogamershow@gmail.com>
+Date:   Sun Jun 22 10:28:52 2025 -0600
+
+    Merge branch 'master' into ramaLeo-qq

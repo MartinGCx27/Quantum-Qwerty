@@ -7,6 +7,7 @@ from django.http import JsonResponse
 from django.conf import settings
 import requests
 from django.core.mail import send_mail
+import random
 
 
 # Create your views here.
@@ -30,8 +31,28 @@ def index(request):
         {'src': 'img/android_studio.png', 'class': 'android'},
         {'src': 'img/wordpress.png', 'class': 'wordpress'}
     ]
+    desafios = [
+        {'titulo':'Visión por computadora', 'icono_url':'https://www.santanderopenacademy.com/content/dam/becasmicrosites/01-soa-blog/iStock-1491043474.jpg'},
+        {'titulo':'Educación', 'icono_url':'https://cdn.prod.website-files.com/61e20a03e0607714290543fb/63e3cbaf12de1a263ed4f347_elearning-min.jpg'},
+        {'titulo':'Web shops', 'icono_url':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQED96nlhFVHcK5YaxM6tUl8gFaTAok0eQNag&s'},
+        {'titulo':'Landing pages', 'icono_url':'https://elysiamstudio.com/wp-content/uploads/2022/11/750-X-400-2x.jpg'},
+        {'titulo':'Dashboards', 'icono_url':'https://t4.ftcdn.net/jpg/02/70/23/67/360_F_270236770_C2sB7zP7AJx0ivHr5KUl2a46yMkqTTAW.jpg'},
+        {'titulo':'Apps', 'icono_url':'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/140599451/original/602e9a52c18a32e25dd3282f05c699cf3ce89f80/create-a-professional-ios-and-android-app.png'},
+        #{'titulo':'Salud', 'icono_url':'/static/icons/salud.svg'},
+    ]
+    bubbles = [
+        {
+            'size': round(2 + random.uniform(0, 4), 2),
+            'distance': round(6 + random.uniform(0, 4), 2),
+            'position': round(-5 + random.uniform(0, 110), 2),
+            'time': round(2 + random.uniform(0, 2), 2),
+            'delay': round(-1 * (2 + random.uniform(0, 2)), 2),
+        }
+        for _ in range(128)
+    ]
+
     # pdb.set_trace()
-    return render(request, 'index.html', {'logos': logos})
+    return render(request, 'index.html', {'logos': logos, 'desafios': desafios, 'bubbles': bubbles})
 
 
     
