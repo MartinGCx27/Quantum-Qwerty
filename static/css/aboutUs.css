@@ -634,10 +634,3 @@ opacity: 0.4;
         font-size: 1rem;
     }
 }
-
-/* Seccion footer -Fer */
-
-footer {
-    padding: 1.875rem 0 1.875rem 0;
-    background: linear-gradient(180deg, #5A1B84, #002d47);
-}
