@@ -16,6 +16,17 @@ body {
     }
 }
 
+
+/* Estilos del menu hamburguesa en responsive para moviles. -Fer */
+@media (max-width: 30rem) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .navbar .navbar-toggler {
+        background-color: rgba(234, 228, 240, 0.9);
+    }
+}
+
 /* Sección del navbar -Fer */
 .custom-navbar.scrolled {
     background-color: #ffffff;
@@ -288,7 +299,7 @@ body {
         font-size: 0.938rem;
         padding: 1.5rem 0.1rem 0.1rem 0.1rem;
     }
-
+    
     .values h3 {
         font-size: 1rem;
     }
@@ -508,10 +519,8 @@ figure.snip0019:hover figcaption::before {
 .connectWithUs {
     background: #3B6689;
     text-align: center;
-    padding: 5rem 1rem 5rem;
+    padding: 5rem 1rem 8rem;
     color: #eae4f0;
-    width: 100vw;
-    height: 48vh;
     background: #5A1B84;
     
 }
@@ -520,7 +529,7 @@ figure.snip0019:hover figcaption::before {
     padding: 1.563rem 21.875rem 0 21.875rem;
 }
 
-.cantactUs-button {
+.contactUs-button {
     display: inline-flex;
     width: 9.375rem;
     height: 3.125rem;
@@ -537,8 +546,8 @@ figure.snip0019:hover figcaption::before {
     box-shadow: 0.313rem 0.313rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-.cantactUs-button::before,
-.cantactUs-button::after {
+.contactUs-button::before,
+.contactUs-button::after {
     content: '';
     position: absolute;
     top: 0;
@@ -550,50 +559,37 @@ figure.snip0019:hover figcaption::before {
     z-index: -1;
 }
 
-.cantactUs-button::before {
+.contactUs-button::before {
     left: -0.625rem;
     background: #EAE7E5;
 }
 
-.cantactUs-button::after {
+.contactUs-button::after {
     right: -0.625rem;
     background: #EAE7E5;
 }
 
-.cantactUs-button:hover::before,
-.cantactUs-button:hover::after {
+.contactUs-button:hover::before,
+.contactUs-button:hover::after {
     width: 58%;
 }
 
-.cantactUs-button:hover span {
+.contactUs-button:hover span {
     color: #022C44;
     transition: 0.3s;
 }
 
-.cantactUs-button span {
+.contactUs-button span {
     color: #EAE7E5;
     font-size: 1.125rem;
     transition: all 0.3s ease-in;
 }
 
-/* .blink-soft {
-animation: blinkAnimation 3.5s infinite;
-}
-
-@keyframes blinkAnimation {
-0%, 100% {
-opacity: 1;
-}
-50% {
-opacity: 0.4;
-}
-} */
-
 /* ================= Responsive de connectWithUs -Fer================= */
 @media (max-width: 64rem) {
     .connectWithUs {
         height: auto;
-        padding: 4.375rem 2rem 4rem;
+        padding: 4.375rem 2rem 9rem;
     }
     
     .connectHead p {
@@ -604,7 +600,7 @@ opacity: 0.4;
 
 @media (max-width: 48rem) {
     .connectWithUs {
-        padding: 3.75rem 1.5rem 3rem;
+        padding: 3.75rem 1.5rem 9rem;
     }
     
     .connectHead p {
@@ -612,7 +608,7 @@ opacity: 0.4;
         font-size: 1.2rem;
     }
     
-    .cantactUs-button {
+    .contactUs-button {
         width: 8.75rem;
         height: 3rem;
         font-size: 1rem;
@@ -620,17 +616,20 @@ opacity: 0.4;
 }
 
 @media (max-width: 30rem) {
+    .connectWithUs {
+        padding: 3.75rem 1.5rem 9rem;
+    }
     .connectHead p {
         padding: 0.625rem 1rem 0 1rem;
         font-size: 0.938rem;
     }
     
-    .cantactUs-button {
+    .contactUs-button {
         width: 8.125rem;
         height: 2.813rem;
     }
     
-    .cantactUs-button span {
+    .contactUs-button span {
         font-size: 1rem;
     }
 }
