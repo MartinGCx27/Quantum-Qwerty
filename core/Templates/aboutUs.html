@@ -144,7 +144,7 @@
             Conectemos y demos forma a tu visión digital con soluciones inteligentes y a la medida. 
             En Quantum Qwerty estamos listos para escucharte y crear algo excepcional contigo.
         </p>
-        <a href="{% url 'contactus' %}" class="cantactUs-button">
+        <a href="{% url 'contactus' %}" class="contactUs-button">
             <span> 
                 Contactanos
             </span>
@@ -177,8 +177,12 @@
 
 {% endblock %}
 
-{% block js %}
+{% block footer %}
+{{ block.super }}
+{% endblock %}
 
+{% block js %}
+{{ block.super }}
 <script>
     window.addEventListener("scroll", function () {
         const navbar = document.getElementById("menu");
