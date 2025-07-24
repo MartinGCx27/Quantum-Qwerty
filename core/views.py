@@ -66,7 +66,7 @@ def ContactUs(request):
 
         # Armamos los datos que vamos a enviar a Google para validar el captcha -LGS
         data = {
-            'secret': settings.RECAPTCHA_SECRET_KEY,  # clave privada -LGS
+            'secret': settings.R3CAP7CH4_SECR37,  # clave privada -LGS
             'response': recaptcha_response            # token generado por el widget -LGS
         }
 
