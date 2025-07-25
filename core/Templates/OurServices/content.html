@@ -1,5 +1,6 @@
 {% load static %}
-<section class="section content-services">
+<link href="{% static 'css/content-services.css' %}" rel="stylesheet">
+<section class="section content-services" id="content-services">
   <div class="services-title" data-aos="fade-left">
     <h1>¿Qué ofrecemos?</h1>
   </div>
@@ -21,9 +22,10 @@
       <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#marca">Marca y Contenido</a></li>
     </ul>
     <div class="tab-content" id="serviceTabsContent">
-      <!-- Desarrollo de Software -->
+      <!-- ===== DESARROLLO DE SOFTWARE ===== -->
       <div class="tab-pane fade show active services-temp" id="software" role="tabpanel">
         <div class="row">
+          <!-- Menú vertical solo visible en desktop -->
           <div class="services-temp-nav">
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item"><a class="nav-link active show" data-bs-toggle="tab" href="#software-q1">¿Qué hacemos?</a></li>
@@ -33,8 +35,9 @@
               <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#software-q5">¿Qué nos diferencia frente a<br> otras soluciones similares?</a></li>
             </ul>
           </div>
+          <!-- Contenido de preguntas en desktop, carrusel en mobile -->
           <div>
-            <div class="tab-content">
+            <div class="tab-content tab-content-questions">
               <div class="tab-pane active show" id="software-q1">
                 <h3>¿Qué hacemos?</h3>
                 <p>
@@ -71,10 +74,54 @@
                 </p>
               </div>
             </div>
+            <!-- Carrusel móvil -->
+            <div class="questions-carousel-wrapper" style="display:none;">
+              <div id="questions-carousel-software" class="questions-carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3>¿Qué hacemos?</h3>
+                    <p>
+                      Desarrollamos aplicaciones y sistemas personalizados para empresas de todos los tamaños.<br>
+                      Realizamos desde páginas web corporativas, plataformas de ecommerce, CRMs y aplicaciones móviles, hasta soluciones basadas en microservicios y cloud computing. Nuestro equipo incluye desarrolladores, arquitectos de software y diseñadores UX/UI, lo que nos permite abordar proyectos de cualquier complejidad. Además, integramos sistemas existentes, automatizamos procesos internos y ofrecemos mantenimiento evolutivo para que tus herramientas digitales siempre estén actualizadas y seguras.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Cómo lo hacemos?</h3>
+                    <p>
+                      Usamos metodologías ágiles y tecnologías modernas para garantizar entregas rápidas y eficientes.<br>
+                      Trabajamos con frameworks como React, Django, Node.js y Flutter, y aplicamos buenas prácticas como DevOps, integración continua y pruebas automatizadas. Nuestro proceso incluye análisis de requerimientos, prototipado, desarrollo iterativo y validación con el cliente en cada sprint. También empleamos herramientas de gestión colaborativa y mantenemos comunicación constante contigo, asegurando transparencia y flexibilidad para adaptarnos a cambios durante el desarrollo.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué beneficios tiene para tu empresa?</h3>
+                    <p>
+                      Mejoras en productividad, reducción de errores y optimización de recursos.<br>
+                      Los desarrollos que implementamos permiten automatizar tareas repetitivas, centralizar información y agilizar la toma de decisiones. Al integrar tus sistemas y personalizar las soluciones, logramos que tu equipo trabaje más eficiente y con menos fricciones. Además, nuestras aplicaciones están diseñadas para crecer contigo, permitiendo añadir nuevas funcionalidades y usuarios sin perder rendimiento o seguridad.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Por qué es importante este servicio en el contexto actual?</h3>
+                    <p>
+                      La digitalización es clave para sobrevivir y destacar en el mercado.<br>
+                      Las empresas que invierten en software propio pueden adaptarse rápidamente a los cambios del entorno, aprovechar nuevas oportunidades y diferenciarse de la competencia. En el contexto actual, contar con plataformas digitales robustas te permite ofrecer mejores experiencias a tus clientes, analizar datos en tiempo real y responder con agilidad a los desafíos tecnológicos.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué nos diferencia frente a otras soluciones similares?</h3>
+                    <p>
+                      Ofrecemos soluciones a medida, acompañamiento continuo y resultados medibles.<br>
+                      Nuestro enfoque es 100% personalizado: no vendemos productos genéricos, sino que desarrollamos exactamente lo que tu empresa necesita. Aportamos valor desde el análisis inicial hasta el soporte post-lanzamiento, con métricas de desempeño y recomendaciones de mejora continua. Además, fomentamos la innovación y el aprendizaje, proponiendo tecnologías emergentes cuando pueden generar ventajas competitivas para tu proyecto.
+                    </p>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="prevQuestion('software')">‹</button>
+                <button class="carousel-control-next" type="button" onclick="nextQuestion('software')">›</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Marketing Digital y SEO -->
+      <!-- ===== MARKETING DIGITAL Y SEO ===== -->
       <div class="tab-pane fade services-temp" id="seo" role="tabpanel">
         <div class="row">
           <div class="services-temp-nav">
@@ -87,7 +134,7 @@
             </ul>
           </div>
           <div>
-            <div class="tab-content">
+            <div class="tab-content tab-content-questions">
               <div class="tab-pane active show" id="seo-q1">
                 <h3>¿Qué hacemos?</h3>
                 <p>
@@ -124,10 +171,53 @@
                 </p>
               </div>
             </div>
+            <div class="questions-carousel-wrapper" style="display:none;">
+              <div id="questions-carousel-seo" class="questions-carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3>¿Qué hacemos?</h3>
+                    <p>
+                      Posicionamos tu marca en los primeros lugares de búsqueda y aumentamos tu visibilidad digital.<br>
+                      Desarrollamos estrategias integrales de SEO y SEM, gestionamos campañas publicitarias en Google, Facebook y otras redes, y optimizamos tu sitio web para mejorar su ranking y velocidad. Analizamos tu competencia, identificamos oportunidades de contenido y convertimos visitantes en clientes mediante técnicas de inbound marketing y remarketing. También te ayudamos a construir una reputación online sólida y a manejar tu imagen en plataformas clave.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Cómo lo hacemos?</h3>
+                    <p>
+                      Aplicamos análisis de palabras clave, optimización on-page y campañas de contenido.<br>
+                      Utilizamos herramientas avanzadas como Google Analytics, Search Console, SEMrush y Ahrefs para identificar tendencias y ajustar tus estrategias. Creamos contenidos que responden a las búsquedas de tus clientes potenciales, optimizamos la estructura de tu sitio y mejoramos la experiencia de usuario. Además, implementamos campañas de anuncios pagados, email marketing y gestión de redes sociales para maximizar el alcance y la conversión.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué beneficios tiene para tu empresa?</h3>
+                    <p>
+                      Mayor alcance, reconocimiento de marca y atracción de clientes potenciales.<br>
+                      Tus productos y servicios se vuelven más visibles ante quienes realmente los buscan, lo que genera más tráfico cualificado y oportunidades de venta. Además, una estrategia digital bien ejecutada mejora la confianza en tu marca y favorece el crecimiento orgánico, permitiendo que tus campañas sean más rentables y sostenibles a largo plazo.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Por qué es importante este servicio en el contexto actual?</h3>
+                    <p>
+                      La mayoría de las decisiones de compra se inician en internet; estar presente es clave.<br>
+                      Sin una estrategia digital efectiva, tu empresa puede perder relevancia y clientes frente a la competencia. El marketing digital y el SEO te permiten adaptarte a los cambios en los algoritmos de búsqueda, aprovechar nuevas plataformas y conectar con tu público objetivo de manera directa y personalizada.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué nos diferencia frente a otras soluciones similares?</h3>
+                    <p>
+                      Somos analíticos, estratégicos y enfocados en resultados reales, no solo métricas vacías.<br>
+                      Te ofrecemos informes detallados de cada campaña, con KPIs claros y recomendaciones de mejora. Probamos y ajustamos cada acción para maximizar tu retorno de inversión, y nos apoyamos en automatización y análisis de datos para que tu presencia digital evolucione junto con las tendencias del mercado.
+                    </p>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="prevQuestion('seo')">‹</button>
+                <button class="carousel-control-next" type="button" onclick="nextQuestion('seo')">›</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Bases de Datos -->
+      <!-- ===== BASES DE DATOS ===== -->
       <div class="tab-pane fade services-temp" id="bd" role="tabpanel">
         <div class="row">
           <div class="services-temp-nav">
@@ -140,7 +230,7 @@
             </ul>
           </div>
           <div>
-            <div class="tab-content">
+            <div class="tab-content tab-content-questions">
               <div class="tab-pane active show" id="bd-q1">
                 <h3>¿Qué hacemos?</h3>
                 <p>
@@ -177,10 +267,53 @@
                 </p>
               </div>
             </div>
+            <div class="questions-carousel-wrapper" style="display:none;">
+              <div id="questions-carousel-bd" class="questions-carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3>¿Qué hacemos?</h3>
+                    <p>
+                      Diseñamos, optimizamos y mantenemos bases de datos eficientes, seguras y escalables.<br>
+                      Trabajamos con tecnologías como MySQL, PostgreSQL, MongoDB y Firebase, y desarrollamos modelos de datos adaptados a las necesidades de cada empresa. Realizamos auditorías de seguridad, migraciones de grandes volúmenes, y configuramos sistemas de respaldo y recuperación ante desastres. También integramos tus bases de datos con otras plataformas y desarrollamos APIs para facilitar el acceso y explotación de la información.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Cómo lo hacemos?</h3>
+                    <p>
+                      Usamos técnicas de normalización, respaldos automáticos y estructuras adaptadas a cada proyecto.<br>
+                      Analizamos el flujo de información y los puntos críticos de tu negocio, diseñando esquemas que simplifican el acceso y garantizan la integridad de los datos. Aplicamos buenas prácticas de seguridad, versionado y monitoreo constante, y ofrecemos formación a tu equipo para que aproveche al máximo las capacidades de las bases de datos.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué beneficios tiene para tu empresa?</h3>
+                    <p>
+                      Mejor gestión de información, integridad de datos y disponibilidad 24/7.<br>
+                      Tus datos estarán protegidos ante pérdidas, accesibles desde cualquier dispositivo y organizados para facilitar la toma de decisiones. Además, una buena arquitectura de base de datos reduce costos operativos y acelera el crecimiento del negocio, permitiéndote escalar sin complicaciones.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Por qué es importante este servicio en el contexto actual?</h3>
+                    <p>
+                      Los datos son el activo más importante en la era digital.<br>
+                      Una base de datos bien gestionada te permite cumplir normativas, evitar errores críticos y responder con agilidad a las exigencias del mercado. Además, facilita el análisis avanzado y la automatización de procesos, dando ventajas competitivas a tu empresa.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué nos diferencia frente a otras soluciones similares?</h3>
+                    <p>
+                      Ofrecemos soporte continuo, migraciones sin pérdida y estructuras flexibles.<br>
+                      Nos adaptamos a tus sistemas y procesos, brindamos documentación detallada y respondemos ante cualquier incidencia en tiempo récord. Nuestro objetivo es que tu base de datos sea el motor de tu negocio y no un problema técnico.
+                    </p>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="prevQuestion('bd')">‹</button>
+                <button class="carousel-control-next" type="button" onclick="nextQuestion('bd')">›</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Consultoría Digital -->
+      <!-- ===== CONSULTORIA DIGITAL ===== -->
       <div class="tab-pane fade services-temp" id="consultoria" role="tabpanel">
         <div class="row">
           <div class="services-temp-nav">
@@ -193,7 +326,7 @@
             </ul>
           </div>
           <div>
-            <div class="tab-content">
+            <div class="tab-content tab-content-questions">
               <div class="tab-pane active show" id="consultoria-q1">
                 <h3>¿Qué hacemos?</h3>
                 <p>
@@ -230,10 +363,53 @@
                 </p>
               </div>
             </div>
+            <div class="questions-carousel-wrapper" style="display:none;">
+              <div id="questions-carousel-consultoria" class="questions-carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3>¿Qué hacemos?</h3>
+                    <p>
+                      Analizamos tu infraestructura digital y procesos para optimizar recursos y resultados.<br>
+                      Realizamos diagnósticos tecnológicos, identificamos cuellos de botella y proponemos soluciones innovadoras para mejorar la eficiencia, competitividad y adaptación al entorno digital. Además, te ayudamos a seleccionar las herramientas tecnológicas que mejor se adaptan a tu modelo de negocio y acompañamos la implementación de nuevas estrategias.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Cómo lo hacemos?</h3>
+                    <p>
+                      Con consultores expertos y herramientas de análisis a la medida.<br>
+                      Utilizamos benchmarks sectoriales, entrevistas con tu equipo y análisis de KPIs para entender tus necesidades. Creamos planes de acción personalizados, acompañamos la ejecución y capacitamos a tu personal, asegurando que los cambios propuestos se integren de forma efectiva en tu empresa.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué beneficios tiene para tu empresa?</h3>
+                    <p>
+                      Reducción de costos, mayor eficiencia y preparación tecnológica.<br>
+                      Te apoyamos en la toma de decisiones estratégicas, anticipando riesgos y aprovechando oportunidades del entorno digital. Nuestro acompañamiento permite que tu empresa evolucione en procesos, tecnología y cultura organizacional para mantener la competitividad.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Por qué es importante este servicio en el contexto actual?</h3>
+                    <p>
+                      El entorno digital cambia rápidamente y exige adaptación.<br>
+                      Sin una estrategia clara, las empresas quedan rezagadas y pierden oportunidades. Nuestra consultoría te ayuda a evolucionar, implementar innovaciones y responder a los desafíos del mercado con agilidad y visión de futuro.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué nos diferencia frente a otras soluciones similares?</h3>
+                    <p>
+                      Visión estratégica, enfoque humano y propuestas claras.<br>
+                      Nos involucramos activamente con tu equipo, priorizamos tus objetivos de negocio y generamos soluciones prácticas y medibles. Aportamos experiencia en diversos sectores y mantenemos un compromiso genuino con el éxito de tu empresa.
+                    </p>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="prevQuestion('consultoria')">‹</button>
+                <button class="carousel-control-next" type="button" onclick="nextQuestion('consultoria')">›</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Análisis de Datos -->
+      <!-- ===== ANALISIS DE DATOS ===== -->
       <div class="tab-pane fade services-temp" id="datos" role="tabpanel">
         <div class="row">
           <div class="services-temp-nav">
@@ -246,7 +422,7 @@
             </ul>
           </div>
           <div>
-            <div class="tab-content">
+            <div class="tab-content tab-content-questions">
               <div class="tab-pane active show" id="datos-q1">
                 <h3>¿Qué hacemos?</h3>
                 <p>
@@ -283,10 +459,53 @@
                 </p>
               </div>
             </div>
+            <div class="questions-carousel-wrapper" style="display:none;">
+              <div id="questions-carousel-datos" class="questions-carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3>¿Qué hacemos?</h3>
+                    <p>
+                      Transformamos tus datos en decisiones mediante dashboards, análisis y modelos predictivos.<br>
+                      Construimos reportes interactivos, segmentamos audiencias, y generamos insights accionables para ventas, marketing y operaciones. Utilizamos técnicas de minería de datos, aprendizaje automático y visualización avanzada, permitiendo que tu empresa descubra patrones y oportunidades ocultas.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Cómo lo hacemos?</h3>
+                    <p>
+                      Con herramientas estadísticas, BI y storytelling de datos.<br>
+                      Empleamos PowerBI, Tableau, Python y R para analizar tendencias, identificar riesgos y comunicar resultados a través de visualizaciones intuitivas. Además, implementamos procesos de recolección y limpieza de datos para asegurar que la información utilizada sea precisa y relevante.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué beneficios tiene para tu empresa?</h3>
+                    <p>
+                      Decisiones más informadas, reducción de incertidumbre y visión estratégica.<br>
+                      Podrás anticipar cambios de mercado, identificar áreas de mejora y ajustar tus estrategias con rapidez. El análisis de datos te permite medir el impacto de tus acciones y optimizar recursos para alcanzar tus objetivos de negocio.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Por qué es importante este servicio en el contexto actual?</h3>
+                    <p>
+                      Vivimos en una era saturada de datos; saber interpretarlos marca la diferencia.<br>
+                      Las empresas que aprovechan sus datos avanzan más rápido, detectan oportunidades y mitigan riesgos antes que la competencia. El análisis profesional permite tomar decisiones respaldadas por evidencia y no solo por intuición.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué nos diferencia frente a otras soluciones similares?</h3>
+                    <p>
+                      Nos enfocamos en información útil y accionable, no solo gráficos bonitos.<br>
+                      Traducimos datos complejos en recomendaciones prácticas, personalizadas y alineadas con tus objetivos. Nuestro equipo combina experiencia analítica y visión de negocio para que cada proyecto de datos genere verdadero valor estratégico.
+                    </p>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="prevQuestion('datos')">‹</button>
+                <button class="carousel-control-next" type="button" onclick="nextQuestion('datos')">›</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Marca y Contenido -->
+      <!-- ===== MARCA Y CONTENIDO ===== -->
       <div class="tab-pane fade services-temp" id="marca" role="tabpanel">
         <div class="row">
           <div class="services-temp-nav">
@@ -299,7 +518,7 @@
             </ul>
           </div>
           <div>
-            <div class="tab-content">
+            <div class="tab-content tab-content-questions">
               <div class="tab-pane active show" id="marca-q1">
                 <h3>¿Qué hacemos?</h3>
                 <p>
@@ -336,9 +555,53 @@
                 </p>
               </div>
             </div>
+            <div class="questions-carousel-wrapper" style="display:none;">
+              <div id="questions-carousel-marca" class="questions-carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3>¿Qué hacemos?</h3>
+                    <p>
+                      Diseñamos tu identidad visual y creamos contenido gráfico y audiovisual estratégico.<br>
+                      Desarrollamos logotipos, manuales de marca, campañas multimedia y piezas creativas para redes sociales y publicidad digital. Además, realizamos producciones fotográficas, videos promocionales y materiales para presentaciones corporativas, asegurando que tu marca se comunique de forma coherente y profesional en todos los canales.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Cómo lo hacemos?</h3>
+                    <p>
+                      Con branding coherente, diseño profesional y narrativas visuales.<br>
+                      Analizamos tu audiencia, creamos estilos únicos y producimos contenidos que conectan emocionalmente y comunican tu propuesta de valor. Utilizamos tendencias actuales en diseño, storytelling y marketing para que tus mensajes sean memorables y efectivos.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué beneficios tiene para tu empresa?</h3>
+                    <p>
+                      Mayor reconocimiento de marca, diferenciación y conexión emocional.<br>
+                      Tu empresa será recordada, ganarás autoridad y tus clientes se identificarán con tus valores, aumentando la fidelidad y las recomendaciones. Una marca sólida facilita la entrada en nuevos mercados y mejora la percepción de calidad de tus productos y servicios.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Por qué es importante este servicio en el contexto actual?</h3>
+                    <p>
+                      Las marcas con identidad sólida destacan y permanecen en la mente del consumidor.<br>
+                      Una buena imagen genera confianza y te permite competir con empresas más grandes, transmitiendo profesionalismo y autenticidad en cada contacto. Además, en la era digital, la presencia visual es clave para captar la atención y conectar con audiencias diversas.
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>¿Qué nos diferencia frente a otras soluciones similares?</h3>
+                    <p>
+                      Creamos desde la estrategia, no solo desde el diseño. Contenido con propósito.<br>
+                      Nos aseguramos de que cada pieza comunique tu esencia y te ayude a cumplir objetivos de negocio. Nuestro equipo combina creatividad y análisis, planificando campañas integrales y midiendo su impacto en la percepción y crecimiento de tu marca.
+                    </p>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="prevQuestion('marca')">‹</button>
+                <button class="carousel-control-next" type="button" onclick="nextQuestion('marca')">›</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+

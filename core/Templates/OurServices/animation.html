@@ -1,27 +1,50 @@
 
-{% load static%}
+{% load static %}
 <section class="animation-services">
 <link href="{% static 'css/animation-services.css' %}" rel="stylesheet">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" 
+        values="1 0 0 0 0  
+                0 1 0 0 0  
+                0 0 1 0 0  
+                0 0 0 18 -7" result="goo"/>
+      <feBlend in="SourceGraphic" in2="goo"/>
+    </filter>
+  </defs>
+</svg>
 <canvas id="goo-canvas"></canvas>
 <div class="overlay-text">
     <h1 class="title">NUESTROS SERVICIOS</h1>
     <h2 class="subtitle">Quantum Qwerty</h2>
 </div>
-<div id="loader">Cargando...</div>
-  <div class="scroll-down-indicator">
-    <svg class="arrow-svg left-arrow" viewBox="0 0 24 24">
-      <path d="M12 16L6 10h12l-6 6z" fill="#0088ff"/>
-    </svg>
-    <a href="#content-services"> <p class="scroll-text">Da click aquí para deslizar</p> </a>
-    <svg class="arrow-svg right-arrow" viewBox="0 0 24 24">
-      <path d="M12 16L6 10h12l-6 6z" fill="#0088ff"/>
-    </svg>
+
+<!-- Loader chulote -->
+<div id="loader" class="loader">
+  <div class="gooey">
+    <span class="dot"></span>
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
+  <span class="loader-label">Cargando...</span>
+</div>
 
-
+<div class="scroll-down-indicator">
+  <svg class="arrow-svg left-arrow" viewBox="0 0 24 24">
+    <path d="M12 16L6 10h12l-6 6z" fill="#0088ff"/>
+  </svg>
+  <a href="#content-services"> <p class="scroll-text">Da click aquí para deslizar</p> </a>
+  <svg class="arrow-svg right-arrow" viewBox="0 0 24 24">
+    <path d="M12 16L6 10h12l-6 6z" fill="#0088ff"/>
+  </svg>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.9/build/dat.gui.min.js"></script>
-
 <script type="module">
     import * as THREE from 'https://cdn.skypack.dev/three@0.136.0/build/three.module.js';
     import { OrbitControls } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js';

@@ -42,11 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',   #PARA CONF DEL SERVER
     # Local Apps
     'core'
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -129,8 +131,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
+# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
+STATIC_ROOT = BASE_DIR / "staticfiles" #CONFIGURACIÓN PARA SERVER PROD
+#STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static') #ANTERIOR CONFIGURACIÓN DE STATICS
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
@@ -140,8 +143,15 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-RECAPTCHA_PUBLIC_KEY = '6LfDEIkrAAAAACX1AiomHxo4MgaclWELJQ8kHYb4' 
-RECAPTCHA_SECRET_KEY = '6LfDEIkrAAAAAH5sp3b8HvXNMw-gf_7SeT6WX1BB'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' #CONFIGURACIÓN PARA SERVER PROD
+
+
+R3CAP7CH4_PUBL1C = os.environ.get('R3CAP7CH4_PUBL1C')
+R3CAP7CH4_SECR37 = os.environ.get('R3CAP7CH4_SECR37')
+
+#ReC4ha lcl
+#RECAPTCHA_PUBLIC_KEY = '6LfDEIkrAAAAACX1AiomHxo4MgaclWELJQ8kHYb4'
+#RECAPTCHA_SECRET_KEY = '6LfDEIkrAAAAAH5sp3b8HvXNMw-gf_7SeT6WX1BB'
 
 #servidor de uso Gmail correo
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -154,4 +164,5 @@ DEFAULT_FROM_EMAIL = f'quantumqwerty <{os.environ.get("EMAIL_HOST_USER")}>'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 BASE_URL = os.environ.get('BASE_URL', 'http://localhost:8000')
 
-RECIPIENT_LIST = tuple(os.environ.get("recipient_list"))
+RECIPIENT_LIST = [os.environ.get("RECIPIENT_EMAIL")]
+

@@ -1,0 +1,71 @@
+{% load static %}
+
+<section id="nos-desafios" class="desafios section">
+  <h2>¡Nos encantan los desafíos!</h2>
+  <p class="desafios-subtitulo">Siempre estamos en búsqueda de crear soluciones tecnológicas nuevas y originales para más industrias.</p>
+
+  <div class="desafios-grid">
+    {% for desafio in desafios %}
+    <div class="desafio-item">
+      <canvas class="fluid-canvas"></canvas>
+      <img class="desafio-img" src="{{ desafio.icono_url }}" alt="{{ desafio.titulo }}">
+      <div class="overlay">
+        <h3>{{ desafio.titulo }}</h3>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <a href="#" class="button-know-us">
+    <span>¡Quieres saber más de nuestros casos de éxito?</span>
+    <div class="span-wrapper">
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+    </div>
+  </a>
+</section>
+
+
+
+<!--
+
+<section id="nos-desafios" class="desafios">
+    <h2>¡Nos encantan los desafíos!</h2>
+    <p class="desafios-subtitulo">Siempre estamos en búsqueda de crear soluciones tecnológicas nuevas y originales para
+        más industrias.</p>
+    <div class="desafios-grid">
+        <div class="item">
+            <img src="/static/images/logistica.svg" alt="Logística y transporte">
+            <span>Logística y transporte</span>
+        </div>
+        <div class="item">
+            <img src="/static/images/educacion.svg" alt="Educación">
+            <span>Educación</span>
+        </div>
+        <div class="item">
+            <img src="/static/images/retail.svg" alt="Comercio minorista y retail">
+            <span>Retail</span>
+        </div>
+        <div class="item">
+            <img src="/static/images/bebidas.svg" alt="Bebidas y Licores">
+            <span>Bebidas y Licores</span>
+        </div>
+        <div class="item">
+            <img src="/static/images/finanzas.svg" alt="Servicios financieros y de seguros">
+            <span>Finanzas y Seguros</span>
+        </div>
+        <div class="item">
+            <img src="/static/images/autos.svg" alt="Renta de automóviles y transporte terrestre">
+            <span>Renta de autos</span>
+        </div>
+        <div class="item">
+            <img src="/static/images/salud.svg" alt="Salud">
+            <span>Salud</span>
+        </div>
+    </div>
+    <div class="desafios-cta">
+        <a href="/casos-de-exito" class="btn">¿Quieres saber más de nuestros casos de éxito?</a>
+    </div>
+</section>
+-->

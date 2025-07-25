@@ -7,6 +7,7 @@ from django.http import JsonResponse
 from django.conf import settings
 import requests
 from django.core.mail import send_mail
+import random
 
 
 # Create your views here.
@@ -30,14 +31,24 @@ def index(request):
         {'src': 'img/android_studio.png', 'class': 'android'},
         {'src': 'img/wordpress.png', 'class': 'wordpress'}
     ]
+    desafios = [
+        {'titulo':'Visión por computadora', 'icono_url':'https://www.santanderopenacademy.com/content/dam/becasmicrosites/01-soa-blog/iStock-1491043474.jpg'},
+        {'titulo':'Educación', 'icono_url':'https://cdn.prod.website-files.com/61e20a03e0607714290543fb/63e3cbaf12de1a263ed4f347_elearning-min.jpg'},
+        {'titulo':'Web shops', 'icono_url':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQED96nlhFVHcK5YaxM6tUl8gFaTAok0eQNag&s'},
+        {'titulo':'Landing pages', 'icono_url':'https://elysiamstudio.com/wp-content/uploads/2022/11/750-X-400-2x.jpg'},
+        {'titulo':'Dashboards', 'icono_url':'https://t4.ftcdn.net/jpg/02/70/23/67/360_F_270236770_C2sB7zP7AJx0ivHr5KUl2a46yMkqTTAW.jpg'},
+        {'titulo':'Apps', 'icono_url':'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/140599451/original/602e9a52c18a32e25dd3282f05c699cf3ce89f80/create-a-professional-ios-and-android-app.png'},
+        #{'titulo':'Salud', 'icono_url':'/static/icons/salud.svg'},
+    ]
+    
     # pdb.set_trace()
-    return render(request, 'index.html', {'logos': logos})
+    return render(request, 'index.html', {'logos': logos, 'desafios': desafios})
 
 
     
 def ContactUs(request):
     # Verificamos si la petición es POST y además viene por AJAX (usando cabecera x-requested-with) -LGS
-    #EVITA LA RECARGA DEL SUBMIT-LGS
+    # EVITA LA RECARGA DEL SUBMIT-LGS
     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
         # Cargamos los datos enviados al formulario -LGS
         form = FormContact(request.POST)
@@ -55,7 +66,7 @@ def ContactUs(request):
 
         # Armamos los datos que vamos a enviar a Google para validar el captcha -LGS
         data = {
-            'secret': settings.RECAPTCHA_SECRET_KEY,  # clave privada -LGS
+            'secret': settings.R3CAP7CH4_SECR37,  # clave privada -LGS
             'response': recaptcha_response            # token generado por el widget -LGS
         }
 
@@ -109,7 +120,7 @@ def ContactUs(request):
                 subject=asunto,
                 message=contenido,
                 from_email=settings.DEFAULT_FROM_EMAIL,      # Remitente configurado en settings -LGS
-                recipient_list=['quantumqwrty@gmail.com'],      # A quién le llegará -LGS
+                recipient_list=settings.RECIPIENT_LIST,      # A quién le llegará -LGS
                 fail_silently=False,
             )
         except Exception as e:
