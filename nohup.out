@@ -1082,3 +1082,71 @@ Forbidden (Origin checking failed - https://quantumqwerty.com does not match any
 [2025-07-25 07:12:19 +0000] [602206] [INFO] Listening at: http://0.0.0.0:8001 (602206)
 [2025-07-25 07:12:19 +0000] [602206] [INFO] Using worker: sync
 [2025-07-25 07:12:19 +0000] [602207] [INFO] Booting worker with pid: 602207
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Forbidden (CSRF token missing.): /ContactUs/
+[2025-07-25 09:30:53 +0000] [602206] [INFO] Handling signal: hup
+[2025-07-25 09:30:53 +0000] [602206] [INFO] Hang up: Master
+[2025-07-25 09:30:53 +0000] [602206] [ERROR] Worker (pid:602207) was sent SIGHUP!
+[2025-07-25 09:30:53 +0000] [602974] [INFO] Booting worker with pid: 602974
+Not Found: /корзина
+Not Found: /carrello
+Not Found: /checkout
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /web-app-manifest-192x192.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-192x192.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /casos-de-exito
+Not Found: /web-app-manifest-192x192.png
+Not Found: /web-app-manifest-192x192.png
+Not Found: /web-app-manifest-192x192.png
+Not Found: /web-app-manifest-192x192.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /web-app-manifest-512x512.png
+Not Found: /bag
+Not Found: /order
+Not Found: /заказ
+Not Found: /web-app-manifest-512x512.png
+Not Found: /ads.txt
+Not Found: /app-ads.txt
+Not Found: /sellers.json
+Not Found: /web-app-manifest-192x192.png
+Not Found: /web-app-manifest-192x192.png
+Not Found: /th1s_1s_a_4o4.html
+Not Found: /robots.txt
+Not Found: /web-app-manifest-512x512.png
+Not Found: /.env
+Not Found: /xmlrpc.php
+Not Found: /xmlrpc.php
+Not Found: /.env
+Not Found: /.env
+Not Found: /backup.zip
+Not Found: /Archive.zip
+Not Found: /quantumqwerty.zip
+Not Found: /quantumqwerty.com.zip
+Not Found: /.git/config
