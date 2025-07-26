@@ -16,5 +16,12 @@
     });
   });
 
+ document.querySelectorAll('.button-challenges').forEach(button => {
+    button.addEventListener('touchstart', () => {
+      button.classList.add('hover');
 
+      // Quitar la clase después de un tiempo (por ejemplo, 1 segundo)
+      setTimeout(() => button.classList.remove('hover'), 1000);
+    });
+  });
 
