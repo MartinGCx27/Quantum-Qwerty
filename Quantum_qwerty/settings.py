@@ -63,7 +63,9 @@ ROOT_URLCONF = 'Quantum_qwerty.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+         BASE_DIR / 'core' / 'Templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -165,4 +167,9 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 BASE_URL = os.environ.get('BASE_URL', 'http://localhost:8000')
 
 RECIPIENT_LIST = [os.environ.get("RECIPIENT_EMAIL")]
+
+CSRF_TRUSTED_ORIGINS = ['https://quantumqwerty.com'] 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = False
 

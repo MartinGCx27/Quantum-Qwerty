@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Enviar formulario con fetch al mismo URL (""), método POST y encabezados para CSRF y AJAX -LGS
             fetch("", {
                 method: "POST",
+		credentials: "include",
                 headers: {
                     "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value,
                     "X-Requested-With": "XMLHttpRequest"
