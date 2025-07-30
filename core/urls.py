@@ -5,4 +5,5 @@ urlpatterns = [
         path('ContactUs/', views.ContactUs, name='contactus'),
         path('aboutUs/', views.aboutUs, name='about'),
         path('services', views.services, name='services'),
+        path('error404/', views.error404_view, name='error 404'),
     ]

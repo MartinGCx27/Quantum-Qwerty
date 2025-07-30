@@ -23,3 +23,6 @@ urlpatterns = [
     # URLS from App Core
     path('', include('core.urls')),
 ]
+
+handler404 = 'core.views.handling_404'
+

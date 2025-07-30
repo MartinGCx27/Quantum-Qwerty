@@ -1,0 +1,41 @@
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: #0f0;
+      text-align: center;
+    }
+
+    #space-invaders-404 {
+      padding: 2rem;
+    }
+
+    h1 {
+      color: lime;
+      font-size: 2.5rem;
+    }
+
+    canvas {
+      background-color: #000;
+      display: block;
+      margin: 1rem auto;
+      border: 2px solid lime;
+    }
+
+    #instructions {
+      margin-top: 1rem;
+      color: #7df9ff;
+      font-size: 0.9rem;
+    }
+
+    #retryBtn {
+      display: none;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: lime;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: black;
+    }

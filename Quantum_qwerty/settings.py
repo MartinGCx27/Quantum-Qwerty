@@ -166,3 +166,7 @@ BASE_URL = os.environ.get('BASE_URL', 'http://localhost:8000')
 
 RECIPIENT_LIST = [os.environ.get("RECIPIENT_EMAIL")]
 
+# CSRF_TRUSTED_ORIGINS = ['https://quantumqwerty.com/'] 
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_HTTPONLY = False

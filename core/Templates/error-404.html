@@ -1,0 +1,131 @@
+{% extends "starter-page.html" %}
+
+{% load static %}
+
+{% block head %}
+{{ block.super }}
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Error 404 - Página no encontrada</title>
+<link href="{% static 'css/404.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+{% endblock %}
+
+{% block navbar %}
+<nav id="menu" class="navbar navbar-expand-lg fixed-top custom-navbar">
+  <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between">
+    
+    <!-- LOGO -->
+    <div class="col-6 col-md-4">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'img/logotipo_qq.png' %}"
+                    data-src-normal="{% static 'img/logotipo_qq.png' %}"
+                    data-src-rosa="{% static 'img/logotipo_qq.png' %}"
+                    alt="Logo"
+                    class="d-inline-block align-text-top navbar-logo">
+                </a>
+            </div>
+
+    <!-- Botón hamburguesa móvil -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú principal -->
+    <div class="collapse navbar-collapse flex-grow-1" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-column flex-lg-row align-items-lg-center">
+        <li class="nav-item">
+          <a href="{% url 'index' %}" class="nav-link d-flex align-items-center">
+            <img class="nav-icon" src="{% static 'img/home-icon.png' %}" alt="Inicio" />
+            Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'about' %}" class="nav-link d-flex align-items-center">
+            <img class="nav-icon" src="{% static 'img/about-icon.png' %}" alt="Sobre Nosotros" />
+            Sobre nosotros
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'services' %}" class="nav-link d-flex align-items-center">
+            <img class="nav-icon" src="{% static 'img/services2-icon.png' %}" alt="Servicios" />
+            Servicios
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'contactus' %}" class="nav-link d-flex align-items-center">
+            <img class="nav-icon" src="{% static 'img/contact-icon.png' %}" alt="Contactanos" />
+            Contactanos
+          </a>
+        </li>
+
+        <!-- Redes sociales para móvil -->
+        <li class="nav-item d-lg-none mt-3">
+          <div class="d-flex gap-3 ms-3">
+            <img class="navIcons" width="24" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="facebook" />
+            <img class="navIcons" width="28" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram" />
+            <img class="navIcons" width="24" src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Redes sociales escritorio -->
+    <div class="d-none d-lg-flex align-items-center gap-3">
+      <img class="navIcons" width="30" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="facebook" />
+      <img class="navIcons" width="40" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram" />
+      <img class="navIcons" width="30" src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
+    </div>
+
+  </div>
+</nav>
+
+{% endblock %}
+
+{% block content %}
+<section id="game-section">
+<h1>Error 404</h1>
+  <p>¡Ups! Esta página no existe. Mientras buscas el camino, juega Space Invaders 👾</p>
+  <canvas id="gameCanvas" width="400" height="500"></canvas>
+  <button id="retryBtn" onclick="restartGame()">Reintentar</button>
+  <div id="instructions">
+    <p>⬅️ ➡️ para moverse | Barra espaciadora para disparar</p>
+  </div>
+  </section>
+{% endblock %}
+
+{% block footer %}
+{{ block.super }}
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+
+<script src="{% static 'js/404.js' %}"></script>
+
+<script>
+    window.addEventListener("scroll", function () {
+        
+    });
+</script>
+
+<script>
+    const logo = document.getElementsByClassName('navbar-logo')[0];
+    
+    function updateNavbarIL() {
+        const useColorDark = window.scrollY >= 0;
+        
+        
+        // Cambiar imagen del logo si existe
+        if (logo) {
+            logo.src = useColorDark
+            ? logo.dataset.srcNormal
+            : logo.dataset.srcNormal;
+        }
+    }
+    
+    window.addEventListener('load', updateNavbarIL);
+</script>
+
+
+{% endblock %}
