@@ -1,0 +1,170 @@
+/* Estilos del fondo de la pagina de error 500 -fer */
+body {
+  background: linear-gradient(334deg, #5a1b84, #2d0e42, #014276);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  animation: gradient-animationBody 6s ease infinite;
+}
+
+@keyframes gradient-animationBody {
+  0% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 100% 30%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+/* Estilos de la aniacion de particulas del fondo -Fer */
+#particles-js { 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para el texto animado  -Fer */
+.animated-text-section {
+  position: relative;
+  width: 100%;
+  min-height: 13rem;
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.animated-text-section .content {
+  position: relative;
+  width: max-content;
+}
+
+.animated-text-section .content h2 {
+  font-size: 13rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.animated-text-section .content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 0.4rem rgba(118, 215, 217, 1);
+  z-index: 1;
+}
+
+.animated-text-section .content h2:nth-child(2) {
+  color: rgba(118, 215, 217, 0.5);
+  animation: animate 4s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+    0% 45%,
+    16% 44%,
+    33% 50%,
+    54% 60%,
+    70% 61%,
+    84% 59%,
+    100% 52%,
+    100% 100%,
+    0% 100%
+    );
+  }
+  
+  50% {
+    clip-path: polygon(
+    0% 60%,
+    15% 65%,
+    34% 66%,
+    51% 62%,
+    67% 50%,
+    84% 45%,
+    100% 46%,
+    100% 100%,
+    0% 100%
+    );
+  }
+}
+
+/* Estilos del texto sobre el error 500 -Fer */
+.text-error {
+  text-align: center;
+  margin-bottom: 5rem;  
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.text-error h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.text-error p {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: rgba(234, 231, 229, 0.8);
+}
+
+.text-error .ups {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: rgba(232, 169, 216, 0.8);
+}
+
+/* Estilos de estados cuanticos -Fer */
+
+.quantum-stats {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+  padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 1.25rem rgba(255, 255, 255, 0.1);
+  margin: 3rem auto 3rem auto;
+  max-width: 40.625rem;
+}
+
+.stat {
+  font-size: 0.95rem;
+  color: #EAE7E5;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.collapses {
+  color: #33ccff;
+}
+
+.lost {
+  color: #ff5ba7;
+}
+
+.particles {
+  color: #00e0c6;
+}
+
+.probability {
+  color: #ff5b5b;
+}

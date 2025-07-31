@@ -23,3 +23,5 @@ urlpatterns = [
     # URLS from App Core
     path('', include('core.urls')),
 ]
+
+handler500 = 'core.views.handling_500'
