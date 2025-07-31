@@ -1262,6 +1262,50 @@ body.loaded .loader {
   display: none; /* Chrome, Safari */
 }
 
+/* Estilos base para el botón desafíos */
+.button-challenges {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+}
+
+/* Alineación al centro en móviles */
+@media (max-width: 600px) {
+  .button-challenges {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Alternativa con salto controlado en pantallas muy pequeñas */
+@media (max-width: 500px) {
+  .button-challenges {
+    white-space: normal;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    padding: 0.6rem 1rem;
+  }
+
+  .button-challenges span {
+    display: inline-block;
+  }
+}
+
+/* Forzar animación también en estado :active para móviles */
+.button-challenges:active .span-wrapper span {
+  transform: scale(1.7) translateY(0) translateZ(0);
+}
+
+
+
 
 /* FOOTER SECTION */
 
@@ -1358,5 +1402,17 @@ body.loaded .loader {
   }
   100% {
     bottom: var(--distance, 10rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .content {
+    grid-template-columns: 1fr; /* cambia a una sola columna */
+    text-align: center;
+    justify-items: center;
+  }
+
+  .footer .content > div {
+    align-items: center;
   }
 }

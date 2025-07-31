@@ -1,0 +1,167 @@
+[2025-07-24 06:14:42 +0000] [598229] [INFO] Starting gunicorn 20.1.0
+[2025-07-24 06:14:42 +0000] [598229] [INFO] Listening at: http://127.0.0.1:8001 (598229)
+[2025-07-24 06:14:42 +0000] [598229] [INFO] Using worker: sync
+[2025-07-24 06:14:42 +0000] [598230] [INFO] Booting worker with pid: 598230
+[2025-07-24 06:14:42 +0000] [598230] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python3/dist-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/lib/python3/dist-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python3/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python3/dist-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/lib/python3/dist-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python3/dist-packages/gunicorn/util.py", line 384, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'QuantumQwerty'
+[2025-07-24 06:14:42 +0000] [598230] [INFO] Worker exiting (pid: 598230)
+[2025-07-24 06:14:42 +0000] [598229] [INFO] Shutting down: Master
+[2025-07-24 06:14:42 +0000] [598229] [INFO] Reason: Worker failed to boot.
+[2025-07-24 06:14:57 +0000] [598231] [INFO] Starting gunicorn 20.1.0
+[2025-07-24 06:14:57 +0000] [598231] [INFO] Listening at: http://127.0.0.1:8001 (598231)
+[2025-07-24 06:14:57 +0000] [598231] [INFO] Using worker: sync
+[2025-07-24 06:14:57 +0000] [598232] [INFO] Booting worker with pid: 598232
+[2025-07-24 06:14:57 +0000] [598232] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python3/dist-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/lib/python3/dist-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python3/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python3/dist-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/lib/python3/dist-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python3/dist-packages/gunicorn/util.py", line 384, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'QuantumQwerty'
+[2025-07-24 06:14:57 +0000] [598232] [INFO] Worker exiting (pid: 598232)
+[2025-07-24 06:14:57 +0000] [598231] [INFO] Shutting down: Master
+[2025-07-24 06:14:57 +0000] [598231] [INFO] Reason: Worker failed to boot.
+[2025-07-24 06:20:18 +0000] [598259] [INFO] Starting gunicorn 20.1.0
+[2025-07-24 06:20:18 +0000] [598259] [INFO] Listening at: http://0.0.0.0:8001 (598259)
+[2025-07-24 06:20:18 +0000] [598259] [INFO] Using worker: sync
+[2025-07-24 06:20:18 +0000] [598260] [INFO] Booting worker with pid: 598260
+[2025-07-24 06:20:18 +0000] [598260] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python3/dist-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/lib/python3/dist-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python3/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python3/dist-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/lib/python3/dist-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python3/dist-packages/gunicorn/util.py", line 384, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Quantum_qwerty'
+[2025-07-24 06:20:18 +0000] [598260] [INFO] Worker exiting (pid: 598260)
+[2025-07-24 06:20:18 +0000] [598259] [INFO] Shutting down: Master
+[2025-07-24 06:20:18 +0000] [598259] [INFO] Reason: Worker failed to boot.
+[2025-07-24 07:12:28 +0000] [598621] [INFO] Starting gunicorn 23.0.0
+[2025-07-24 07:12:28 +0000] [598621] [INFO] Listening at: http://0.0.0.0:8001 (598621)
+[2025-07-24 07:12:28 +0000] [598621] [INFO] Using worker: sync
+[2025-07-24 07:12:28 +0000] [598622] [INFO] Booting worker with pid: 598622
+[2025-07-24 07:12:28 +0000] [598622] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Quantum_qwerty'
+[2025-07-24 07:12:28 +0000] [598622] [INFO] Worker exiting (pid: 598622)
+[2025-07-24 07:12:28 +0000] [598621] [ERROR] Worker (pid:598622) exited with code 3
+[2025-07-24 07:12:28 +0000] [598621] [ERROR] Shutting down: Master
+[2025-07-24 07:12:28 +0000] [598621] [ERROR] Reason: Worker failed to boot.
+[2025-07-25 03:09:53 +0000] [600657] [INFO] Starting gunicorn 23.0.0
+[2025-07-25 03:09:53 +0000] [600657] [INFO] Listening at: http://0.0.0.0:8001 (600657)
+[2025-07-25 03:09:53 +0000] [600657] [INFO] Using worker: sync
+[2025-07-25 03:09:53 +0000] [600658] [INFO] Booting worker with pid: 600658
+[2025-07-25 03:09:53 +0000] [600658] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/opt/qqvenv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Quantum_qwerty'
+[2025-07-25 03:09:53 +0000] [600658] [INFO] Worker exiting (pid: 600658)
+[2025-07-25 03:09:53 +0000] [600657] [ERROR] Worker (pid:600658) exited with code 3
+[2025-07-25 03:09:53 +0000] [600657] [ERROR] Shutting down: Master
+[2025-07-25 03:09:53 +0000] [600657] [ERROR] Reason: Worker failed to boot.
