@@ -17,65 +17,14 @@
     <!-- LOGO -->
     <div class="col-6 col-md-4">
                 <a class="navbar-brand" href="{% url 'index' %}">
-                    <img src="{% static 'img/logotipo_qq.png' %}"
-                    data-src-normal="{% static 'img/logotipo_qq.png' %}"
-                    data-src-rosa="{% static 'img/logotipo_qq.png' %}"
+                    <img src="{% static 'img/logotipo_qq_rosa.png' %}"
+                    data-src-normal="{% static 'img/logotipo_qq_rosa.png' %}"
+                    data-src-rosa="{% static 'img/logotipo_qq_rosa.png' %}"
                     alt="Logo"
                     class="d-inline-block align-text-top navbar-logo">
                 </a>
             </div>
 
-    <!-- Botón hamburguesa móvil -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Menú principal -->
-    <div class="collapse navbar-collapse flex-grow-1" id="navbarNavDropdown">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-column flex-lg-row align-items-lg-center">
-        <li class="nav-item">
-          <a href="{% url 'index' %}" class="nav-link d-flex align-items-center">
-            <img class="nav-icon" src="{% static 'img/home-icon.png' %}" alt="Inicio" />
-            Inicio
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{% url 'about' %}" class="nav-link d-flex align-items-center">
-            <img class="nav-icon" src="{% static 'img/about-icon.png' %}" alt="Sobre Nosotros" />
-            Sobre nosotros
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{% url 'services' %}" class="nav-link d-flex align-items-center">
-            <img class="nav-icon" src="{% static 'img/services2-icon.png' %}" alt="Servicios" />
-            Servicios
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{% url 'contactus' %}" class="nav-link d-flex align-items-center">
-            <img class="nav-icon" src="{% static 'img/contact-icon.png' %}" alt="Contactanos" />
-            Contactanos
-          </a>
-        </li>
-
-        <!-- Redes sociales para móvil -->
-        <li class="nav-item d-lg-none mt-3">
-          <div class="d-flex gap-3 ms-3">
-            <img class="navIcons" width="24" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="facebook" />
-            <img class="navIcons" width="28" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram" />
-            <img class="navIcons" width="24" src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Redes sociales escritorio -->
-    <div class="d-none d-lg-flex align-items-center gap-3">
-      <img class="navIcons" width="30" src="https://img.icons8.com/ios-filled/50/facebook--v1.png" alt="facebook" />
-      <img class="navIcons" width="40" src="https://img.icons8.com/sf-regular-filled/48/instagram-new.png" alt="instagram" />
-      <img class="navIcons" width="30" src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
-    </div>
 
   </div>
 </nav>
@@ -83,15 +32,36 @@
 {% endblock %}
 
 {% block content %}
-<section id="game-section">
-<h1>Error 404</h1>
-  <p>¡Ups! Esta página no existe. Mientras buscas el camino, juega Space Invaders 👾</p>
-  <canvas id="gameCanvas" width="400" height="500"></canvas>
-  <button id="retryBtn" onclick="restartGame()">Reintentar</button>
-  <div id="instructions">
-    <p>⬅️ ➡️ para moverse | Barra espaciadora para disparar</p>
-  </div>
-  </section>
+
+    <section class="">
+        <div class="stars">
+            <div class="central-body">
+                <h1>404</h1>
+                <p>! EL ALMA DE ESTA PAGINA SE HA IDO ¡</p>
+                <P>UN MINUTO DE SILENCIO, POR FAVOR</P>
+                <a href="{% url 'index' %}" class="btn-go-home">DE VUELTA AL INICIO</a>
+            </div>
+            <div class="objects">
+                <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
+                <div class="earth-moon">
+                    <img class="object_earth" src="http://salehriaz.com/404Page/img/earth.svg" width="100px">
+                    <img class="object_moon" src="http://salehriaz.com/404Page/img/moon.svg" width="80px">
+                </div>
+                <div class="box_astronaut">
+                    <img class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140px">
+                </div>
+            </div>
+            <div class="glowing_stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+
+            </div>
+
+        </div>
+    </section>
 {% endblock %}
 
 {% block footer %}
