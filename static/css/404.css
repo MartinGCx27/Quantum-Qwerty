@@ -49,7 +49,6 @@ html, body{
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Dosis', sans-serif;
     font-weight: 300;
     -webkit-user-select: none; /* Safari 3.1+ */
     -moz-user-select: none; /* Firefox 2+ */
@@ -65,72 +64,6 @@ html, body{
     height: 100%;
     overflow: hidden;
     
-}
-
-.custom-navbar{
-    padding-top: 15px;
-}
-
-.brand-logo{
-    margin-left: 25px;
-    margin-top: 5px;
-    display: inline-block;
-}
-
-.navbar-links{
-    display: inline-block;
-    float: right;
-    margin-right: 15px;
-    text-transform: uppercase;
-    
-    
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-/*    overflow: hidden;*/
-    display: flex; 
-    align-items: center; 
-}
-
-li {
-    float: left;
-    padding: 0px 15px;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing : 2px;
-    font-size: 12px;
-    
-    -webkit-transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -ms-transition: all 0.3s ease-in;
-    -o-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in;
-}
-
-li a:hover {
-    color: #ffcb39;
-}
-
-.btn-request{
-    padding: 10px 25px;
-    border: 1px solid #FFCB39;
-    border-radius: 100px;
-    font-weight: 400;
-}
-
-.btn-request:hover{
-    background-color: #d4edda;
-    color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
 }
 
 .btn-go-home{
@@ -165,7 +98,7 @@ li a:hover {
 
 .central-body{
 /*    width: 100%;*/
-    padding: 17% 5% 10% 5%;
+    padding: 5% 5% 10% 5%;
     text-align: center;
 }
 
@@ -207,15 +140,17 @@ li a:hover {
 
 .object_astronaut{
     animation: rotate-astronaut 200s infinite linear both alternate;
+    z-index: -1;
 }
 
 .box_astronaut{
-    z-index: 110 !important;
+    z-index: -1;
     position: absolute;
     top: 60%;
     right: 20%;
     will-change: transform;
     animation: move-astronaut 50s infinite linear both alternate;
+
 }
 
 .image-404{
@@ -265,6 +200,32 @@ li a:hover {
     top: 90%;
     left: 50%;
     animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    z-index: 99999 !important;
+}
+
+.number-error{
+    font-size: 13rem;
+    color: transparent;
+    background: linear-gradient( #76D7D9, #5A1B84, #E8A9D8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.13rem; /* Ancho del contorno (ajustable) */
+    -webkit-text-stroke-color: #EAE7E5; /* Color del contorno */
+    text-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+}
+
+.text-error{
+    font-size: 1.5rem;
+    color: rgba(118, 215, 217, 0.8);
+    -webkit-text-stroke-color: #EAE7E5; 
+    text-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    z-index: 9999999;   
 }
 
 @media only screen and (max-width: 600px){

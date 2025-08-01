@@ -1,28 +1,57 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Se ejecuta cuando todo el DOM está cargado y listo
+    const btn = document.getElementById('sendBtn');
+    const form = document.querySelector('form');
+    const alertContainer = document.getElementById('alert-container');
 
-    const btn = document.getElementById('sendBtn'); // Botón para enviar el formulario
-    const form = document.querySelector('form');    // El formulario en sí
-    const alertContainer = document.getElementById('alert-container'); // Contenedor para mostrar alertas
-
-    // === Evento de click para enviar formulario ===
     btn.addEventListener('click', function (e) {
-        e.preventDefault(); // Evita que el formulario se envíe tradicionalmente (recarga) -LGS
+        e.preventDefault();
+        clearErrors();
 
-        // Validar recaptcha en frontend
-        const recaptchaValue = grecaptcha.getResponse(); // Obtiene la respuesta del recaptcha -LGS
-        if (!recaptchaValue) { // Si el usuario no validó el recaptcha
-            showAlert("Por favor confirma que no eres un robot ❌", 'danger'); // Mostrar alerta de error -LGS
-            return; // Sale sin enviar nada -LGS
+        let hasErrors = false;
+
+        // Nombres reales del formulario Django
+        const fields = [
+            { name: 'name_contact', message: 'Por favor ingresa tu nombre.' },
+            { name: 'lastname_contact', message: 'Por favor ingresa tu apellido.' },
+            { name: 'email_contact', message: 'Por favor ingresa tu correo electrónico.' },
+            { name: 'phone_contact', message: 'Por favor ingresa tu teléfono.' },
+            { name: 'comments_contact', message: 'Por favor escribe tu mensaje.' }
+        ];
+
+        fields.forEach(field => {
+            const input = form.querySelector(`[name="${field.name}"]`);
+            const errorDiv = document.getElementById(`${field.name}-error-message`);
+            const value = input ? input.value.trim() : '';
+
+            if (!value) {
+                if (errorDiv) errorDiv.textContent = field.message;
+                hasErrors = true;
+            }
+
+            if (field.name === 'email_contact' && value !== '') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    if (errorDiv) errorDiv.textContent = 'Por favor introduce un correo electrónico válido.';
+                    hasErrors = true;
+                }
+            }
+        });
+
+        if (hasErrors) {
+            showAlert("Corrige los campos marcados antes de continuar ❌", 'danger');
+            return;
         }
 
-        btn.classList.add('loading'); // Añade clase para animar el botón mientras se procesa -LGS
+        const recaptchaValue = grecaptcha.getResponse();
+        if (!recaptchaValue) {
+            showAlert("Por favor confirma que no eres un robot ❌", 'danger');
+            return;
+        }
 
-        // Simula una espera de 2.8 segundos antes de enviar (puede ser para animación o esperar algo) -LGS
+        btn.classList.add('loading');
+        const formData = new FormData(form);
+
         setTimeout(() => {
-            const formData = new FormData(form); // Recopila los datos del formulario -LGS
-
-            // Enviar formulario con fetch al mismo URL (""), método POST y encabezados para CSRF y AJAX -LGS
             fetch("", {
                 method: "POST",
                 credentials: "include",
@@ -32,81 +61,66 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 body: formData
             })
-            .then(res => res.json()) // Se espera respuesta JSON del servidor -LGS
+            .then(res => res.json())
             .then(data => {
-                clearErrors(); // Limpia errores previos en el formulario -LGS
+                clearErrors();
 
-                if (data.success) { // Si el backend dice que fue exitoso
-                    showAlert("Formulario enviado correctamente ✅", 'success'); // Muestra alerta éxito
-                    form.reset(); // Limpia el formulario -LGS
-                    grecaptcha.reset(); // Resetea el recaptcha -LGS
+                if (data.success) {
+                    showAlert("Formulario enviado correctamente ✅", 'success');
+                    form.reset();
+                    grecaptcha.reset();
 
-                    // Limpia contador o mensaje de teléfono si existe -LGS
                     const phoneMessage = document.getElementById('phone-count-message');
                     if (phoneMessage) phoneMessage.textContent = '';
                 } else {
-                    // Si hay errores específicos de campos -LGS
                     if (data.errors) {
-                        // Itera cada campo con error -LGS
                         for (const [field, messages] of Object.entries(data.errors)) {
-                            const errorDiv = document.getElementById(field + '-error-message'); // Div para mostrar error -LGS
+                            const errorDiv = document.getElementById(`${field}-error-message`);
                             if (errorDiv) {
-                                // Muestra los mensajes de error concatenados con saltos de línea -LGS
                                 errorDiv.innerHTML = messages.map(m => m.message).join('<br>');
                             }
                         }
-                        showAlert("Por favor corrige los campos marcados ❌", 'danger'); // Alerta general de error -LGS
+                        showAlert("Por favor corrige los campos marcados ❌", 'danger');
                     } else if (data.message) {
-                        // Si hay un mensaje general de error -LGS
                         showAlert(data.message, 'danger');
                     } else {
-                        // Error no esperado -LGS
                         showAlert("Ocurrió un error al enviar el formulario ❌", 'danger');
                     }
                 }
             })
             .catch(() => {
-                // Si la petición falla (error de red, servidor, etc) -LGS
                 showAlert("Ocurrió un error al enviar el formulario ❌", 'danger');
             })
             .finally(() => {
-                btn.classList.remove('loading'); // Quita la animación de carga del botón -LGS
+                btn.classList.remove('loading');
             });
         }, 2800);
     });
 
-    // === Función para mostrar alertas dentro del contenedor específico ===
     function showAlert(message, type) {
-        if (!alertContainer) return; // Si no existe el contenedor, no hace nada -LGS
+        if (!alertContainer) return;
 
-        // Elimina la alerta previa si existe para no acumular varias -LGS
         const existingAlert = alertContainer.querySelector('.alert');
         if (existingAlert) existingAlert.remove();
 
         const alert = document.createElement('div');
-        alert.className = `alert alert-${type}`; // Clase bootstrap o similar según tipo (danger, success) -LGS
-        alert.textContent = message; // Texto del mensaje -LGS
+        alert.className = `alert alert-${type}`;
+        alert.textContent = message;
 
-        alertContainer.appendChild(alert); // Agrega la alerta al contenedor -LGS
+        alertContainer.appendChild(alert);
 
-        // Animación de entrada con opacidad -LGS
         alert.style.opacity = '0';
         requestAnimationFrame(() => {
             alert.style.opacity = '1';
         });
 
-        // Después de 5 segundos se oculta y elimina la alerta -LGS
         setTimeout(() => {
             alert.style.opacity = '0';
             setTimeout(() => alert.remove(), 500);
         }, 5000);
     }
 
-    // === Función para limpiar mensajes de error de campos individuales ===
     function clearErrors() {
-        // Busca todos los elementos con clase 'error-message' y los limpia -LGS
-        document.querySelectorAll('.error-message').forEach(el => el.innerHTML = '');
+        document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
     }
-
-   
 });

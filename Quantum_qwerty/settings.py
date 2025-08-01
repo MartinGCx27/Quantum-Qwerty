@@ -63,7 +63,9 @@ ROOT_URLCONF = 'Quantum_qwerty.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+         BASE_DIR / 'core' / 'Templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -150,8 +152,8 @@ R3CAP7CH4_PUBL1C = os.environ.get('R3CAP7CH4_PUBL1C')
 R3CAP7CH4_SECR37 = os.environ.get('R3CAP7CH4_SECR37')
 
 #ReC4ha lcl
-#RECAPTCHA_PUBLIC_KEY = '6LfDEIkrAAAAACX1AiomHxo4MgaclWELJQ8kHYb4'
-#RECAPTCHA_SECRET_KEY = '6LfDEIkrAAAAAH5sp3b8HvXNMw-gf_7SeT6WX1BB'
+# R3CAP7CH4_PUBL1C = '6LfDEIkrAAAAACX1AiomHxo4MgaclWELJQ8kHYb4'
+# R3CAP7CH4_SECR37 = '6LfDEIkrAAAAAH5sp3b8HvXNMw-gf_7SeT6WX1BB'
 
 #servidor de uso Gmail correo
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -166,7 +168,8 @@ BASE_URL = os.environ.get('BASE_URL', 'http://localhost:8000')
 
 RECIPIENT_LIST = [os.environ.get("RECIPIENT_EMAIL")]
 
-# CSRF_TRUSTED_ORIGINS = ['https://quantumqwerty.com/'] 
-# CSRF_COOKIE_SECURE = True
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_HTTPONLY = False
+CSRF_TRUSTED_ORIGINS = ['https://quantumqwerty.com'] 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = False
+
