@@ -25,3 +25,6 @@ urlpatterns = [
 ]
 
 handler500 = 'core.views.handling_500'
+
+handler404 = 'core.views.handling_404'
+

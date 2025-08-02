@@ -6,4 +6,5 @@ urlpatterns = [
         path('aboutUs/', views.aboutUs, name='about'),
         path('services', views.services, name='services'),
         path('error500/', views.error_500, name='error500'),
+        path('error404/', views.error404_view, name='error 404'),
     ]

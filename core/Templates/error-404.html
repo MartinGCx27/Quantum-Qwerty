@@ -1,0 +1,100 @@
+{% extends "starter-page.html" %}
+
+{% load static %}
+
+{% block head %}
+{{ block.super }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Error 404 - Página no encontrada</title>
+<link href="{% static 'css/404.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+{% endblock %}
+
+{% block navbar %}
+<nav id="menu" class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between">
+        
+        <!-- LOGO -->
+        <div class="col-6 col-md-4">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/logotipo_qq_rosa.png' %}"
+                data-src-normal="{% static 'img/logotipo_qq_rosa.png' %}"
+                data-src-rosa="{% static 'img/logotipo_qq_rosa.png' %}"
+                alt="Logo"
+                class="d-inline-block align-text-top navbar-logo">
+            </a>
+        </div>
+        
+        
+    </div>
+</nav>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <section class="">
+        <div class="stars">
+            <div class="central-body">
+                <h1 class="number-error">404</h1>
+                <p class="text-error">¡EL ALMA DE ESTA PAGINA SE HA IDO!</p>
+                <P class="text-error">UN MINUTO DE SILENCIO, POR FAVOR</P>
+                <a href="{% url 'index' %}" class="btn-go-home">DE VUELTA AL INICIO</a>
+            </div>
+            <div class="objects">
+                <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
+                <div class="earth-moon">
+                    <img class="object_earth" src="http://salehriaz.com/404Page/img/earth.svg" width="100px">
+                    <img class="object_moon" src="http://salehriaz.com/404Page/img/moon.svg" width="80px">
+                </div>
+                <div class="box_astronaut">
+                    <img class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140px">
+                </div>
+            </div>
+            <div class="glowing_stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                
+            </div>
+            
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+
+
+{% block js %}
+{{ block.super }}
+
+<script src="{% static 'js/404.js' %}"></script>
+
+<script>
+    window.addEventListener("scroll", function () {
+        
+    });
+</script>
+
+<script>
+    const logo = document.getElementsByClassName('navbar-logo')[0];
+    
+    function updateNavbarIL() {
+        const useColorDark = window.scrollY >= 0;
+        
+        
+        // Cambiar imagen del logo si existe
+        if (logo) {
+            logo.src = useColorDark
+            ? logo.dataset.srcNormal
+            : logo.dataset.srcNormal;
+        }
+    }
+    
+    window.addEventListener('load', updateNavbarIL);
+</script>
+
+
+{% endblock %}
