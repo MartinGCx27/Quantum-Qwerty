@@ -1192,6 +1192,15 @@ body.loaded .loader {
 
 /* CHALLENGES SECTION */
 .desafios {
+  /* 
+    ¿Qué es esto? 
+    Estas reglas CSS definen el estilo base de la sección "desafios":
+    - padding: Espaciado interno de 60px arriba/abajo y 20px a los lados.
+    - background-color: Fondo transparente.
+    - text-align: Centra el texto.
+    - width: Ocupa el 100% del ancho disponible.
+    - max-width: Sin límite máximo de ancho.
+  */
   padding: 60px 20px;
   background-color: transparent;
   text-align: center;

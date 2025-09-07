@@ -133,12 +133,7 @@
     <footer  class="footer">
     <div id="bubble-container" class="bubbles">
       {% for b in bubbles %}
-      <div class="bubble" style="--size:{{ b.size }}rem;
-                    --distance:{{ b.distance }}rem;
-                    --position:{{ b.position }}%;
-                    --time:{{ b.time }}s;
-                    --delay:{{ b.delay }}s;">
-      </div>
+      <div class="bubble" style="--size:{{ b.size }}rem; --distance:{{ b.distance }}rem; --position:{{ b.position }}%; --time:{{ b.time }}s; --delay:{{ b.delay }}s;"></div>
       {% endfor %}
     </div>
 
