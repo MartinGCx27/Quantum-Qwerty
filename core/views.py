@@ -148,3 +148,16 @@ def aboutUs(request):
 
 def services(request):
     return render(request, 'services.html')
+
+def handling_500(request):
+    return render(request, 'error-500.html')
+
+def error_500(request):
+    return render(request, 'error-500.html', status=500)
+#Función solo para ver el error 404 -LGS
+def error404_view(request):
+    return render(request, "error-404.html", status=404)
+
+#Función nueva para función correcta de error 404 -LGS
+def handling_404(request, exception):
+    return render(request, "error-404.html", status=404)
