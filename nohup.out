@@ -17053,3 +17053,7 @@ ModuleNotFoundError: No module named 'Inmunolife'
 [2025-09-22 12:21:18 -0600] [1328770] [INFO] Worker exiting (pid: 1328770)
 [2025-09-22 18:21:18 +0000] [1328769] [INFO] Handling signal: term
 [2025-09-22 18:21:19 +0000] [1328769] [INFO] Shutting down: Master
+[2025-09-22 18:28:57 +0000] [1328887] [INFO] Starting gunicorn 23.0.0
+[2025-09-22 18:28:57 +0000] [1328887] [INFO] Listening at: http://0.0.0.0:8001 (1328887)
+[2025-09-22 18:28:57 +0000] [1328887] [INFO] Using worker: sync
+[2025-09-22 18:28:57 +0000] [1328888] [INFO] Booting worker with pid: 1328888
