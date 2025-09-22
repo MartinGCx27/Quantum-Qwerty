@@ -1191,85 +1191,39 @@ body.loaded .loader {
 
 
 /* CHALLENGES SECTION */
-.desafios {
-  /* 
-    ¿Qué es esto? 
-    Estas reglas CSS definen el estilo base de la sección "desafios":
-    - padding: Espaciado interno de 60px arriba/abajo y 20px a los lados.
-    - background-color: Fondo transparente.
-    - text-align: Centra el texto.
-    - width: Ocupa el 100% del ancho disponible.
-    - max-width: Sin límite máximo de ancho.
-  */
-  padding: 60px 20px;
-  background-color: transparent;
-  text-align: center;
-  width: 100%;
-  max-width: none;
-}
-.desafios h2,
-.desafios-subtitulo {
-  color: #EAE7E5;
-}
-.desafios-grid {
-  display: flex;
-  overflow-x: auto;
-  gap: 1.5rem;
-  padding-bottom: 2rem;
-}
-.desafio-item {
-  position: relative;
-  width: 300px;
-  aspect-ratio: 1/1;
-  flex-shrink: 0;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.fluid-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-.desafio-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-.overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: rgba(0,0,0,0.4);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 3;
-  pointer-events: none;
-  text-align: center;
-}
-.desafio-item:hover .overlay {
-  opacity: 1;
-}
 
-.desafios-grid {
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-}
 
-.desafios-grid::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+/* === Gooey Hover (Three.js) === */
+.desafios-grid{
+  display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;
 }
+.desafio-item{
+  position:relative; width: 280px; height: 350px;
+  border-radius:20px; overflow:hidden; cursor:pointer;
+  background:#0c0c0c;
+}
+/* Fallback <img> (se oculta si WebGL corre) */
+.desafio-item .desafio-fallback{
+  width:100%; height:100%; object-fit:cover; display:block;
+  filter: grayscale(60%); transition: transform .6s ease;
+}
+.desafio-item:hover .desafio-fallback{ transform: scale(1.05); }
+
+.desafio-item canvas{ position:absolute; inset:0; width:100%; height:100%; display:block; }
+
+.desafio-item .overlay{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  background: rgba(0,0,0,.35); color:#fff; opacity:0; transition:opacity .35s ease;
+  text-align:center; padding:1rem;
+}
+.desafio-item:hover .overlay{ opacity:1; }
+.desafio-item .overlay h3{ margin:0; font-weight:700; font-size:1.2rem; }
+
+
+
+
+
+
 
 /* Estilos base para el botón desafíos */
 .button-challenges {
@@ -1424,4 +1378,9 @@ body.loaded .loader {
   .footer .content > div {
     align-items: center;
   }
+}
+
+
+#logo-quantum{
+  max-width: 6.5rem;
 }
