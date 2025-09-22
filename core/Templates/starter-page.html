@@ -133,12 +133,7 @@
     <footer  class="footer">
     <div id="bubble-container" class="bubbles">
       {% for b in bubbles %}
-      <div class="bubble" style="--size:{{ b.size }}rem;
-                    --distance:{{ b.distance }}rem;
-                    --position:{{ b.position }}%;
-                    --time:{{ b.time }}s;
-                    --delay:{{ b.delay }}s;">
-      </div>
+      <div class="bubble" style="--size:{{ b.size }}rem; --distance:{{ b.distance }}rem; --position:{{ b.position }}%; --time:{{ b.time }}s; --delay:{{ b.delay }}s;"></div>
       {% endfor %}
     </div>
 
@@ -146,8 +141,9 @@
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <p>&copy; 2025 Quantum Qwerty. Todos los derechos reservados.</p>
-            <p>Powered By: Quantum Qwerty</p>
+            <img src="{% static 'img/logo_blanco_ok.png' %}" alt="Logo" id="logo-quantum" class="img-fluid" style=" ">
+            <p>Powered by <strong>Quantum Qwerty</strong></p>
+            <p>2025 Quantum Qwerty. Todos los derechos reservados.</p>
           </div>
         </div>
       </div>
