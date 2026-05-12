@@ -127,6 +127,13 @@ body {
   display: inline-block;
 }
 
+.navIcons {
+  transition: transform 0.3s ease;
+}
+
+.navIcons:hover {
+  transform: scale(1.1);
+}
 
 /* -------- ESTILOS PRINCIPALES -------- */
 .hyperjump-effect {

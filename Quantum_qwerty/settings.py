@@ -148,8 +148,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' #CONFIGURACIÓN PARA SERVER PROD
 
 
-R3CAP7CH4_PUBL1C = os.environ.get('R3CAP7CH4_PUBL1C')
-R3CAP7CH4_SECR37 = os.environ.get('R3CAP7CH4_SECR37')
+RECAPTCHA_SITE_KEY = os.environ.get('RECAPTCHA_SITE_KEY')
+RECAPTCHA_SECRET_KEY = os.environ.get('RECAPTCHA_SECRET_KEY')
+
+
 
 #ReC4ha lcl
 # R3CAP7CH4_PUBL1C = '6LfDEIkrAAAAACX1AiomHxo4MgaclWELJQ8kHYb4'

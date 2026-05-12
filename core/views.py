@@ -1,13 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.utils import timezone
-import pdb 
 from .forms import FormContact
 from django.http import JsonResponse
 from django.conf import settings
 import requests
 from django.core.mail import send_mail
-import random
 
 
 # Create your views here.
@@ -66,7 +64,7 @@ def ContactUs(request):
 
         # Armamos los datos que vamos a enviar a Google para validar el captcha -LGS
         data = {
-            'secret': settings.R3CAP7CH4_SECR37,  # clave privada -LGS
+            'secret': settings.RECAPTCHA_SECRET_KEY,  # clave privada -LGS
             'response': recaptcha_response            # token generado por el widget -LGS
         }
 
@@ -139,7 +137,10 @@ def ContactUs(request):
     # Si NO es POST o no es AJAX, simplemente mostramos el formulario vacío -LGS
     form = FormContact()
     # pdb.set_trace()
-    return render(request, 'ContactUs.html', {'form': form})
+    return render(request, 'ContactUs.html', {
+         'form': form,
+         'RECAPTCHA_SITE_KEY': settings.RECAPTCHA_SITE_KEY 
+        })
 
 
 

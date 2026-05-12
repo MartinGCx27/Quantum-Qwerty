@@ -36,10 +36,10 @@ class Contact(models.Model):
     )
     
     def __str__(self):
-        return f"{self.name_contact} ({'Visto' if self.seen_contact == 'SI' else 'No visto'})"
+        return f"{self.name_contact} ({self.seen_contact})"
     
     class Meta:
         db_table = 'contact'
         verbose_name = 'Contacto'
         verbose_name_plural = 'Contactos'
-        ordering = ['id_contact']
+        ordering = ['-id_contact']

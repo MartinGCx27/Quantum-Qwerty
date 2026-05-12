@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const formData = new FormData(form);
 
         setTimeout(() => {
-            fetch("", {
+            fetch(window.location.pathname, {
                 method: "POST",
                 credentials: "include",
                 headers: {
